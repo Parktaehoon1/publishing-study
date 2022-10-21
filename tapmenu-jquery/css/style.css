@@ -1,0 +1,126 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.64px;
+  color: #444;
+}
+
+/* 공통요소 */
+.clearfix::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 탭 메뉴 */
+.tab-wrap {
+  position: relative;
+  display: block;
+  width: 800px;
+
+  height: 427px;
+
+  margin: 0 auto;
+}
+
+.tab-menu {
+  position: relative;
+  display: block;
+}
+
+.tab-menu button {
+  position: relative;
+  display: block;
+  float: left;
+  border: 1px solid #ddd;
+  border-radius: 3px 3px 0 0;
+  line-height: 25px;
+  text-align: center;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.tab-focus {
+  background: red;
+  color: #fff;
+}
+
+.tab-main {
+  position: relative;
+  display: block;
+}
+
+.tab-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* 일단 내용을 안보이게 한다. */
+  display: none;
+
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+
+}
+
+.bg-1 {
+  background-color: green;
+}
+
+.bg-2 {
+  background-color: greenyellow;
+}
+
+.bg-3 {
+  background-color: pink;
+}
+
+.bg-4 {
+  background-color: hotpink;
+}
+
+.bg-5 {
+  background-color: firebrick;
+}

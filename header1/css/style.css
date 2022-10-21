@@ -1,0 +1,151 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Noto Sans KR', Helvetica, '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.64px;
+  color: #444;
+  background-color: #d4d4d4;
+}
+/* 공통요소 */
+.clearfix::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+  
+}
+
+.gnb-bg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  display: block;
+  width: 100vw;
+  height: 0;
+  background-color: #fff;
+ 
+}
+
+.gnb {
+  position: relative;
+  display: block;
+}
+
+.mainmenu {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  font-size: 0;
+  text-align: center;
+}
+.mainmenu > li {
+  position: relative;
+  display: inline-block;
+  /* background-color: pink; */
+}
+.mainmenu > li > a {
+  display: block;
+  font-size: 1.8rem;
+  padding: 0 3.7rem;
+  line-height: 4.5rem;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.submenu-wrap {
+  position: relative;
+  display: block;
+  width: 710px;  
+  margin: 0 auto;
+}
+
+.submenu-wrap::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  display: block;
+  width: 100vw;
+  height: 100%;
+  /* background-color: #fff; */
+}
+
+.sub-menu {
+  position: relative;
+  display: block;
+
+  font-size: 0;
+  white-space: nowrap;
+  padding: 50px 0;
+}
+
+.sub-menu > li {
+  position: relative;
+  display: inline-block;
+  padding-right: 50px;
+  vertical-align: top;  
+}
+
+.sub-menu > li > a{
+  display: block;
+  font-size: 1.6rem;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+.sub-menu2{}
+.sub-menu2 li{
+  margin-bottom: 15px;
+}
+.sub-menu2 li a {  
+  font-size: 1.5rem;
+  color: #888;
+}
