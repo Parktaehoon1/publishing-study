@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      dl {
+        display: flex;
+      }
+      dt {
+        width: 22%;
+      }
+      dd {
+        width: 28%;
+      }
+    </style>
+  </head>
+  <body>
+    <dl>
+      <dt>제목1</dt>
+      <dd>설명</dd>
+      <dt>제목1</dt>
+      <dd>설명3</dd>
+      <dt>제목</dt>
+      <dd>설명3</dd>
+      <dt>제목1</dt>
+      <dd>설명</dd>
+      <dt>제목1</dt>
+      <dd>설명3</dd>
+      <dt>제목</dt>
+      <dd>설명3</dd>
+      <dt>제목1</dt>
+      <dd>설명</dd>
+      <dt>제목1</dt>
+      <dd>설명3</dd>
+      <dt>제목</dt>
+      <dd>설명3</dd>
+      <dt>제목1</dt>
+      <dd>설명</dd>
+      <dt>제목1</dt>
+      <dd>설명3</dd>
+      <dt>제목</dt>
+      <dd>설명3</dd>
+    </dl>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(document).click(function (e) {
+      let target = e.target;
+      console.log(target);
+    });
+  </script>
+</html>

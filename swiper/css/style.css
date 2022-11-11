@@ -1,0 +1,231 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Noto Sans KR", Helvetica, "맑은 고딕", "malgun gothic",
+    "Apple SD Gothic Neo", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: -0.64px;
+  color: #444;
+  background-color: #d4d4d4;
+}
+/* 공통요소 */
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 145px;
+  overflow: hidden;
+}
+
+.mainSection {
+  position: relative;
+  padding: 40px 0 60px 0;
+}
+.mainSection h2 {
+  font-size: 36px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  line-height: 1.2em;
+  margin-bottom: 20px;
+}
+.mainSection p.small-tit {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 40px;
+  word-break: keep-all;
+}
+
+.mainSection .btn-more {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-top: 60px;
+}
+.mainSection .btn-more:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.mainSection .btn-more a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 220px;
+  height: 55px;
+  font-size: 18px;
+  color: #1e1e1e;
+  border: 1px solid #494949;
+  background: #fff;
+  border-radius: 8px;
+}
+.mainSection .btn-more a i {
+  display: inline-block;
+  margin: 0 0 0 5px;
+}
+.mainSection .btn-more a:hover {
+  color: #fb5b0d;
+}
+
+.mainBox {
+  position: relative;
+  width: 90%;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+.mainBox::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.visual-slide-thumb {
+  position: relative;
+  margin-top: auto;
+}
+.mvSlide-thumb.swiper-container {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  width: 116%;
+  height: 100px;
+  overflow: visible;
+  z-index: 10;
+  display: none;
+}
+.mvSlide-thumb .swiper-slide:nth-child(n + 6) {
+  display: none;
+}
+
+.mvSlide-thumb .slide-con {
+  height: 100%;
+}
+.mvSlide-thumb .slide-con .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.mvSlide-thumb .slide-con .img::before,
+.mvSlide-thumb .slide-con .img::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  opacity: 0;
+  transition: all 0.8s;
+  z-index: 5;
+}
+.mvSlide-thumb .slide-con .img::before {
+  bottom: 0;
+  left: 0;
+}
+.mvSlide-thumb .slide-con .img::after {
+  top: 0;
+  right: 0;
+}
+.mvSlide-thumb .slide-con.on .img::before,
+.mvSlide-thumb .slide-con.on .img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.mvSlide-thumb .slide-con.on .img::before {
+  border-left: 5px solid #fb5b0d;
+  border-bottom: 5px solid #fb5b0d;
+}
+.mvSlide-thumb .slide-con.on .img::after {
+  border-top: 5px solid #fb5b0d;
+  border-right: 5px solid #fb5b0d;
+}
+.mvSlide-thumb .slide-con .img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mvSlide-thumb .text-area {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  opacity: 0;
+  display: none;
+}
+.mvSlide-thumb .text-area p {
+  width: 65%;
+}
+.mvSlide-thumb .text-area p.name {
+  margin-bottom: 5px;
+}
+.mvSlide-thumb .text-area p.name a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.mvSlide-thumb .text-area p.name span {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+}
+.mvSlide-thumb .text-area p.name strong {
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.mvSlide-thumb .text-area p.tit {
+  font-size: 18px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.mvSlide-thumb .slide-con.on .text-area {
+  animation: textSlide 1s forwards;
+  z-index: 10;
+}
