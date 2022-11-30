@@ -1,0 +1,20 @@
+<svg id="BTN_pageup" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="17.414" height="23.207" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="타원_17734" data-name="타원 17734" fill="#fff" stroke="#161a1a" stroke-width="1">
+    <circle cx="30" cy="30" r="30" stroke="none"/>
+    <circle cx="30" cy="30" r="29.5" fill="none"/>
+  </g>
+  <g id="icon_pageup" transform="translate(21.293 18.396)">
+    <g id="icon_pageup-2" data-name="icon_pageup" clip-path="url(#clip-path)" style="isolation: isolate">
+      <g id="그룹_12834" data-name="그룹 12834" transform="translate(-1571.293 -967.293)">
+        <line id="선_40" data-name="선 40" y2="22" transform="translate(1580 968)" fill="none" stroke="#161a1a" stroke-linecap="round" stroke-width="1"/>
+        <line id="선_41" data-name="선 41" x1="8" y2="8" transform="translate(1572 968)" fill="none" stroke="#161a1a" stroke-linecap="round" stroke-width="1"/>
+        <line id="선_42" data-name="선 42" x1="8" y1="8" transform="translate(1580 968)" fill="none" stroke="#161a1a" stroke-linecap="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

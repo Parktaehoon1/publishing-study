@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #toTop { position: fixed; right: 25px; bottom: 30px; z-index: 10; width:60px; height:60px; opacity: 0; background: url('/button_top.svg') center center no-repeat, url('/button_top_on.svg') center center no-repeat; background-size: contain; transition: all 0.7s; cursor: pointer; }
+        #toTop:hover { opacity: 1; background: url('/button_top_on.svg') center center no-repeat;}
+    </style>
+</head>
+<body>
+<div style="height: 1500px;">
+    <div class="" id="toTop"></div>
+</div>
+</body>
+<script>
+    // Top
+const toTop = document.getElementById("toTop");
+window.onscroll = function () { scrollFunction(); };
+
+function scrollFunction() {
+    if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+    ) {
+        toTop.style.opacity = "1";
+    } else {
+        toTop.style.opacity = "0";
+    }
+}
+
+toTop.addEventListener("click", backToTop);
+
+function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+</html>
