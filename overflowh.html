@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    	// 햄버거메뉴
+	$("#navbutton a").click(function (e) {
+		e.preventDefault();
+		$(".menu ul").slideUp();
+
+		if (!$(this).hasClass("on")) {
+
+			$('body').css('overflow', 'hidden');
+			$('body').css('touch-action', 'none');
+
+			$("#nav").addClass("show");
+
+			$(this).addClass("on");
+			//swiper.disableMousewheelControl();
+			//swiper.lockSwipes();
+		} else {
+
+			$('body').css('overflow', '');
+			$('body').css('touch-action', '');
+
+			$("#nav").removeClass("show");
+
+			$(this).removeClass("on");
+			//swiper.enableMousewheelControl();
+			//swiper.unlockSwipes();
+		}
+	});
+</script>
+</html>
