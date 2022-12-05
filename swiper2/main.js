@@ -1,3 +1,40 @@
+"use strict";
+
+$(".header").addClass("bb-0");
+
+// Swiper Slider : Visual
+/*
+var swiper = new Swiper(".mvSwiper", {
+	effect        : "fade",
+	grabCursor    : true,
+	speed         : 1000,
+	centeredSlides: true,
+	loop          : true,
+	autoplay      : {
+		delay               : 2000,
+		disableOnInteraction: false,
+	},
+	navigation    : {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+	pagination    : {
+		el       : ".swiper-pagination",
+			clickable: true,
+	},
+});
+
+$(".mvSwiper").each(function (elem, target) {
+	var swp = target.swiper;
+	$(this).hover(function () {
+		swp.autoplay.stop();
+	}, function () {
+		swp.autoplay.start();
+	});
+});
+*/
+
+// Swiper Slider : Visual Ver.2
 $(function () {
 
 	var interleaveOffset = 0.5;
@@ -24,7 +61,7 @@ $(function () {
 	var mvSlide = new Swiper(".mvSlide", {
 		speed: 2000,
 		autoplay: {
-			delay: 8000,
+			delay: 4000,
 			autoplayDisableOnInteraction: true,
 			disableOnInteraction: false,
 		},
@@ -115,9 +152,9 @@ $(function () {
 		mvSlide.find(mvText).css("width", mv);
 
 		var i;
-//		for (i = 1; i < mvSlide.length; i++) {
-//			mvSlide.eq([i]).find(mvText).css("left", -(mvSlideW + 10) * [i]);
-//		}
+		for (i = 1; i < mvSlide.length; i++) {
+			mvSlide.eq([i]).find(mvText).css("left", -(mvSlideW + 10) * [i]);
+		}
 	}
 	mvTextInit();
 
@@ -138,4 +175,150 @@ $(function () {
 		}
 	});
 
+});
+
+
+// Swiper Slider : Best
+var swiper2 = new Swiper(".bestSwiper", {
+	slidesPerView: 5,
+	spaceBetween : 30,
+	pagination   : {
+		el       : ".swiper-pagination.best",
+		clickable: true,
+	},
+	navigation   : {
+		nextEl: ".swiper-button-next.best",
+		prevEl: ".swiper-button-prev.best",
+	},
+	breakpoints  : {
+		1600: {
+			slidesPerView: 4,
+			spaceBetween : 30,
+		},
+		1200: {
+			slidesPerView: 3,
+			spaceBetween : 20,
+		},
+		700 : {
+			slidesPerView: 2,
+		},
+		420 : {
+			slidesPerView: 1,
+		},
+	},
+});
+
+
+// Swiper Slider : temp
+/*
+var swiper3 = new Swiper(".tempSwiper", {
+	slidesPerView: 5,
+	spaceBetween : 30,
+	pagination   : {
+		el       : ".swiper-pagination.temp",
+		clickable: true,
+	},
+	navigation   : {
+		nextEl: ".swiper-button-next.temp",
+		prevEl: ".swiper-button-prev.temp",
+	},
+	breakpoints  : {
+		1600: {
+			slidesPerView: 4,
+			spaceBetween : 30,
+		},
+		1200: {
+			slidesPerView: 3,
+			spaceBetween : 20,
+		},
+		700 : {
+			slidesPerView: 2,
+		},
+		420 : {
+			slidesPerView: 1,
+		},
+	},
+});
+*/
+
+
+// Swiper Slider : Auction
+var swiper4 = new Swiper(".auctionSwiper", {
+	navigation : {
+		nextEl: ".swiper-button-next.auction",
+		prevEl: ".swiper-button-prev.auction",
+	},
+	breakpoints: {
+		991: {
+			spaceBetween: 40,
+		},
+	},
+});
+
+
+// Swiper Slider : Category
+var swiper5 = new Swiper(".cate-slide", {
+	slidesPerView: 10,
+	spaceBetween : 0,
+	pagination   : {
+		el       : ".swiper-pagination.catego",
+		clickable: true,
+	},
+	navigation   : {
+		nextEl: ".swiper-button-next.catego",
+		prevEl: ".swiper-button-prev.catego",
+	},
+	breakpoints  : {
+		1760: {
+			slidesPerView: 9,
+			spaceBetween: 0,
+		},
+		1650: {
+			slidesPerView: 8,
+			spaceBetween : 0,
+		},
+		1500: {
+			slidesPerView: 6,
+			spaceBetween : 0,
+		},
+		1200 : {
+			slidesPerView: 5,
+			spaceBetween : 0,
+		},
+		767 : {
+			slidesPerView: 4,
+			spaceBetween : 0,
+		},
+		600 : {
+			slidesPerView: 3,
+			spaceBetween : 5,
+			slidesPerColumn: 2,
+			slidesPerColumnFill: 'column',
+		},
+	},
+});
+
+
+// Tab
+function openTab(evt, tabtransName) {
+	var i, x, tablinks;
+	x = document.getElementsByClassName("tabbox");
+	for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	}
+	tablinks = document.getElementsByClassName("tablink");
+	for (i = 0; i < x.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" on", "");
+	}
+	document.getElementById(tabtransName).style.display = "block";
+	evt.currentTarget.className += " on";
+}
+
+// Auction
+$(function () {
+	var auctionLi = $(".auctionlist > li");
+
+	if (auctionLi.length == 1){
+		$("#Auction .btn-more").css('display', 'none');
+	}
 });
