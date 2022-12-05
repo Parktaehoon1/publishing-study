@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .browser-info { display: none; background: #212121; padding: 20px 0}
+        .browser-info.open { display: block}
+        .browser-info .conBox { display: flex; align-items: center; height: 100%}
+
+        .browser-info .chrome-side { display: flex; align-items: center}
+        .browser-info .memo { display: flex}
+        .browser-info .memo img { display: inline-block;}
+        .browser-info .memo p { font-size: 15px; color: #fff; letter-spacing: -0.5px; margin-left: 20px}
+        .browser-info .memo p strong { color: #fb5b0d}
+        .browser-info .memo p .small { display: block; font-size: 11px; color: #999}
+        .browser-info .chrome-side .btn { display: inline-flex; align-items: center; width: 150px; height: 40px; font-size: 14px; color: #fff; font-weight: 400;  letter-spacing: -0.5px; border-radius: 20px; background: transparent; margin-left: 60px}
+        .browser-info .chrome-side .btn.btn-outline-gray:hover { background: transparent}
+        .browser-info .chrome-side .btn span { display: block; margin-top: 2px}
+        .browser-info .chrome-side .btn img { margin-left: 4px;}
+
+        .browser-info .close-week { margin-left: auto}
+        .browser-info .close-week a { display: flex; align-items: center; font-size: 14px; color: #999}
+        .browser-info .close-week span { display: block; margin-top: 2px}
+        .browser-info .close-week img { display: inline-block; margin-left: 10px}
+    </style>
+</head>
+<body>
+    <div id="chromeInfoBnr" class="browser-info open">
+		<div class="conBox">
+			<div class="chrome-side">
+				<div class="memo">
+					<img src="cookie/logo_chrome.svg" alt="">
+					<p>
+						빠르고 안전한 Owner Market 이용을 위해 <em><strong>크롬 브라우저 사용</strong>을 권장합니다.</em>
+						<span class="small">※ 크롬 외의 다른 브라우저에서는 오류가 발생할 수 있습니다.</span>
+					</p>
+				</div>
+				<a href="https://www.google.co.kr/chrome" target="_blank" class="btn btn-outline-gray">
+					<span>Chrome 다운로드</span>
+					<img src="cookie/icon_arr_chrome.svg" alt="">
+				</a>
+			</div>
+			<div class="close-week">
+				<a href="javascript:;" onclick="weekClosePop('chromeInfoBnr');">
+					<span>일주일간 표시하지 않기</span>
+					<img src="cookie/icon_close_chrome.svg" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script>
+    // Popup 하루만 닫기
+function setCookie(name, value, expiredays) {
+	var todayDate = new Date();
+	todayDate.setDate(todayDate.getDate() + expiredays);  // 현재시간에 하루를 더함 
+	document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+}
+function todayClosePop(id) {   // 오늘 하루 닫기
+	setCookie(id, "done", 1);
+	$("#"+id).hide().removeClass("show");
+}
+function weekClosePop(id) {   // 일주일 닫기
+	setCookie(id, "done", 7);
+	$("#"+id).hide();
+}
+function closePop(id) {    // 그냥 닫기
+	$("#"+id).hide().removeClass("show");
+}
+</script>
+</html>
