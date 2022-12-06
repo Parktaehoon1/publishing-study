@@ -1,5 +1,7 @@
 "use strict";
 
+
+
 $(".header").addClass("bb-0");
 
 // Swiper Slider : Visual
@@ -322,3 +324,5 @@ $(function () {
 		$("#Auction .btn-more").css('display', 'none');
 	}
 });
+
+

@@ -1,0 +1,72 @@
+/* main_pop */
+
+.popup-spot { position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 200;}
+.popup-spot-in { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center}
+.popup-spot-in { flex-direction: column}
+.popSwiper { width: 100%}
+.popSwiper ul { display: flex; justify-content: center}
+.popSwiper ul li { width: calc(33.3333% - 40px); max-width: 550px; background: transparent; margin: 0 20px}
+.popSwiper ul li { display: none}
+.popSwiper ul li.show { display: block;}
+
+.popSwiper ul li .scroll-box { position: relative; width: 100%; padding-bottom: 109.090909%; overflow-y: auto}
+.popSwiper ul li .scroll-box::-webkit-scrollbar-button:start:decrement,
+.popSwiper ul li .scroll-box::-webkit-scrollbar-button:end:increment { display: block; height: 6px;}
+.popSwiper ul li .scroll-box::-webkit-scrollbar-track { background: #efefef; -webkit-border-radius: 6px; border-radius: 6px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2)}
+.popSwiper ul li .scroll-box::-webkit-scrollbar-thumb { height: 30%; width: 6px; background: #9c9aaf; -webkit-border-radius: 6px; border-radius: 6px ; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1)}
+.popSwiper ul li .scroll-box::-webkit-scrollbar { width: 6px; height: 6px; background: #eeeff2; border-radius: 0 4px 4px 0;}
+
+.popSwiper ul li .img-area { position: absolute; width: 100%; height: 100%;}
+.popSwiper ul li .img-area a { display: block}
+.popSwiper ul li .img-area img { display: block; max-width: 100%;}
+
+.popSwiper ul li .pop-close { display: flex; height: 60px; background: #212121}
+.popSwiper ul li .pop-close .ui-close { margin-left: auto}
+.popSwiper ul li .pop-close button { display: flex; align-items: center; height: 100%; font-size: 16px; color: #fff; background: transparent; padding: 0 30px}
+
+.swiper-button-prev.pop, .swiper-button-next.pop, .swiper-pagination.pop { display: none}
+.swiper-button-prev.pop, .swiper-button-next.pop { width: 35px; height: 66px; background: center center /cover no-repeat; transition: 0.3s; transform: translateY(-50%); margin-top: 0; color: #fff;}
+/*
+.swiper-button-prev.pop { left: 100px; background-image: url("../admin/img/arrow_R_L.svg"); transform: scaleX(-1) translateY(-50%); }
+.swiper-button-next.pop { left: auto; right: 100px; background-image: url("../admin/img/arrow_R_L.svg");}
+*/
+
+.swiper-pagination.pop { position: relative; font-size: 0; margin-top: 20px;}
+.swiper-pagination.pop .swiper-pagination-bullet { width: 45px; height: 10px; background: #999; opacity: 1; border-radius: 0}
+.swiper-pagination.pop .swiper-pagination-bullet + .swiper-pagination-bullet { margin-left: 5px;}
+.swiper-pagination.pop .swiper-pagination-bullet-active { background: #fff}
+
+/* li 4개 */
+.count4 .popSwiper ul li { width: calc(25% - 40px); max-width: 430px;}
+
+/* li 5개 */
+.count5 .popSwiper { max-width: 550px}
+.count5 .popSwiper ul { justify-content: flex-start}
+.count5 .popSwiper ul li { margin: 0;}
+.count5 .swiper-button-prev.pop, .count5 .swiper-button-next.pop, .count5 .swiper-pagination.pop { display: block}
+
+@media (max-width: 1430px) {
+    .count4 .popSwiper ul li { width: calc(25% - 20px); margin: 0 10px}
+    .popSwiper ul li .pop-close button { font-size: 15px; padding: 0 20px;}
+}
+@media (max-width: 1216px) {
+    .popSwiper { max-width: 550px}
+    .popSwiper ul { justify-content: flex-start}
+    .popSwiper ul li { margin: 0;}
+    .count4 .popSwiper ul li { max-width: 550px; margin: 0}
+    .swiper-button-prev.pop, .swiper-button-next.pop, .swiper-pagination.pop { display: block}
+    .swiper-button-prev.pop, .swiper-button-next.pop { width: 26px; height: 49px}
+    .swiper-button-prev.pop { left: 10px}
+    .swiper-button-next.pop { right: 10px}
+    .swiper-pagination.pop .swiper-pagination-bullet { width: 40px; height: 8px;}
+}
+@media (max-width: 767px) {
+    .popSwiper, .count5 .popSwiper { max-width: 70%}
+}
+@media (max-width: 575px) {
+    .popSwiper ul li .pop-close { height: 50px}
+    .popSwiper ul li .pop-close button { font-size: 14px; padding: 0 20px}
+}
+@media (max-width: 355px) {
+    .popSwiper ul li .pop-close button { font-size: 13px; padding: 0 10px}
+}
