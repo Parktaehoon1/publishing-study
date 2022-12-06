@@ -44,6 +44,69 @@
       <dt>제목</dt>
       <dd>설명3</dd>
     </dl>
+
+
+<!-- 팝업 양식 -->
+    <div class="popwrap stop_sell">
+    <div class="bg"></div>
+    <div class="approve_wrap" id="stop_sell">
+        <p class="approve_wrap_title">해당 신고데이터를 판매중지하시겠습니까?</p>
+        <div class="member_modal_btn_wrap">
+            <button class="member_modal_cancel save">취소</button>
+            <button class="member_modal_save save" onclick="pop_up_layer('stop_sell_w')">네</button>
+        </div>
+    </div>
+</div>
+
+<div class="popwrap stop_sell_r">
+    <div class="bg"></div>
+    <div class="sell_modal_reason_step2" id="stop_sell_r">
+        <p class="sell_modal_title">판매중지 사유</p>
+        <div class="sell_modal_detail">
+            <div class="sell_modal_detail_admin_row">
+                <div class="sell_modal_detail_admin">관리자</div>
+                <div class="sell_modal_detail_admin_user">KAMP 관리자</div>
+            </div>
+            <div class="sell_modal_detail_division_row">
+                <div class="sell_modal_detail_division">구분</div>
+                <div class="sell_modal_detail_division_user">판매승인반려사유</div>
+            </div>
+            <div class="sell_modal_detail_desc_row">
+                <div class="sell_modal_detail_desc">상세</div>
+                <div class="sell_modal_detail_desc_user">
+                    판매중지상세입니다.
+                </div>
+            </div>
+        </div>
+        <button class="sell_modal_confirm save">확인</button>
+    </div>
+</div>
+
+<div class="popwrap stop_sell_w">
+    <div class="bg"></div>
+    <div class="sell_modal_reason" id="stop_sell_w">
+        <p class="sell_modal_title">판매중지 사유</p>
+        <div class="sell_modal_desc">
+            <div class="sell_modal_admin">KAMP 관리자</div>
+            <section class="theme">
+                <div class="selectbox modal">
+                    <select class="selectpicker">
+                        <option value="0">사유선택</option>
+                        <option value="2">카테고리 1</option>
+                        <option value="3">카테고리 2</option>
+                        <option value="4">카테고리 3</option>
+                    </select>
+                </div>
+            </section>
+            <textarea type="text" placeholder="사유 입력" class="sell_modal_reason_input"></textarea>
+        </div>
+        <div class="sell_modal_btn_wrap">
+            <button class="sell_modal_cancel save">취소</button>
+            <button class="sell_modal_save save">저장</button>
+        </div>
+    </div>
+</div>
+
   </body>
   <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"
