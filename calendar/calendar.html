@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style rel="stylesheet" href="calendar.css"></style>
+    <style rel="stylesheet" href="style.css"></style>
+</head>
+<body>
+    <div class="admin_form_bottom">
+    <span data-period="all" class="admin_form_bottom_active">전체</span>
+    <span data-period="today">오늘</span>
+    <span data-period="week">1주</span>
+    <span data-period="month">1개월</span>
+    <span data-period="custom">직접입력</span>
+    <div class="admin_calendar_wrap">
+        <div class="admin_calendar_box">
+            <input type="text" placeholder="날짜선택" class="admin_calendar_box_input datepicker" id="datepicker" readonly>
+        </div>
+        <div class="admin_table_division"> ~ </div>
+        <div class="admin_calendar_box">
+            <input type="text" placeholder="날짜선택" class="admin_calendar_box_input datepicker" id="datepicker" readonly>
+        </div>
+    </div>
+    <div id="search_btn">조회</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+<script src="datepicker.js"></script>
+<script src="main.js"></script>
+</html>

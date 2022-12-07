@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32">
+  <g id="그룹_12588" data-name="그룹 12588" transform="translate(18998 -6229)">
+    <g id="그룹_12586" data-name="그룹 12586" transform="translate(0 -5)">
+      <rect id="사각형_3647" data-name="사각형 3647" width="16" height="16" transform="translate(-18998 6234)" fill="none"/>
+      <g id="chevron-down" transform="translate(-18997 6238)">
+        <path id="chevron-down-2" data-name="chevron-down" d="M6.4,16.561,4.929,15.094l7.337-7.337L19.6,15.094l-1.467,1.467-5.87-5.869Z" transform="translate(-4.929 -7.757)" fill="#fff"/>
+      </g>
+    </g>
+    <g id="그룹_12587" data-name="그룹 12587" transform="translate(-18998 6245)">
+      <rect id="사각형_3647-2" data-name="사각형 3647" width="16" height="16" fill="none"/>
+      <g id="chevron-down-3" data-name="chevron-down" transform="translate(1 3.196)">
+        <path id="chevron-down-4" data-name="chevron-down" d="M6.4,7.757,4.929,9.225l7.337,7.337L19.6,9.225,18.135,7.757l-5.87,5.869Z" transform="translate(-4.929 -7.757)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

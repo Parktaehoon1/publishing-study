@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 22 88" style="enable-background:new 0 0 22 88;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#3A3A3A;}
+	.st1{clip-path:url(#SVGID_2_);}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+	.st3{opacity:0.8;}
+	.st4{fill:none;stroke:#D8D8D8;}
+	.st5{clip-path:url(#SVGID_4_);}
+	.st6{fill:none;stroke:#D8D8D8;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+	.st7{fill:none;}
+	.st8{clip-path:url(#SVGID_6_);}
+	.st9{fill:none;stroke:#D8D8D8;stroke-miterlimit:10;}
+	.st10{clip-path:url(#SVGID_8_);}
+</style>
+<title>checkbox_1</title>
+<g id="Layer_2_1_">
+	<g id="Layer_1-2">
+		<g id="Layer_2-2">
+			<g id="Layer_1-2-2">
+				<g id="Layer_2-2-2">
+					<g id="Dark_checkbox_01">
+						<path id="Rectangle_333" class="st0" d="M4,22h14c2.2,0,4,1.8,4,4v14c0,2.2-1.8,4-4,4H4c-2.2,0-4-1.8-4-4V26
+							C0,23.8,1.8,22,4,22z"/>
+						<g>
+							<defs>
+								<rect id="SVGID_1_" x="5.9" y="29.2" width="10.2" height="7.4"/>
+							</defs>
+							<clipPath id="SVGID_2_">
+								<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+							</clipPath>
+							<g class="st1">
+								<g id="icon_checkbox_check_off">
+									<path id="Icon_feather-check" class="st2" d="M15,30.2l-5.5,5.5L7,33.2"/>
+								</g>
+							</g>
+						</g>
+						<g id="Rectangle_333-2" class="st3">
+							<path class="st4" d="M4,0.5h14c1.9,0,3.5,1.6,3.5,3.5v14c0,1.9-1.6,3.5-3.5,3.5H4c-1.9,0-3.5-1.6-3.5-3.5V4
+								C0.5,2.1,2.1,0.5,4,0.5z"/>
+						</g>
+						<g class="st3">
+							<g>
+								<defs>
+									<rect id="SVGID_3_" x="5.9" y="7.2" width="10.2" height="7.4"/>
+								</defs>
+								<clipPath id="SVGID_4_">
+									<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+								</clipPath>
+								<g class="st5">
+									<g id="icon_checkbox_check_off-2">
+										<path id="Icon_feather-check-2" class="st6" d="M15,8.2l-5.5,5.5L7,11.2"/>
+									</g>
+								</g>
+							</g>
+						</g>
+						<rect y="0" class="st7" width="22" height="22"/>
+						<path id="Rectangle_333-3" class="st0" d="M4,66h14c2.2,0,4,1.8,4,4v14c0,2.2-1.8,4-4,4H4c-2.2,0-4-1.8-4-4V70
+							C0,67.8,1.8,66,4,66z"/>
+						<g>
+							<defs>
+								<rect id="SVGID_5_" x="5.9" y="73.2" width="10.2" height="7.3"/>
+							</defs>
+							<clipPath id="SVGID_6_">
+								<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+							</clipPath>
+							<g class="st8">
+								<g id="icon_checkbox_check_off-3">
+									<path id="Icon_feather-check-3" class="st2" d="M15,74.2l-5.5,5.5L7,77.2"/>
+								</g>
+							</g>
+						</g>
+						<g id="Rectangle_333-4">
+							<path class="st9" d="M4,44.5h14c1.9,0,3.5,1.6,3.5,3.5v14c0,1.9-1.6,3.5-3.5,3.5H4c-1.9,0-3.5-1.6-3.5-3.5V48
+								C0.5,46.1,2.1,44.5,4,44.5z"/>
+						</g>
+						<g>
+							<defs>
+								<rect id="SVGID_7_" x="5.9" y="51.2" width="10.2" height="7.3"/>
+							</defs>
+							<clipPath id="SVGID_8_">
+								<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
+							</clipPath>
+							<g class="st10">
+								<g id="icon_checkbox_check_off-4">
+									<path id="Icon_feather-check-4" class="st6" d="M15,52.2l-5.5,5.5L7,55.2"/>
+								</g>
+							</g>
+						</g>
+						<rect y="44" class="st7" width="22" height="22"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
