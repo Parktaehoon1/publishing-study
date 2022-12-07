@@ -1,0 +1,98 @@
+@charset 'utf-8';
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+/*common*/
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-touch-callout: none; }
+html { -webkit-font-size-adjust: none;/*overflow-y: scroll;*/ -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; word-break: break-all}
+html, body { height: 100%; margin: 0; padding: 0; color: var(--gray01); font-size: 15px; font-family: 'Pretendard',sans-serif; line-height:normal; text-rendering: optimizeLegibility; font-weight:var(--font_nomal); word-break: keep-all; }
+h1, h2, h3, h4, h5, h6 { font-weight:var(--font_bold); line-height:auto;  }
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, a, abbr, address, cite, em, img, strong, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, audio, video { margin: 0; padding: 0; border: 0; }
+dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote { margin: 0; padding: 0 }
+
+input, textarea, select {  font-family:inherit; color: inherit;   }
+table th{  font-weight:var(--font_bold);}
+a{ display:inline-block; cursor:pointer;color:inherit }
+a:link, a:visited,a:hover, a:active { text-decoration: none }
+
+button{ border-color: transparent; font-size:inherit; font-family:inherit; cursor:pointer; vertical-align:middle; background:none; }
+input, textarea, select { font-size:inherit; vertical-align:middle; }
+input:focus { border:1px solid var(--border_focus)}
+a:focus, img:focus, input:focus, button:focus, textarea:focus {outline:0;}
+
+input { -webkit-appearance: none;  -webkit-border-radius: 0; padding: 0; vertical-align: top; appearance: none; overflow: visible; box-sizing: border-box; -moz-box-sizing: border-box; }
+input[type=submit]{-webkit-border-radius:0; -webkit-appearance:none;}
+input[type=text], input[type=password],input[type=file], input[type=number]{  -webkit-appearance:none;  box-sizing:border-box;  }
+input[type=file]{ border:0; background:none;  }
+input[type=checkbox], input[type=radio]{ }
+
+textarea{  padding:10px 10px;  box-sizing:border-box; width:100%;  border-radius: 5px; overflow-y:auto;  border:1px solid var(--border); outline:none }
+select { height: 30px ;  border: 1px solid var(--border); box-sizing: border-box; -webkit-border-radius:0; /* -webkit-appearance:none; reason ios */ }
+
+label { cursor: pointer }
+label, select, input, button { outline:none}
+table { border-collapse: collapse; border-spacing: 0 }
+img { max-width: 100%; border: 0; margin:0; padding:0; font-size:0}
+ol, ul, li { list-style: none }
+img, fieldset { border: 0  }
+legend, caption { visibility: hidden; overflow: hidden; position: absolute; width: 0; height: 0; margin: 0; padding: 0; line-height: 0 }
+object, embed, video {max-width:100%;}
+
+/* Chrome, Safari scroll*/
+::-webkit-scrollbar {width:6px; height: 6px; background:#eeeff2;}
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {display: block; height: 6px;}
+::-webkit-scrollbar-track {background: #efefef; -webkit-border-radius: 6px; border-radius:6px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.2)}
+::-webkit-scrollbar-thumb {height: 30%; width: 6px; background: rgba(0,0,0,.2); -webkit-border-radius: 6px; border-radius:6px; -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,.1)}
+
+
+:root{
+    --primary: #0B51F1;
+    --primary_dark:#1547b9;
+    /*--primary_dark:#003ABC;*/
+
+    --gray01: #161A1A;
+    --gray02: #242424; /*footer*/
+    --gray03: #6A6A6A;
+    --gray04: #999999;
+    --gray05: #B4B4B4;
+    --gray06: #DBDBDB;
+    --gray07: #D5D5D5;
+    --gray08: #E6E6E6;
+    --gray09: #F5F5F5;
+
+    --white: #fff;
+    --red: #ee0909;
+    --error: #ed2024;
+    --dev_memo: #EE0979;
+
+    --border: #E6E6E6;
+    --border_focus: #333333;
+    --back: #fff;
+    --shadow: #fff;
+    --font_nomal: 500;
+    --font_bold: 600;
+    --font_heavy: 700;
+    --radius05: 5px;
+    --radius10: 10px;
+    --border_radius: 5px;
+
+    --font13: 0.867rem;
+    --font14: 0.933rem;
+    --font15: 1rem;
+    --font16: 1.067rem;
+    --font17: 1.13rem;
+    --font18: 1.2rem;
+    --font20: 1.33rem;
+    --font22: 1.467rem;
+    --font24: 1.6rem;
+    --font28: 1.867rem;
+    --font30: 2rem;
+    --font32: 2.133rem;
+
+}
+
+.dev_memo { color: var(--dev_memo) !important; margin:10px auto; }
+.point_primary { color: var(--primary) !important; }
+
+@media screen and (max-width: 860px) {
+    html, body { font-size: 14px; word-break: break-all; }
+}

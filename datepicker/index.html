@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .period_wrap .calendar { display: flex; align-items: center; }
+        .period_wrap .calendar input { width:180px; height: 42px; line-height: 42px; padding-left:35px; border: 1px solid var(--gray07); background: var(--white) url( "../img/common/icon_calendar.svg") 15px 12px no-repeat; cursor: pointer; }
+        .period_wrap .calendar span { display: inline-block; width: 30px; text-align: center; }
+        .period_wrap button { width: 80px; height: 42px; line-height: 42px; color: var(--gray03); text-align: center; font-size: var(--font14); margin-left: 10px;  border: 1px solid var(--gray07); background-color: var(--white); }
+        .period_wrap button:hover { color: var(--gray01); border-color: var(--gray01); }
+
+
+
+        #ui-datepicker-div {width:280px; box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;}
+        .ui-widget-header {border:none; border-radius:5px 5px 0 0 ;border-bottom: none; margin:0 0 5px;background: #f7f7f7;color: #0a0a0a;font-weight: bold;}
+        .ui-datepicker-title {padding:10px 0 ;font-family: 'SCDream',sans-serif;}
+        .ui-datepicker-title span {font-weight:600; font-size:15px;}
+        .ui-datepicker-calendar tr th {  font-family: 'SCDream',sans-serif; }
+        .ui-datepicker-calendar tr td {  font-family: 'SCDream',sans-serif;font-weight:400;}
+        .ui-datepicker-calendar tr td a {position:relative; width:20px; padding:0; height:20px; border-radius:50%; text-align:center;display:flex; justify-content: center;align-items:center;font-weight:400;}
+        .ui-datepicker-calendar tr td.ui-datepicker-week-end:first-child .ui-state-default {color:#000;}
+        .ui-datepicker-calendar tr td.ui-datepicker-week-end:last-child .ui-state-default {color:#000;}
+        .ui-datepicker-calendar tr td.ui-datepicker-week-end:first-child .ui-state-default.ui-state-active,
+        .ui-datepicker-calendar tr td.ui-datepicker-week-end:last-child .ui-state-default.ui-state-active {color:#000; border: none; background: transparent;}
+        .ui-datepicker .ui-datepicker-prev:hover {border: 1px solid #999;border-radius: 4px;}
+        .ui-datepicker .ui-datepicker-next:hover{border: 1px solid #999;border-radius: 4px;}
+        .ui-datepicker .ui-datepicker-buttonpane { border-top:1px solid #e1e1e1; padding:0; line-height:1; height:40px; margin:10px 0 0 0;} 
+        .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {width:50%;height:40px;line-height:39px; text-align:center; border:none; border-radius:0 0 0 5px; background:#fff;  padding:0 ; font-size:12px; font-weight:500; }
+        .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-close{ width:50%; height:40px;line-height:39px; text-align:center; bottom:0; right:0; border:none;border-radius:0 0 5px 0; background:#fff; padding:0; font-size:12px; font-weight:500; border-left:1px solid #e1e1e1;  }
+        .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current:hover {color:#20badb; font-weight:600;}
+        .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-close:hover {color:#20badb; font-weight:600;}
+        .ui-datepicker-calendar tr td:hover{color: #fff;}
+        .ui-datepicker-calendar tr td.ui-datepicker-week-end:first-child:hover .ui-state-default{color: #fff;background: var(--primary);}
+        .ui-datepicker-calendar tr td.ui-datepicker-week-end:last-child:hover .ui-state-default{color: #fff;}
+    
+        .ui-datepicker { display: none; width:288px; padding:25px 30px; font-size: var(--font15); border:1px solid var(--gray05); background-color: var(--white); }
+        .ui-datepicker .ui-datepicker-header { position:relative; font-weight: var(--font_heavy); text-align: center; padding: 0 30px; margin-bottom:10px; }
+        .ui-datepicker .ui-datepicker-header .ui-corner-all { position:absolute; width: 20px; height: 20px; }
+        .ui-datepicker .ui-datepicker-header .ui-corner-all span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; border: 0; clip: rect(0,0,0,0); }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-prev { left:0; background:url('../img/sub/icon_calendar_arr.svg') 0 0 no-repeat; }
+        .ui-datepicker .ui-datepicker-header .ui-datepicker-next { right:0; background:url('../img/sub/icon_calendar_arr.svg') 0 -30px no-repeat; }
+        .ui-datepicker .ui-datepicker-calendar { width:100%; text-align: center; }
+        .ui-datepicker .ui-datepicker-calendar thead { font-weight: var(--font_heavy); }
+        .ui-datepicker .ui-datepicker-calendar th { padding:8px 1px; }
+        .ui-datepicker .ui-datepicker-calendar td { padding:3px 1px; }
+        .ui-datepicker .ui-datepicker-calendar td a,
+        .ui-datepicker .ui-datepicker-calendar td span { width:30px; height:30px; line-height:30px; font-size: var(--font14); }
+        .ui-datepicker .ui-datepicker-calendar td a.ui-state-highlight,
+        .ui-datepicker .ui-datepicker-calendar td a.ui-state-hover { color: var(--white); border-radius: 50%; background-color: var(--primary); }
+            
+    </style>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="jquery-ui.min.js"></script>
+</head>
+<body>
+    <div class="period_wrap">
+
+    <div class="calendar">
+        <input type="text" id="dateStart" name="" value="" class="datepicker" placeholder="날짜 선택" readonly/>
+        <span> ~ </span>
+        <input type="text" id="dateEnd" name="" value="" class="datepicker" placeholder="날짜 선택" readonly/>
+        <button type="button" class="" id="search_date_btn">조회</button>
+    </div>
+</div>
+</body>
+<script>
+    function addDatePicker(){
+        $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd',
+            prevText: '이전 달',
+            nextText: '다음 달',
+            monthNames: ['01월', '02월', '03월', '04월', '05월', '06월', '07월', '08월', '09월', '10월', '11월', '12월'],
+            dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+            showOtherMonths: false,
+            showMonthAfterYear: true,
+            //hideIfNoPrevNext: true,
+            yearSuffix: '년',
+            //yearRange: "2002:2012"
+            //duration: 'normal',
+            //closeText: 'Close'
+        });
+        $(".datepicker").datepicker({
+        });
+    }
+    addDatePicker();
+
+</script>
+</html>

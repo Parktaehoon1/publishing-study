@@ -1,0 +1,19 @@
+/* calendar */
+.ui-datepicker { display: none; width:288px; padding:25px 30px; font-size: var(--font15); border:1px solid var(--gray05); background-color: var(--white); }
+.ui-datepicker .ui-datepicker-header { position:relative; font-weight: var(--font_heavy); text-align: center; padding: 0 30px; margin-bottom: 0; background: transparent; }
+.ui-datepicker .ui-datepicker-header .ui-corner-all { position:absolute; width: 20px; height: 20px; }
+.ui-datepicker .ui-datepicker-header .ui-corner-all span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; border: 0; clip: rect(0,0,0,0); }
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev { position: absolute; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; left:0; background: url('../img/arrow_R_L.svg') no-repeat center;background-size: 5px 10px; border: 1px solid #999; border-radius: 4px;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next { position: absolute; top: 50%; transform: translateY(-50%) rotate(180deg); width: 20px; height: 20px; right:0; background: url('../img/arrow_R_L.svg') no-repeat center;background-size: 5px 10px; border: 1px solid #999; border-radius: 4px;}
+
+.ui-datepicker .ui-datepicker-calendar { width:100%; text-align: center; }
+.ui-datepicker .ui-datepicker-calendar thead { font-weight: var(--font_heavy); }
+.ui-datepicker .ui-datepicker-calendar th { padding:8px 1px; }
+.ui-datepicker .ui-datepicker-calendar td { padding:3px 1px; }
+.ui-datepicker .ui-datepicker-calendar td a { width:30px; height:30px; line-height:30px; font-size: var(--font14); }
+.ui-datepicker .ui-datepicker-calendar td a.ui-state-highlight,
+.ui-datepicker .ui-datepicker-calendar td a.ui-state-hover { color: var(--white); border-radius: 50%; background-color: var(--primary); }
+.ui-widget.ui-widget-content{border: 1px solid #eee; padding: 10px 20px;}
+.admin_calendar_box input { width:180px; height: 42px; line-height: 42px; padding-left:35px; border: 1px solid var(--gray07); background: var(--white) url( "../img/icon_calendar.svg") 15px 12px no-repeat; cursor: pointer; }
+.ui-datepicker-trigger{display: none;}
+
