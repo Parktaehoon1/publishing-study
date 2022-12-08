@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .thumbnail-wrappper {
+            width: 25%; 
+        }
+
+        .thumbnail {
+            position: relative;
+            padding-top: 100%;  /* 원하는 크기 따라 세로 / 가로 * 100 하면 됨 */
+            overflow: hidden;
+        }
+
+        .thumbnail .centered  {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-transform: translate(50%,50%);
+            -ms-transform: translate(50%,50%);
+            transform: translate(50%,50%);
+        }
+
+        .thumbnail .centered img {
+            position: absolute;
+            top: 0;
+            left: 0;   
+            max-width: 100%;
+            height: auto;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="thumbnail-wrapper">
+    <div class="thumbnail">
+        <div class="centered">
+            <img src="xxxx">
+        </div>
+    </div>
+</div>
+</body>
+</html>
