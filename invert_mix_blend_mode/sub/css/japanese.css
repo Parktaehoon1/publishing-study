@@ -1,0 +1,174 @@
+@charset 'utf-8';
+
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	font-style: normal;
+	font-weight: 100;
+	src: url('/assets/css/fonts/NotoSansJP-Thin.woff2') format('woff2'),
+		 url('/assets/css/fonts/NotoSansJP-Thin.woff') format('woff'),
+		 url('/assets/css/fonts/NotoSansJP-Thin.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	font-style: normal;
+	font-weight: 200;
+	src: url('/assets/css/fonts/NotoSansJP-Light.woff2') format('woff2'),
+		 url('/assets/css/fonts/NotoSansJP-Light.woff') format('woff'),
+		 url('/assets/css/fonts/NotoSansJP-Light.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	font-style: normal;
+	font-weight: 300;
+	src: url('/assets/css/fonts/NotoSansJP-DemiLight.woff2') format('woff2'),
+		 url('/assets/css/fonts/NotoSansJP-DemiLight.woff') format('woff'),
+		 url('/assets/css/fonts/NotoSansJP-DemiLight.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/assets/css/fonts/NotoSansJP-Regular.woff2') format('woff2'),
+		 url('/assets/css/fonts/NotoSansJP-Regular.woff') format('woff'),
+		 url('/assets/css/fonts/NotoSansJP-Regular.otf') format('opentype');
+ }
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	font-style: normal;
+	font-weight: 500;
+	src: url('/assets/css/fonts/NotoSansJP-Medium.woff2') format('woff2'),
+		 url('/assets/css/fonts/NotoSansJP-Medium.woff') format('woff'),
+		 url('/assets/css/fonts/NotoSansJP-Medium.otf') format('opentype');
+ }
+@font-face {
+	font-family: 'Noto Sans Japanese';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/assets/css/fonts/NotoSansJP-Bold.woff2') format('woff2'),
+         url('/assets/css/fonts/NotoSansJP-Bold.woff') format('woff'),
+         url('/assets/css/fonts/NotoSansJP-Bold.otf') format('opentype');
+ }
+
+ body{ word-wrap:break-word;  }
+
+html, body, div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, button, select, textarea, p, blockquote, address, table, th, td, 
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, h1,h2,h3,h4,h5,h6{ font-family:'Noto Sans Japanese', 'notokr', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', Dotum, sans-serif !important; font-weight:200; letter-spacing:-0.7px; word-break:break-all;}
+
+@media all and (max-width:600px){
+	html,body, div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, button, select, textarea, p, blockquote, address, table, th, td, 
+	article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, h1,h2,h3,h4,h5,h6{ letter-spacing:-0.5px;} 
+}
+
+.jp{ font-family:'Noto Sans Japanese', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', Dotum, sans-serif !important; font-weight:200 !important; letter-spacing:-0.7px !important;}
+ 
+
+
+/* main */
+.mv .mv_txt .tit{ font-size:48px;}
+.mv .mv_txt .tit em{ font-size:81px; font-family:'Montserrat','Roboto',sans-serif !important;}
+.mv .mv_txt .txt{ font-size:26px;}
+
+.mboxWrap .mtit { font-size:38px;}
+.mboxWrap .mtit em{ font-family:'Montserrat';}
+
+
+@media screen and (max-width:1100px){
+	.mv .mv_txt .tit{ font-size:40px;}
+	.mv .mv_txt .tit em{ font-size:60px;}
+	.mboxWrap .mtit{ font-size:36px;}
+}
+
+@media screen and (max-width:980px){
+	.mboxWrap .mtit{ font-size:34px;}
+}
+
+@media screen and (max-width:900px){
+	.mv .mv_txt .tit{ font-size: 38px;}
+	.mv .mv_txt .tit em{ font-size: 50px;}
+	.mboxWrap .mtit{ font-size:32px;}
+}
+
+@media screen and (max-width:801px){
+	.mv .mv_txt .tit{ font-size:32px;}
+	.mv .mv_txt .tit em{ font-size:44px;}
+}
+
+@media screen and (max-width:700px){
+	.mboxWrap .mtit{ font-size:30px;}
+}
+
+@media screen and (max-width:600px){
+	.mv .mv_txt .tit{ font-size:30px;}
+	.mv .mv_txt .tit em{ font-size:42px;}
+	.mv .mv_txt .tit br,
+	.mv .mv_txt .txt br{ display:block;} 
+	.mboxWrap .mtit{ font-size:28px;}
+}
+
+@media screen and (max-width:480px){
+	.mv .mv_txt .tit{ font-size:28px;}
+	.mv .mv_txt .tit  em{ font-size:38px;} 
+	.mv .mv_txt .txt{ font-size:19px;}
+	.mboxWrap .mtit{ font-size:26px;}
+}
+
+@media screen and (max-width:360px){
+	.mv .mv_txt .txt{ font-size:15px;}
+}
+
+
+
+/* layout _ sv */
+.sv_vtxt em{ font-size:24px;}
+
+
+@media all and (max-width:980px){ 
+	.sv_vtxt em{ font-size:22px;}
+}
+
+@media all and (max-width:801px){
+	.sv_vtxt em{ font-size:20px;}
+}
+
+@media all and (max-width:700px){
+	.sv_vtxt em{ font-size:18px;}
+}
+
+@media all and (max-width:600px){
+	.sv_vtxt em{ font-size:16px;}
+}
+
+@media all and (max-width:400px){
+	.sv_vtxt em{ font-size:14px;}
+}
+
+
+
+/* contact */
+.contactwrap .contxt{ font-size:28px;}
+
+
+@media all and (max-width:900px){
+	.contactwrap .contxt{ font-size:23px;}
+}                                    
+
+@media all and (max-width:801px){    
+	.contactwrap .contxt{ font-size:22px;}
+}                                    
+
+@media all and (max-width:600px){    
+	.contactwrap .contxt{ font-size:20px;}
+}                                    
+
+@media all and (max-width:480px){    
+	.contactwrap .contxt{ font-size:18px;} 
+}
+
+
+
+.ceoimgWrap .ceoimgtxt em,
+.ceoimgWrap .ceoimgtxt span{
+    font-family:'Noto Sans Japanese', 'AppleSDGothicNeo-Regular', 'Malgun Gothic', Dotum, sans-serif;
+}
+
+.member .inwrap .membox .inbox p { word-break:break-all;}

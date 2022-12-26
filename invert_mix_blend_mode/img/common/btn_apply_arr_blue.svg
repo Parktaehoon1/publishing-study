@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.414" height="13.414" viewBox="0 0 7.414 13.414">
+    <defs>
+        <clipPath id="clip-path">
+            <path style="fill:none" d="M0 0h7.414v13.414H0z"/>
+        </clipPath>
+        <style>
+            .cls-3{fill:none;stroke:#104f9f;stroke-linecap:square}
+        </style>
+    </defs>
+    <g id="스크롤_그룹_13" data-name="스크롤 그룹 13" style="isolation:isolate;clip-path:url(#clip-path)">
+        <g id="제휴문의_arr" data-name="제휴문의 arr" transform="translate(-1740.793 -45.793)">
+            <path id="선_5" data-name="선 5" class="cls-3" transform="translate(1741.5 46.5)" d="m0 0 6 6"/>
+            <path id="선_6" data-name="선 6" class="cls-3" transform="translate(1741.5 52.5)" d="m0 6 6-6"/>
+        </g>
+    </g>
+</svg>

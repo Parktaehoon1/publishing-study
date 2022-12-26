@@ -1,0 +1,116 @@
+@charset 'utf-8';
+
+
+.h_active {
+background-color: rgba(2,26,73, 1);
+}
+
+/* Common */
+
+#wrapper {width:100%; height:100%; margin:0 auto; }
+body {min-width: 320px; overflow-x:hidden;}
+.wrap {width:100%; height:100%;}
+
+ 
+
+
+.section {width:100%; overflow:hidden; display:block; }
+.section:after {content:''; display:block; clear:both; }
+
+.layout {width:100%; max-width:980px;  margin:0 auto;box-sizing: border-box; }
+
+@media all and (max-width:980px){
+.layout {width:94%;max-width:94%;  }
+}
+ 
+@media all and (max-width:600px){
+.layout {width:90%; max-width:90%;}
+}
+
+@media all and (max-width:480px){
+.layout {width:88%;max-width:88%; }
+}
+
+
+/* footer */
+
+.footer { background:#222; width:100%; text-align:center; font-size:13px; color:#000; font-weight:300; line-height: 1.4; display:block; padding:45px 0;  }
+.footer:after {content:""; display:block; clear:both;}
+
+.fwrap {width:90%; max-width:880px; margin:0 auto;  display:block; }
+.fwrap:after {content:""; display:block; clear:both;}
+.fwrap .fbox {width:50%; float:left; font-size:0; text-align:left; }
+.fwrap .fbox.fmail {width:60%; float:left;}
+.fwrap .fbox.flink {width:240px;  float:right;}
+
+.fwrap .fbox h3 {width:100%;  color:#999; text-align:left; font-size:13px; font-weight:600; padding:0 0 15px;}
+.fwrap .fbox ul {width:100%; }
+.fwrap .fbox ul li {width:100%; color:#fff;   font-size:13px; }
+.fwrap .fbox ul li .tit {width:100%; display:block; color:#666;padding:10px 0;}
+.fwrap .fbox ul li .subcribe { width:100%;  max-width:440px; }
+.fwrap .fbox ul li .subcribe input.txt {width:77%; float:left;  background:#333; border:1px solid #333; color:#cacaca; font-size:13px; border-radius:0 !important;  -webkit-appearance:none; -moz-appearance:none; appearance:none; -webkit-border-radius: 0; }
+.fwrap .fbox ul li .subcribe input.btn {width:23%;  padding:0;  float:left;  max-width:95px;  text-align:center; background:#222; border:1px solid #333; color:#b9b9b9; font-size:13px; }
+
+.fwrap .fbox.flink ul li {width: auto; float:left; padding: 10px 0px; margin:0 0 0 40px;  }
+.fwrap .fbox.flink ul li:first-child {margin:0; }
+.fwrap .fbox.flink ul li a { padding:0 ;   color:#666 ;  }
+.footer .copyright {width:100%; padding:35px 0 0 0; color:#999;font-size:13px; display:block;  text-align:center;  }
+.footer .copyright:after {content:""; display:block; clear:both; }
+
+ 
+
+@media all and (max-width:801px){
+.fwrap .fbox.fmail {width:60%; }
+.fwrap .fbox.flink {width:35%; }
+.fwrap .fbox.flink ul li { padding: 10px  0; margin:0 0 0 10%;   }
+}
+
+@media all and (max-width:600px){ 
+.footer { padding:30px 0;  } 
+.fwrap .fbox.fmail , .fwrap .fbox.flink {width:100%; float:none; display:block; }
+.fwrap .fbox.fmail:after , 
+.fwrap .fbox.flink:after  {content:""; display:block; clear:both;}  
+.fwrap .fbox.flink { padding-top:25px; }
+.fwrap .fbox h3 {padding:0;} 
+.fwrap .fbox ul li .tit {width:100%; display:block; color:#666;padding:10px 0 5px 0;} 
+.fwrap .fbox ul li .subcribe { max-width:100%;} 
+.footer .copyright {  padding:15px 0 0 0 ; }
+
+}
+
+
+
+/* sv */
+.sv {width:100%; background:#021a49 url(/assets/sub/img/main/sub_bg.jpg) no-repeat center bottom;  height:287px; display:block; }
+.sv:after {content:''; display:block; clear:both; }
+.sv_vtxt {width:90%; max-width:1140px; margin:0 auto; padding:125px 0 50px 0 ; font-size:50px;  text-align: center; color:#fff;line-height:1.2; }
+.sv_vtxt span {width:100%; display:block; font-weight:700; }
+.sv_vtxt em {width:100%; display:block; font-size:30px; font-weight:100; padding:20px  0 0 0; }  
+
+@media all and (max-width:980px){ 
+.sv { background:#021a49 url(/assets/sub/img/main/sub_bg.jpg) no-repeat center bottom; background-size:100%; height:auto; }
+.sv_vtxt {padding:90px 0 40px 0; font-size:40px; }
+.sv_vtxt em {font-size:28px;}
+}
+
+
+@media all and (max-width:801px){
+.sv_vtxt { font-size:38px;} 
+.sv_vtxt em {font-size:24px;}
+}
+
+@media all and (max-width:700px){
+.sv_vtxt { font-size:36px;}
+.sv_vtxt em {font-size:20px; padding:15px 0 0 0;}
+}
+
+@media all and (max-width:600px){
+.sv_vtxt {padding:70px 0 40px 0;}
+.sv_vtxt { font-size:34px;} 
+.sv_vtxt em {font-size:20px; padding:10px 0 0 0; }
+}
+
+@media all and (max-width:400px){
+.sv_vtxt { font-size:30px;}
+.sv_vtxt em {font-size:16px;}
+}
