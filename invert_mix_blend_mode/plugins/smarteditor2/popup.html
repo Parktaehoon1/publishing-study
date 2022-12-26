@@ -1,0 +1,372 @@
+<!doctype>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<title>사진 첨부하기 :: SmartEditor2</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<style>
+	body {margin:0;padding:0;overflow-x:hidden}
+	body,input,textarea,select,button,table{font-family:'돋움',Dotum,Helvetica,sans-serif;font-size:12px}
+
+	#pop_header{height:26px;padding:14px 0 0 20px;border-bottom:1px solid #ededeb;background:#f4f4f3}
+	#pop_header h1{color:#333;font-size:14px;letter-spacing:-1px;margin:0;padding:0}
+
+	.content_container{padding:5px 10px}
+
+	.swfupload{OUTLINE-WIDTH: 0px; OUTLINE-STYLE: none; OUTLINE-COLOR: invert}
+
+	.pop_container .drag_area{overflow:hidden;overflow-y:auto;position:relative;width:100%;height:250px;margin-top:4px;border:1px solid #eceff2}
+	.pop_container .blind{visibility:hidden;position:absolute;line-height:0}
+	
+	.pop_container .drag_area .showbg{display:block}
+	.pop_container .drag_area .hidebg{display:none}
+
+	ul.sortable{margin:0;padding:0;*zoom:1}
+	ul.sortable:after{display:block;clear:both;content:""}
+
+	.sortable > li{
+		list-style:none;
+		float: left;
+		width: 110px;
+		height:110px;
+		overflow: hidden;
+		text-align: center;
+		margin: 4px 3px;  border: 1px solid #DDDDDD;padding:1px; cursor: move;
+		background: #ffffff;
+	}
+	.sortable > li:hover, .sortable > li.ui-sortable-helper{border:2px solid #E58524;padding:0;}
+
+	.sortable > li > div{
+		background: #f7f7f7;
+		color:#808080;
+		margin:0;
+		font-size:11px;
+		height:106px;
+		width:100%;
+		overflow: hidden;
+		white-space:nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis;
+		position:relative;
+	}
+	.sortable > li > div > .pre_thumb{
+		margin:3px;
+		/*
+		width: 100px;
+		height:95px;
+		*/
+	}
+
+	.sortable > li > div .delete_img{position:absolute;top:2px;right:2px;display:none}
+	.sortable > li:hover > div .delete_img{display:block;cursor:pointer;font-size:20px;color:#E58524;}
+
+	.sortable > li > div .fa-spinner {position:absolute;top:30px;left:30px;display:block;color:#E58524;}
+
+	.sortable > li.placeholder{
+		border: dashed 2px #ccc;background-color:#FFF;padding:0;
+	}
+
+	.btn {
+		display: inline-block;
+		margin-bottom: 0;
+		font-weight: 400;
+		text-align: center;
+		vertical-align: middle;
+		cursor: pointer;
+		background-image: none;
+		border: 1px solid transparent;
+		white-space: nowrap;
+		padding: 6px 12px;
+		font-size: 12px;
+		line-height: 1.42857143;
+		border-radius: 4px;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.btn-success {
+		color: #fff;
+		background-color: #5cb85c;
+		border-color: #4cae4c;
+	}
+	.btn:hover, .btn:focus {
+		color: #333;
+		text-decoration: none;
+	}
+	.btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+		color: #fff;
+		background-color: #47a447;
+		border-color: #398439;
+	}
+	.seletion_explain{margin:10px 0}
+	.drag_explain{position:relative;height:36px}
+	.drag_explain p {padding:12px 0 0 0;margin:0;}
+	.file_selet_group{position:absolute;top:0;right:0}
+	.btn_group{text-align:center}
+
+
+	.fileinput-button {
+		position: relative;
+		overflow: hidden;
+	}
+	.fileinput-button input {
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin: 0;
+		opacity: 0;
+		-ms-filter: 'alpha(opacity=0)';
+		font-size: 200px;
+		direction: ltr;
+		cursor: pointer;
+	}
+
+	/* Fixes for IE < 8 */
+	@media screen\9 {
+		.fileinput-button input {
+			filter: alpha(opacity=0);
+			font-size: 100%;
+			height: 100%;
+		}
+	}
+
+	</style>
+
+	<script type="text/javascript" src="/assets/plugins/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/assets/plugins/jquery-ui-1.11.4.min.js"></script>
+	
+	<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+	<script type="text/javascript" src="/assets/plugins/jquery-fileupload/js/jquery.iframe-transport.js"></script>
+	<!-- The basic File Upload plugin -->
+	<script type="text/javascript" src="/assets/plugins/jquery-fileupload/js/jquery.fileupload.js"></script>
+	<!-- The File Upload processing plugin 
+	<script type="text/javascript" src="/assets/plugins/jquery-fileupload/js/jquery.fileupload-process.js"></script>-->
+	<!-- The File Upload image preview & resize plugin
+	<script type="text/javascript" src="/assets/plugins/jquery-fileupload/js/jquery.fileupload-image.js"></script> -->
+	<!-- The File Upload audio preview plugin 
+	<script type="text/javascript" src="/assets/plugins/jquery-fileupload/js/jquery.fileupload-audio.js"></script> -->
+	<!-- The File Upload video preview plugin 
+	<script type="text/javascript" src="/assets/plugins/jquery-fileupload/js/jquery.fileupload-video.js"></script> -->
+	<!-- The File Upload validation plugin 
+	<script type="text/javascript" src="/assets/plugins/jquery-fileupload/js/jquery.fileupload-validate.js"></script>-->
+
+
+</head>
+<body>
+	<div class="container pop_container">
+		<div id="log"></div>
+		<!-- header -->
+		<div id="pop_header">
+			<h1>사진 첨부하기</h1>
+		</div>
+		<!-- //header -->
+		<div class="content_container">
+			<div class="drag_explain">
+				<p>마우스로 드래그하여 순서를 바꿀수 있습니다.</p>
+				<div class="file_selet_group">
+					<span class="btn btn-success fileinput-button">
+						<span>파일선택</span>
+						<!-- The file input field used as target for the file upload widget -->
+						<input id="fileupload" type="file" name="article_file[]" multiple>
+					</span>
+					<button type="button" class="btn btn-danger delete" id="btn_delete_all_file">
+						<span>전체삭제</span>
+					</button>
+				</div>
+			</div>
+			<div class="drag_area" id="drag_area">
+				<ul class="sortable">
+					
+					
+				</ul>
+				<!--<em class="blind">마우스로 드래그해서 이미지를 추가해주세요.</em><span id="guide_text" class="bg hidebg"></span>-->
+			</div>
+			<div class="seletion_explain">이미지는 한번에 10개까지 선택할수 있습니다.</div>
+			<div class="btn_group">
+				<button type="button" class="btn" id="btn_set_photo">
+					<span>등록</span>
+				</button>
+				<button type="button" class="btn" id="btn_close" >
+					<span>취소</span>
+				</button>
+			</div>
+		</div>
+	</div>
+<script>
+
+var option = {};
+
+$(function(){
+
+	$('#btn_delete_all_file').bind('click',delete_all_file);
+	$('#btn_set_photo').bind('click',function(){
+		var result = [];
+		option.drag_area_ul.find(".pre_thumb").each(function(){
+			var url  = $(this).attr("src");
+			var file_name  = $(this).attr("data-name"); 
+			if(file_name != ""){
+				var img = {};
+				img.bNewLine = "true";
+				img.sAlign = "";
+				img.sFileName = file_name;
+				img.sFileURL = url;
+
+				result.push(img);
+			}
+		});
+
+		if(result.length >0 ){
+			opener.nhn.husky.PopUpManager.setCallback(window, 'SET_PHOTO', [result]);
+		}
+		
+		window.close();
+	});
+	$('#btn_close').bind('click',function(){
+		window.close();
+	});
+	
+	option.url = "/editor/upload_file";
+	option.image_width = 100;
+	option.image_height = 70;
+	option.fileSize = 1024 * 100; 
+	option.drag_area =  $('#drag_area');
+	option.drag_area_ul = $('#drag_area ul');
+	
+	option.drag_area_ul.sortable({
+		'cursor':'pointer',
+		'placeholder':'placeholder'
+	});
+	option.drag_area_ul.disableSelection();	
+	
+
+	$('#fileupload').fileupload({
+        url: option.url,
+        dataType: 'json',
+        autoUpload: true,
+		//container_el: "<body>",
+        dropZone: option.drag_area,
+        acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i,
+        maxFileSize: option.fileSize,
+        // Enable image resizing, except for Android and Opera,
+        // which actually support image resizing, but fail to
+        // send Blob objects via XHR requests:
+        disableImageResize: /Android(?!.*Chrome)|Opera/
+            .test(window.navigator.userAgent),
+        previewMaxWidth: option.image_width,
+        previewMaxHeight: option.image_height,
+        previewCrop: true
+    }).on('fileuploadadd', function (e, data) {
+        $.each(data.files, function (index, file) {
+			filePath = URL.createObjectURL(file);
+            data.context = $('<li/>').addClass("sort_list").appendTo(option.drag_area_ul);
+			var $img = $("<img/>").addClass("pre_thumb").attr({"src":"/assets/img/white.png","width":option.image_width,"height":option.image_height,"data-name":""});
+			var node = $('<div/>');
+			node.append($('<span/>').text(file.name));
+			
+			node.append($('<span/>').addClass("uploadLoading").html("<i class=\"fa fa-spinner fa-spin fa-3x fa-fw\" aria-hidden=\"true\"></i>"));
+			node.prepend('<br>').prepend($img);
+			node.appendTo(data.context);
+			
+        });
+    }).on('fileuploadprocessalways', function (e, data) {
+        
+    }).on('fileuploadprogressall', function (e, data) {
+        
+    }).on('fileuploaddone', function (e, data) { //get_ratio(width, height)
+        $.each(data.result, function (index, file) {
+			
+			node = $(data.context.children()[index]);
+			node.find(".uploadLoading").remove();
+
+		  //if(data.result[0].status == "success") {
+
+			if(file.status == "success") {
+				
+				var ret = get_ratio(file.image_width,file.image_height);
+				size_text = file.image_width+" x "+file.image_height;
+
+				node.append('<br>').append($('<span/>').text(size_text))
+					.find("img.pre_thumb").attr({"src":file.url,"width":ret.width,"height":ret.height,"data-name":file.name});
+				node.append($('<span/>').addClass("delete_img").attr({"data-idx":file.idx}).html("<i class=\"fa fa-times\" aria-hidden=\"true\"></i>"));
+				node.find(".delete_img").on("click", function(){
+					delete_file($(this));
+				});
+				
+			}else if(file.status == "error") {
+				node.append('<br>').append($('<span/>').text(file.error));
+				node.append($('<span/>').addClass("delete_img").attr({"data-idx":"0"}).html("<i class=\"fa fa-times\" aria-hidden=\"true\"></i>"));
+				node.find(".delete_img").on("click", function(){
+					delete_file($(this));
+				});
+			}
+
+		});
+		
+    }).on('fileuploadfail', function (e, data) {
+		node = $(data.context.children()[index]);
+		node.find(".uploadLoading").remove();
+
+		node.append('<br>').append($('<span/>').text('File upload failed.'));
+		node.append($('<span/>').addClass("delete_img").attr({"data-idx":"0"}).html("<i class=\"fa fa-times\" aria-hidden=\"true\"></i>"));
+		node.find(".delete_img").on("click", function(){
+			delete_file($(this));
+		});
+    }).prop('disabled', !$.support.fileInput)
+        .parent().addClass($.support.fileInput ? undefined : 'disabled');
+	
+
+})
+
+function get_ratio(width, height){
+	var imageInfo = {};
+	var ratio = 0;
+
+	var default_width = option.image_width;
+	var default_height = option.image_height;
+	
+	if(width > default_width){
+		ratio = default_width / width;
+		height = height * ratio;
+		width = default_width;
+	}
+	if( height > default_height ){
+		ratio = default_height / height;
+		width = width * ratio;
+		height = default_height;
+	}
+	
+	imageInfo.width = width;
+	imageInfo.height = height;
+
+	return imageInfo;
+}
+
+function delete_all_file(){
+	if(confirm("전체 삭제하시겠습니까?")){
+		 if(option.drag_area_ul.children().length ){
+			option.drag_area_ul.find(".delete_img").each( function(i){
+				delete_file($(this));
+			});
+        }
+	}
+} 
+
+function delete_file(obj){
+	var idx = obj.attr("data-idx");
+
+	if(parseInt(idx) > 0) {
+		var url = '/editor/delete_file/'+idx;
+		$.ajax({
+			url : url
+		}).done(function (result) {
+			
+		});
+	}
+	
+	obj.parents('li.sort_list').fadeOut(300, function(){
+		$(this).remove();
+		option.drag_area_ul.sortable('refresh');
+	});
+}
+</script>

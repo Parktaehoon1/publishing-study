@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.232" height="13" viewBox="0 0 19.232 13">
+    <defs>
+        <clipPath id="clip-path">
+            <path style="fill:none" d="M0 0h19.232v13H0z"/>
+        </clipPath>
+        <style>
+            .cls-3{fill:none;stroke:#bfbfbf;stroke-linejoin:round}
+        </style>
+    </defs>
+    <g id="스크롤_그룹_12" data-name="스크롤 그룹 12" style="isolation:isolate;clip-path:url(#clip-path)">
+        <g id="email_icon" data-name="email icon" transform="translate(-228.492 -153.17)">
+            <path id="사각형_134" data-name="사각형 134" class="cls-3" transform="translate(228.992 153.67)" d="M0 0h18.232v12H0z"/>
+            <path id="패스_15837" data-name="패스 15837" class="cls-3" d="m240.37 163.347 6.854 5.965h-18.232l6.895-6" transform="translate(0 -3.642)"/>
+            <path id="패스_15838" data-name="패스 15838" class="cls-3" d="m228.992 153.67 7.415 6.837a2.521 2.521 0 0 0 3.4 0l7.415-6.837z"/>
+        </g>
+    </g>
+</svg>

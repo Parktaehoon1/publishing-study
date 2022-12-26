@@ -1,0 +1,23 @@
+@charset 'utf-8';
+
+html,body, div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, button, select, textarea, p, blockquote, address, table, th, td, 
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, h1,h2,h3,h4,h5,h6 {  font-family:'Roboto','notokr', 'AppleSDGothicNeo-Regular','Malgun Gothic','맑은 고딕',Dotum,'돋움',sans-serif; }
+
+ 
+ 
+ 
+@media all and (max-width:801px){
+html,body, div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, button, select, textarea, p, blockquote, address, table, th, td, 
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, h1,h2,h3,h4,h5,h6{font-size:14px;}
+}
+
+
+
+/* Partner Apply_개인정보 수집.이용동의 */
+.apply_input1 > form > div.info_assent > ul > li > em,
+.apply_input1 > form > div.info_assent > ul > li > p{ font-size:14px;}
+
+
+/* Career_개인정보 수집.이용동의 */
+.apply_input > div.info_assent > ul > li > em,
+.apply_input > div.info_assent > ul > li > p{ font-size:14px;}

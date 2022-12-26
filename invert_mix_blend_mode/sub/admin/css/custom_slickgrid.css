@@ -1,0 +1,103 @@
+/* 헤더에는 경계선이 없는 게 보기 좋다 */
+.slick-header {
+	border:none;
+}
+
+/* 원래의 크기 조정 핸들은 너무 작음 */
+.slick-resizable-handle {
+	width:8px;
+	right:-5px;
+	z-index:1;
+}
+
+/* .slick-resizable-handle이 보이려면 아래 필요 */
+.slick-header-column.ui-state-default {
+	overflow:visible;
+}
+
+.slick-header {
+	background-color:#fafafa;border-top:2px solid #000000;border-bottom:1px solid #aaaaaa;height:40px !important;
+}/* 헤더는 가운데 맞춤이 보기 좋다 */
+
+
+.slick-header-columns {}
+.slick-header-column{
+	text-align:center;
+	margin:0 0 0 0 !important;padding:10px 0 0 0 !important; 
+	font: 14px "Nanum Gothic",Malgun Gothic,"돋움",Dotum,AppleGothic,sans-serif !important; font-weight:bold;height:40px !important;}
+
+.slick-header-column:hover {
+	background-color:#bcbbbb;
+	color:#ffffff;
+	cursor:move;
+}
+
+/* 셀이 모두 position:absolute라 행 높이가 없다. 행 배경색을 주려면 높이 필요. 
+.slick-row {
+	height:25px;
+}
+*/
+
+.slick-row .slick-cell.cell-changed {
+    background-color: red;
+}
+
+.slick-cell{
+	font: 14px "Nanum Gothic",Malgun Gothic,"돋움",Dotum,AppleGothic,sans-serif !important;
+}
+
+.slick-sort-indicator {
+	
+}
+
+/* 셀 편집시 input type=text가 안보이는게 자연스러움 */
+.slick-cell input.editor-text {
+	border:0;
+	outline:0;
+	width:98%;
+	background-color:#ffffff;
+}
+
+.slick-cell select {
+	outline:0;
+	width:98%;
+}
+
+.slick-cell.left {
+	padding-left: 7px;
+	text-align:left;
+}
+
+.slick-cell.right {
+	padding-right: 7px;
+	text-align:right;
+}
+
+.slick-cell.center {
+	padding-left:0;
+	padding-right:0;
+	text-align:center;
+}
+
+
+.edit-field {
+	background-color:#f2f6fd;
+}
+
+
+.slick-cell.selected {
+    background-color: #dcfbcd;
+	/**background-color:#dcfbcd; **/	
+}
+
+.slick-cell.active {
+    border-color: #000000;
+	background-color: #ffffff;
+    border-style: solid;
+}
+
+.slick-row.ui-state-active {
+    background: #dcfbcd !important;
+}
+
+
