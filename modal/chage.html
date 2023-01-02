@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome">
+<title>modal(변환)</title>
+<link rel="stylesheet" href="assets/css/font.css">
+<link rel="stylesheet" href="assets/css/default.css">
+<link rel="stylesheet" href="assets/css/common.css">
+
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/menu.js"></script>
+
+<!-- [if lt IE 9]>
+   <script  src="assets/js/html5.js"></script>
+   <script  src="assets/js/respond.min.js"></script>
+<![endif] -->
+
+<!-- <link rel="shortcut icon" href="assets/img/favicon/favicon.ico"> -->
+</head>
+<body>
+    <button type="submit" onclick="pop_up_layer('chage')">TRR - 다이아 변환 모달창</button>
+
+    <!-- TRR - 다이아 충전 -->
+    <div class="popwrap chage">
+    <div class="bg"></div>
+    <div class="md_charge" id="chage">
+        <h3>다이아 - <br>TRR 변환</h3>
+        <span class="close_btn">닫기버튼</span>
+        <div class="md_bd">
+        <p class="body_tit">계정확인</p>
+        <div class="id_form">
+            <input type="text" placeholder="아이디 입력">
+            <input type="password" placeholder="비밀번호 입력">
+        </div>
+        <a href="javascript:void(0)">METAMASK 연결</a>
+        <p class="body_tit">송금 할 지갑 주소</p>
+        <input type="text" value="METAMASK 에서 선택한 지갑 주소 자동 입력" readonly>
+        <p class="body_tit">변환 수량</p>
+        <div class="line">    
+        <input type="text" value="0">
+        <span>TRR</span>
+        </div>
+    </div>
+        <div class="md_ft">
+            <p>0 다이아</p>
+        </div>
+        <div class="md_btn">
+            <button class="save">닫기</button>
+            <!-- <button onclick="pop_up_layer('step1')">변환하기</button> -->
+            <button onclick="pop_up_layer('error')">변환하기</button>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- error -->
+    <div class="popwrap error">
+    <div class="bg"></div>
+    <div class="md_error" id="error">
+        <div class="md_bd">
+            <p>계정정보가 일치 하지 않습니다.<br>
+            다시 확인해 주세요</p>
+        </div>
+        <div class="md_btn">
+            <button class="confirm save">확인</button>
+        </div>
+    </div>
+    </div>
+
+        <!-- success step1 -->
+    <div class="popwrap step1">
+    <div class="bg"></div>
+    <div class="md_success" id="step1">
+        <div class="md_bd">
+            <p>선택된 지갑 주소로<br> <span>300 TRR</span>이 변환되어 송금됩니다.</p>
+        </div>
+        <div class="md_btn">
+            <button class="save">닫기</button>
+            <button onclick="pop_up_layer('step2')">확인</button>
+        </div>
+    </div>
+    </div>
+
+            <!-- success step2 -->
+    <div class="popwrap step2">
+    <div class="bg"></div>
+    <div class="md_success" id="step2">
+        <div class="md_bd">
+            <p>다이아가 TRR로 변환되어<br>정상적으로 송금되었습니다.</p>
+        </div>
+        <div class="md_btn">
+            <button class="confirm save">확인</button>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>

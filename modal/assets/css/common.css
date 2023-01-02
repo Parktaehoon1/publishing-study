@@ -1,0 +1,80 @@
+@charset 'utf-8'; 
+
+html {overflow-y:scroll;}
+body {line-height:1.6; font-weight:400; color: #000; letter-spacing:0; font-size:13px; font-weight:300;  }
+
+/* modal */
+.popwrap {display:none;position:fixed;_position:absolute;top:0;left:0;width:100%;height:100%;z-index: 9999;}
+.popwrap .bg {position:absolute;top:0;left:0;width:100%;height:100%;background:#fff;opacity:.35;filter:alpha(opacity=35);}
+.md_charge{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: block; padding: 40px; background-color: #fff; width:90%; max-width: 500px; border-radius: 5px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+.md_charge h3{text-align: center; font-size: 28px;font-family: 'SCDream',sans-serif;}
+.md_charge h3 br{display: none;}
+.md_charge .close_btn{position: absolute;right: 20px;top: 20px;font-size: 0;display: block;width: 40px;height: 30px;margin-left: 5px;background: url(../../assets/img/common/icon_del.svg) no-repeat 13px 5px;background-size: cover; cursor: pointer;}
+.md_charge .md_bd{border-bottom: 2px solid #eee; padding: 20px 0;}
+.md_charge .md_bd > input[type=text]{width: 100%;}
+.md_charge .body_tit{font-weight: 600; padding: 10px 0;}
+.md_charge .id_form{display: flex; flex-direction: column; justify-content: space-between; padding: 20px; background: #eee; border-radius: 5px;}
+.md_charge .id_form input[type=text] {margin-bottom: 10px;}
+.md_charge .md_bd a{display: block; width: 100%; margin-top: 10px; padding: 10px 0; text-align: center; border: 1px solid #000; border-radius: 5px; font-weight: 400;}
+.md_charge .line{border: 1px solid #d1d1d1; border-radius: 5px; display: flex; align-items: center;}
+.md_charge .line input[type=text]{width: 100%; border: 0;}
+.md_charge .line span{padding-right: 20px; font-weight: 700;}
+.md_charge .md_ft{display: flex; justify-content: end;}
+.md_charge .md_ft p{font-weight: 600; padding: 20px 0; font-size: 20px;}
+.md_charge .md_btn{display: flex; justify-content: space-between; width: 100%;}
+.md_charge .md_btn button:first-child{width: 24%; border: 1px solid #000; padding: 0; padding: 10px 0; line-height: 1.6; height: 100%;}
+.md_charge .md_btn button:last-child{width: 74%; background-color: #000; color: #fff; border: 1px solid #000; padding: 10px 0; line-height: 1.6; height: 100%;}
+
+.md_bd > p{word-break:keep-all; padding: 15px 0;}
+.md_bd > p > span{font-weight: 700;}
+
+@media screen and (max-width:600px){
+	.md_charge{padding: 20px;}
+	.id_form{padding: 15px 10px;}
+}
+@media screen and (max-width:400px){
+	.md_charge{padding: 15px;}
+	.md_charge h3 br{display: block;}
+	}
+
+@media screen and (max-width: 350px){
+	.md_bd > input[type=text]{font-size: 13px;}
+}
+
+/* error */
+.md_error{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 20px; background-color: #fff; width: 90%; max-width: 300px; min-height: 160px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+.md_error .close_btn{position: absolute;right: 20px;top: 20px;font-size: 0;display: block;width: 40px;height: 30px;margin-left: 5px;background: url(../../assets/img/common/icon_del.svg) no-repeat 13px 5px;background-size: cover; cursor: pointer;}
+.md_error .md_bd {border: none; text-align:center;}
+.md_error .md_bd > p{padding: 25px 0;}
+.md_error .md_bd > input[type=text]{width: 100%;}
+.md_error .body_tit{font-weight: 600; padding: 10px 0;}
+.md_error .id_form{display: flex; flex-direction: column; justify-content: space-between; padding: 20px; background: #eee; border-radius: 5px;}
+.md_error .id_form input[type=text] {margin-bottom: 10px;}
+.md_error .md_bd a{display: block; width: 100%; margin-top: 10px; padding: 10px 0; text-align: center; border: 2px solid #000; border-radius: 5px; font-weight: 400;}
+.md_error .line{border: 1px solid #d1d1d1; border-radius: 5px; display: flex; align-items: center;}
+.md_error .line input[type=text]{width: 100%; border: 0;}
+.md_error .line span{padding-right: 20px; font-weight: 700;}
+.md_error .md_ft{display: flex; justify-content: end;}
+.md_error .md_ft p{font-weight: 600; padding: 20px 0; font-size: 20px;}
+.md_error .md_btn{display: flex; justify-content: space-between; width: 100%;}
+.md_error .md_btn .confirm{display: block;width: 100%; background-color: #000; color: #fff; border: 1px solid #000;}
+
+/* success */
+.md_success{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; justify-content: space-between; align-items: center; padding: 20px; background-color: #fff; width: 90%; max-width: 300px; min-height: 160px; border-radius: 5px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+.md_success .close_btn{position: absolute;right: 20px;top: 20px;font-size: 0;display: block;width: 40px;height: 30px;margin-left: 5px;background: url(../../assets/img/common/icon_del.svg) no-repeat 13px 5px;background-size: cover; cursor: pointer;}
+.md_success .md_bd{border: none; text-align:center;} 
+.md_success .md_bd > input[type=text]{width: 100%;}
+.md_success .body_tit{font-weight: 600; padding: 10px 0;}
+.md_success .id_form{display: flex; flex-direction: column; justify-content: space-between; padding: 20px; background: #eee; border-radius: 5px;}
+.md_success .id_form input[type=text] {margin-bottom: 10px;}
+.md_success .md_bd a{display: block; width: 100%; margin-top: 10px; padding: 10px 0; text-align: center; border: 2px solid #000; border-radius: 5px; font-weight: 400;}
+.md_success .line{border: 1px solid #d1d1d1; border-radius: 5px; display: flex; align-items: center;}
+.md_success .line input[type=text]{width: 100%; border: 0;}
+.md_success .line span{padding-right: 20px; font-weight: 700;}
+.md_success .md_ft{display: flex; justify-content: end;}
+.md_success .md_ft p{font-weight: 600; padding: 20px 0; font-size: 20px;}
+.md_success .md_btn{display: flex; justify-content: space-between; width: 100%;}
+.md_success .md_btn button:first-child{width: 24%; border: 2px solid #000; padding: 0;}
+.md_success .md_btn button:last-child{width: 74%; background-color: #000; color: #fff; border: 1px solid #000;}
+.md_success#step2 .md_btn .confirm{width:100%;}
+.md_success#step2 .md_bd > p{padding: 25px 0;}

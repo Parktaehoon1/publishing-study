@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="11.707" height="27.388" viewBox="0 0 11.707 27.388">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="11.707" height="27.388" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect width="6" height="6" fill="none"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <rect width="11.414" height="11.414" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="반복_그리드_11" data-name="반복 그리드 11" clip-path="url(#clip-path)">
+    <g id="그룹_13688" data-name="그룹 13688" transform="translate(-395.703 -4357.523)">
+      <g id="icon_x" transform="translate(395.703 4357.523)">
+        <g id="icon_x_small_gray" clip-path="url(#clip-path-2)" style="isolation: isolate">
+          <g id="그룹_12799" data-name="그룹 12799" transform="translate(-399.293 -551.613)">
+            <line id="선_38" data-name="선 38" x1="4.621" y2="4.621" transform="translate(400 552.294)" fill="none" stroke="#999" stroke-linecap="round" stroke-width="1"/>
+            <line id="선_39" data-name="선 39" x2="4.621" y2="4.621" transform="translate(400 552.294)" fill="none" stroke="#999" stroke-linecap="round" stroke-width="1"/>
+          </g>
+        </g>
+      </g>
+      <g id="icon_x-2" data-name="icon_x" transform="translate(395.996 4373.497)">
+        <g id="스크롤_그룹_8" data-name="스크롤 그룹 8" clip-path="url(#clip-path-3)" style="isolation: isolate">
+          <g id="그룹_12799-2" data-name="그룹 12799" transform="translate(-399.293 -551.587)">
+            <line id="선_38-2" data-name="선 38" x1="10" y2="10" transform="translate(400 552.294)" fill="none" stroke="#999" stroke-linecap="round" stroke-width="1"/>
+            <line id="선_39-2" data-name="선 39" x2="10" y2="10" transform="translate(400 552.294)" fill="none" stroke="#999" stroke-linecap="round" stroke-width="1"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
