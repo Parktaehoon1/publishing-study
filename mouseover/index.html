@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <!-- <style>
+    .body{
+    display: block;
+    background-color: transparent;
+    }
+    body{
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    }
+
+    .cursor{
+    position: fixed;
+    z-index: 9007199254740991;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    opacity: 0;
+    -webkit-transition: .5s;
+    transition: .5s;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    }
+    .cursor_dot{
+    width: 1em;
+    height: 1em;
+    border: 1px transparent;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0;
+    -webkit-transition: .5s;
+    transition: .5s;
+    }
+    .cursor_dot.is-larger{
+    width: 3em;
+    height: 3em;
+    opacity: 1;
+    transition: 0.5s;
+    }
+
+    .cursor_text{
+    display: inline;
+    opacity: 0;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+    font-family: 'Neue Montreal',sans-serif;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1em;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    }
+    .logo{
+    position: fixed;
+    left: 5vh;
+    top: 5vh;
+    right: auto;
+    bottom: auto;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 5%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-decoration: none;
+    mix-blend-mode: difference;    
+    }
+    .w-inline-block{
+            max-width: 100%;
+    display: inline-block;
+    }
+    .logo-holder{
+        display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    }
+    .smile{
+        height: auto;
+    -webkit-transform: translate(0,-1rem) scale(0);
+    -ms-transform: translate(0,-1rem) scale(0);
+    transform: translate(0,-1rem) scale(0);
+    -webkit-transition: -webkit-transform .5s cubic-bezier(.655, -.204, .322, 1.346);
+    transition: transform .5s cubic-bezier(.655, -.204, .322, 1.346);
+    transition: transform .5s cubic-bezier(.655, -.204, .322, 1.346),-webkit-transform .5s cubic-bezier(.655, -.204, .322, 1.346);
+    }
+    .menu-list{
+        position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    padding: 5vw;
+    background-color: #1f1f1f;
+    }
+    .menu{
+            position: fixed;
+    left: auto;
+    top: 5vh;
+    right: 5vh;
+    bottom: auto;
+    z-index: 9000000000000000;
+    overflow: hidden;
+    text-decoration: none;
+    mix-blend-mode: difference;
+    }
+    .w-inline-block{
+            max-width: 100%;
+    display: inline-block;
+    }
+    .menu-overflow{
+            display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    }
+    .menutext{
+            font-variation-settings: "wght" 350;
+    transition: font-variation-settings 0.5s ease, font-size 0.8s ease-in-out;
+    }
+    .menutext.closed{
+        display: none;
+    }
+    .menu{
+        position: fixed;
+    left: auto;
+    top: 5vh;
+    right: 5vh;
+    bottom: auto;
+    z-index: 9000000000000000;
+    overflow: hidden;
+    text-decoration: none;
+    mix-blend-mode: difference;
+}
+.scroll{
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
+    
+    .hero-home-revised{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin-bottom: 0;
+    padding: 20vh 5vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #000;
+    }
+
+    .hero-text-holder-revised{
+    position: relative;
+    z-index: 5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    }
+</style> -->
+  <link rel="stylesheet" href="main.css" />
+  <body class="body">
+    <div class="cursor">
+      <div
+        class="cursor_move"
+        style="
+          will-change: transform;
+          transform: translate3d(49.993vw, -20.596vh, 0px) scale3d(1, 1, 1)
+            rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+          transform-style: preserve-3d;
+        "
+      >
+        <div class="cursor_dot">
+          <div class="cursor_text">View Project</div>
+        </div>
+      </div>
+    </div>
+    <div class="universalcode w-embed">
+      <!-- <style>
+        .menutext {
+    font-variation-settings: "wght" 350;
+    transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+        }
+        
+    .menutext:hover {
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+    .subtitle {
+    font-variation-settings: "wght" 300;
+    transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+        }
+        
+    .subtitle:hover {
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+    .navlink {
+    font-variation-settings: "wght" 350;
+    transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+        }
+        
+    .navlink:hover {
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+        
+    
+    .selectedprojectholder:hover .cat-holder {
+    width: 100%;
+    }
+    
+    .selectedprojectholder:hover .arrow-holder {
+    width: 2.5rem;
+    }
+    
+        .selectedprojectholder:hover .thumb-img {
+    width: 80%;
+    opacity: 100%;
+    }
+    
+        .selectedprojectholder:hover .subtitle{
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+    .magic-holder:hover .arrow-holder {
+    width: 2.5rem;
+    }
+    
+    .magic-holder:hover .subtitle{
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+    .button:hover .arrow-holder {
+    width: 2.5rem;
+    }
+    
+    .button:hover .subtitle{
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+    .work-contents:hover .cat-holder {
+    width: 100%;
+    }
+    
+    .work-contents:hover .arrow-holder {
+    width: 2.5rem;
+    }
+    
+        .work-contents:hover .subtitle{
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+        .logo:hover .smile {
+    transform: scale(1);
+    transform: translateY(0rem);
+    }
+    
+        .social-icon:hover .icon {
+    transform: scale(1);
+    }
+    
+        .buton-holder:hover .arrow-holder {
+    width: 2.5rem;
+    }
+    
+    .buton-holder:hover .subtitle{
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+        .accordion-tab-button:hover .subtitle{
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+    .cursor {
+        pointer-events: none;
+    }
+    
+    
+    @media (pointer: fine) {
+        body:hover .cursor {
+        opacity: 1;
+        }
+    }
+    
+    .award:hover .cat-award {
+    width: 4em;
+    }
+    
+    .award:hover .subtitle{
+    font-variation-settings: "wght" 550;
+        transition: 
+        font-variation-settings 0.5s ease,
+        font-size 0.8s ease-in-out;
+    }
+    
+
+
+    </style> -->
+      <a href="/" aria-current="page" class="logo w-inline-block w--current">
+        <div class="logo-holder">
+          <img
+            src="https://assets.website-files.com/5f69856bad1199253301ca0a/622e52d35b1ef287cea2ed82_Colour%3DLight%2C%20Smile%3DFalse.svg"
+            loading="lazy"
+            alt="logo"
+            class="logo-image"
+          />
+          <img
+            src="https://assets.website-files.com/5f69856bad1199253301ca0a/6282b12d225ef99e1f1a0a7e_smile.svg"
+            loading="lazy"
+            alt=""
+            class="smile"
+          />
+        </div>
+      </a>
+      <div
+        class="menu-list"
+        style="
+          transform: translate3d(0px, -120vh, 0px) scale3d(1, 1, 1)
+            rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+          transform-style: preserve-3d;
+          display: block;
+        "
+      >
+        <div class="menu-item-holder">
+          <div
+            id="w-node-_2a891e55-018c-f744-c1a8-b8d045fd8a33-45fd8a2e"
+            class="nav-link-holder"
+          >
+            <div class="overflow">
+              <a
+                href="/"
+                aria-current="page"
+                class="nav-link-div w-inline-block w--current"
+              >
+                <div class="subtext" style="display: none; opacity: 0">01.</div>
+                <div
+                  class="navlink"
+                  style="
+                    transform: translate3d(0px, -1em, 0px) scale3d(1, 1, 1)
+                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                    display: none;
+                  "
+                >
+                  Home
+                </div>
+              </a>
+            </div>
+            <div class="overflow">
+              <a href="/work" class="nav-link-div w-inline-block">
+                <div class="subtext" style="display: none; opacity: 0">02.</div>
+                <div
+                  class="navlink"
+                  style="
+                    transform: translate3d(0px, -1em, 0px) scale3d(1, 1, 1)
+                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                    display: none;
+                  "
+                >
+                  Work
+                </div>
+              </a>
+            </div>
+            <div class="overflow">
+              <a href="/about" class="nav-link-div w-inline-block">
+                <div class="subtext" style="display: none; opacity: 0">03.</div>
+                <div
+                  class="navlink"
+                  style="
+                    transform: translate3d(0px, -1em, 0px) scale3d(1, 1, 1)
+                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                    display: none;
+                  "
+                >
+                  About
+                </div>
+              </a>
+            </div>
+            <div class="overflow">
+              <a href="/contact" class="nav-link-div w-inline-block">
+                <div class="subtext" style="display: none; opacity: 0">04.</div>
+                <div
+                  class="navlink"
+                  style="
+                    transform: translate3d(0px, -1em, 0px) scale3d(1, 1, 1)
+                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                    display: none;
+                  "
+                >
+                  Contact
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            id="w-node-_2a891e55-018c-f744-c1a8-b8d045fd8a48-45fd8a2e"
+            class="other-menu-holder"
+          >
+            <div class="other-items-float">
+              <div class="other-item">
+                <div class="subtext" style="display: none; opacity: 0">
+                  Send me an email
+                </div>
+                <a
+                  href="mailto:elvina.prasad19@gmail.com"
+                  class="emailme w-inline-block"
+                >
+                  <div
+                    class="subtitle-no-hover other"
+                    style="
+                      transform: translate3d(0px, -1em, 0px) scale3d(1, 1, 1)
+                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                        skew(0deg, 0deg);
+                      transform-style: preserve-3d;
+                      display: none;
+                    "
+                  >
+                    elvina.prasad19@gmail.com
+                  </div>
+                </a>
+              </div>
+              <div class="other-item">
+                <div class="subtext" style="display: none; opacity: 0">
+                  Follow me (and my dog)
+                </div>
+                <div class="overflow">
+                  <div
+                    class="icon-holder"
+                    style="
+                      transform: translate3d(0px, -1em, 0px) scale3d(1, 1, 1)
+                        rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                        skew(0deg, 0deg);
+                      transform-style: preserve-3d;
+                      display: none;
+                    "
+                  >
+                    <a
+                      href="https://www.linkedin.com/in/elvina-prasad/"
+                      target="_blank"
+                      class="social-icon w-inline-block"
+                    >
+                      <img
+                        src="https://assets.website-files.com/5f69856bad1199253301ca0a/62832c779c00898c5d7f4699_LinkedIN_white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon"
+                    /></a>
+                    <a
+                      href="https://www.instagram.com/e.lvina/?hl=en"
+                      target="_blank"
+                      class="social-icon w-inline-block"
+                    >
+                      <img
+                        src="https://assets.website-files.com/5f69856bad1199253301ca0a/62832c8856a51906523acbab_Instagram_white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon"
+                    /></a>
+                    <a
+                      href="https://www.figma.com/@elvina"
+                      target="_blank"
+                      class="social-icon w-inline-block"
+                    >
+                      <img
+                        src="https://assets.website-files.com/5f69856bad1199253301ca0a/62832f783a049be974d1cb19_Figma_white.svg"
+                        loading="lazy"
+                        alt=""
+                        class="icon"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        data-w-id="e970eccb-9625-76b6-4d40-92f2d7da3ae5"
+        href="#"
+        class="menu w-inline-block"
+        ><div class="menu-overflow">
+          <div
+            data-w-id="e970eccb-9625-76b6-4d40-92f2d7da3ae6"
+            class="menutext"
+            style="
+              transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+              display: block;
+            "
+          >
+            Menu
+          </div>
+          <div
+            data-w-id="649cd922-75ae-fc43-a11d-1f71fb6b6158"
+            class="menutext closed"
+            style="
+              display: none;
+              transform: translate3d(0px, -1em, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform-style: preserve-3d;
+            "
+          >
+            Close
+          </div>
+        </div></a
+      >
+      <div data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a4727" class="scroll">
+        <div class="hero-home-revised wf-section">
+          <div class="hero-text-holder-revised">
+            <div class="divider-negmar">
+              <div
+                data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a472b"
+                class="overflow"
+                style="
+                  will-change: transform;
+                  transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
+                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                  transform-style: preserve-3d;
+                "
+              >
+                <h1
+                  id="w-node-_23e59740-e5a8-dfb9-6ae7-429aca6a472c-2ffd1e9b"
+                  data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a472c"
+                  style="
+                    opacity: 1;
+                    transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1)
+                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                  "
+                  class="title"
+                >
+                  Human
+                </h1>
+              </div>
+            </div>
+            <div class="divider-negmar right">
+              <div
+                data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a472f"
+                class="overflow"
+                style="
+                  will-change: transform;
+                  transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1)
+                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                  transform-style: preserve-3d;
+                "
+              >
+                <h1
+                  id="w-node-_23e59740-e5a8-dfb9-6ae7-429aca6a4730-2ffd1e9b"
+                  data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a4730"
+                  style="
+                    opacity: 1;
+                    transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1)
+                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                  "
+                  class="title"
+                >
+                  centred
+                </h1>
+              </div>
+            </div>
+            <div class="divider-negmar">
+              <div
+                data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a4733"
+                class="overflow"
+                style="
+                  will-change: transform;
+                  transform: translate3d(0%, 0px, 0px) scale3d(1, 1, 1)
+                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                  transform-style: preserve-3d;
+                "
+              >
+                <h1
+                  id="w-node-_23e59740-e5a8-dfb9-6ae7-429aca6a4734-2ffd1e9b"
+                  data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a4734"
+                  style="
+                    opacity: 1;
+                    transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1)
+                      rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                    transform-style: preserve-3d;
+                  "
+                  class="title"
+                >
+                  designs
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div class="keep-scrolling more">
+            <div class="overflow">
+              <h4
+                data-w-id="6708b3fa-6f32-30cb-60a7-5690b9149669"
+                style="
+                  transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1)
+                    rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                  display: block;
+                  transform-style: preserve-3d;
+                "
+                class="subtitle-no-hover space"
+              >
+                Keep Scrolling
+              </h4>
+            </div>
+            <div
+              data-w-id="6708b3fa-6f32-30cb-60a7-5690b914966b"
+              style="
+                opacity: 1;
+                transform: translate3d(0px, 0em, 0px) scale3d(1, 1, 1)
+                  rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+                transform-style: preserve-3d;
+              "
+              class="arrow-holder down"
+            >
+              <div class="circle">
+                <div class="arrow-down w-embed">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 45 66"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.3985 64.4118C21.5626 65.5759 23.4501 65.5759 24.6142 64.4118L43.5853 45.4407C44.7494 44.2766 44.7494 42.3891 43.5853 41.2249C42.4211 40.0608 40.5337 40.0608 39.3695 41.2249L22.5063 58.0881L5.64319 41.2249C4.47903 40.0608 2.59156 40.0608 1.4274 41.2249C0.263247 42.3891 0.263247 44.2766 1.4274 45.4407L20.3985 64.4118ZM19.5253 0.696289L19.5253 62.3039L25.4874 62.3039L25.4874 0.696289L19.5253 0.696289Z"
+                      fill="#FFFFFF"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-images-home is--grid">
+          <div class="container is--grid">
+            <div class="grid_wrapper-contain">
+              <div class="grid_wrapper w-dyn-list">
+                <div role="list" class="grid_list w-dyn-items">
+                  <div role="listitem" class="grid_item w-dyn-item">
+                    <div class="grid_element">
+                      <img
+                        src="https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c063a142bf0eb50338ed_Rectangle%207.png"
+                        loading="lazy"
+                        data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a473d"
+                        alt=""
+                        sizes="29vw"
+                        srcset="
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c063a142bf0eb50338ed_Rectangle%207-p-500.png  500w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c063a142bf0eb50338ed_Rectangle%207-p-800.png  800w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c063a142bf0eb50338ed_Rectangle%207.png       1013w
+                        "
+                        class="grid_img"
+                        style="
+                          will-change: transform;
+                          transform: translate3d(0px, 10em, 0px)
+                            scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+                            rotateZ(0deg) skew(0deg, 0deg);
+                          transform-style: preserve-3d;
+                        "
+                      />
+                    </div>
+                  </div>
+                  <div role="listitem" class="grid_item w-dyn-item">
+                    <div class="grid_element">
+                      <img
+                        src="https://assets.website-files.com/622a8ee0c27dd77168c38692/6295ba2044499c7a51a4e635_Scene%20(3)%20(1).png"
+                        loading="lazy"
+                        data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a473d"
+                        alt=""
+                        sizes="29vw"
+                        srcset="
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295ba2044499c7a51a4e635_Scene%20(3)%20(1)-p-500.png   500w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295ba2044499c7a51a4e635_Scene%20(3)%20(1)-p-800.png   800w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295ba2044499c7a51a4e635_Scene%20(3)%20(1)-p-1080.png 1080w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295ba2044499c7a51a4e635_Scene%20(3)%20(1)-p-1600.png 1600w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295ba2044499c7a51a4e635_Scene%20(3)%20(1)-p-2000.png 2000w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295ba2044499c7a51a4e635_Scene%20(3)%20(1)-p-2600.png 2600w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295ba2044499c7a51a4e635_Scene%20(3)%20(1).png        4050w
+                        "
+                        class="grid_img"
+                        style="
+                          will-change: transform;
+                          transform: translate3d(0px, 10em, 0px)
+                            scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+                            rotateZ(0deg) skew(0deg, 0deg);
+                          transform-style: preserve-3d;
+                        "
+                      />
+                    </div>
+                  </div>
+                  <div role="listitem" class="grid_item w-dyn-item">
+                    <div class="grid_element">
+                      <img
+                        src="https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c010c2886337c884425a_Frame%207%20(2)%20(1).png"
+                        loading="lazy"
+                        data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a473d"
+                        alt=""
+                        sizes="29vw"
+                        srcset="
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c010c2886337c884425a_Frame%207%20(2)%20(1)-p-500.png   500w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c010c2886337c884425a_Frame%207%20(2)%20(1)-p-800.png   800w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c010c2886337c884425a_Frame%207%20(2)%20(1)-p-1080.png 1080w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c010c2886337c884425a_Frame%207%20(2)%20(1).png        1600w
+                        "
+                        class="grid_img"
+                        style="
+                          will-change: transform;
+                          transform: translate3d(0px, 10em, 0px)
+                            scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+                            rotateZ(0deg) skew(0deg, 0deg);
+                          transform-style: preserve-3d;
+                        "
+                      />
+                    </div>
+                  </div>
+                  <div role="listitem" class="grid_item w-dyn-item">
+                    <div class="grid_element">
+                      <img
+                        src="https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c020980f7429c6316129_nataLink%20(1).png"
+                        loading="lazy"
+                        data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a473d"
+                        alt=""
+                        sizes="29vw"
+                        srcset="
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c020980f7429c6316129_nataLink%20(1)-p-500.png 500w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c020980f7429c6316129_nataLink%20(1)-p-800.png 800w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c020980f7429c6316129_nataLink%20(1).png       959w
+                        "
+                        class="grid_img"
+                        style="
+                          will-change: transform;
+                          transform: translate3d(0px, 10em, 0px)
+                            scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+                            rotateZ(0deg) skew(0deg, 0deg);
+                          transform-style: preserve-3d;
+                        "
+                      />
+                    </div>
+                  </div>
+                  <div role="listitem" class="grid_item w-dyn-item">
+                    <div class="grid_element">
+                      <img
+                        src="https://assets.website-files.com/622a8ee0c27dd77168c38692/6295b9bae9bad359c4d647ce_Clue%20(2)%20(1).png"
+                        loading="lazy"
+                        data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a473d"
+                        alt=""
+                        sizes="29vw"
+                        srcset="
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295b9bae9bad359c4d647ce_Clue%20(2)%20(1)-p-500.png   500w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295b9bae9bad359c4d647ce_Clue%20(2)%20(1)-p-800.png   800w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295b9bae9bad359c4d647ce_Clue%20(2)%20(1)-p-1080.png 1080w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295b9bae9bad359c4d647ce_Clue%20(2)%20(1).png        1679w
+                        "
+                        class="grid_img"
+                        style="
+                          will-change: transform;
+                          transform: translate3d(0px, 10em, 0px)
+                            scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+                            rotateZ(0deg) skew(0deg, 0deg);
+                          transform-style: preserve-3d;
+                        "
+                      />
+                    </div>
+                  </div>
+                  <div role="listitem" class="grid_item w-dyn-item">
+                    <div class="grid_element">
+                      <img
+                        src="https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c28af339733c646f7497_08%20(1)%20(1).png"
+                        loading="lazy"
+                        data-w-id="23e59740-e5a8-dfb9-6ae7-429aca6a473d"
+                        alt=""
+                        sizes="29vw"
+                        srcset="
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c28af339733c646f7497_08%20(1)%20(1)-p-500.png  500w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c28af339733c646f7497_08%20(1)%20(1)-p-800.png  800w,
+                          https://assets.website-files.com/622a8ee0c27dd77168c38692/6295c28af339733c646f7497_08%20(1)%20(1).png       1080w
+                        "
+                        class="grid_img"
+                        style="
+                          will-change: transform;
+                          transform: translate3d(0px, 10em, 0px)
+                            scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg)
+                            rotateZ(0deg) skew(0deg, 0deg);
+                          transform-style: preserve-3d;
+                        "
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        :root {
+          --main-light-color: #e8e2da;
+          --main-dark-color: #2e2a27;
+        }
+
+        a {
+          color: inherit;
+        }
+
+        .grid_item:nth-child(6n + 1) {
+          width: 25%;
+          margin-right: 6.25%;
+        }
+        .grid_item:nth-child(6n + 2) {
+          width: 18.75%;
+          margin-right: 6.25%;
+          margin-top: 20%;
+        }
+        .grid_item:nth-child(6n + 3) {
+          width: 12.5%;
+          margin-top: 4%;
+        }
+        .grid_item:nth-child(6n + 4) {
+          width: 31.25%;
+          margin-top: 24%;
+        }
+        .grid_item:nth-child(6n + 5) {
+          width: 31.25%;
+          margin-right: 6.25%;
+          margin-top: -12%;
+        }
+        .grid_item:nth-child(6n + 6) {
+          width: 25%;
+          margin-right: 25%;
+          margin-top: 20%;
+        }
+      </style>
+    </div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $("a:not(.work-link, .next-link)").on("mouseenter", function () {
+      $(".cursor_dot").addClass("is-larger");
+    });
+
+    $("a").on("mouseleave", function () {
+      $(".cursor_dot").removeClass("is-larger");
+    });
+
+    $(".accordion-tab-button").on("mouseenter", function () {
+      $(".cursor_dot").addClass("is-larger");
+    });
+
+    $(".accordion-tab-button").on("mouseleave", function () {
+      $(".cursor_dot").removeClass("is-larger");
+    });
+
+    $("body").on("mousedown", function () {
+      $(".cursor_dot").addClass("cursor-smaller");
+    });
+
+    $("body").on("mouseup", function () {
+      $(".cursor_dot").removeClass("cursor-smaller");
+    });
+
+    $(".work-link, .next-link").on("mouseenter", function () {
+      $(".cursor_dot, .cursor, .cursor_text").addClass("is-title");
+    });
+
+    $(".work-link, .next-link").on("mouseleave", function () {
+      $(".cursor_dot, .cursor, .cursor_text").removeClass("is-title");
+    });
+  </script>
+  <script src="main.js"></script>
+</html>

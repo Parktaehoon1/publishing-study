@@ -1,0 +1,446 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li class="on"><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li><a href="../community/notice.html"><span>커뮤니티관리</span></a></li>
+			<li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>회원관리</h2>
+		<ul>
+			<li class="on"><a href="../member/member.html"><span>KOONG<br>KOONG NFT</span></a></li>
+			<li><a href="../member/member_talk.html"><span>KOONG TALK</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><strong>MEMBER</strong><span> KOONG /  KOONG NFT</span></h2>
+
+		<section class="boardview">
+			<h3 class="ctit">회원정보</h3>
+			<div>
+				<dl>
+					<dt>ID (이메일)</dt>
+					<dd>help@sigmachain.net</dd>
+				</dl>
+				<dl>
+					<dt>닉네임</dt>
+					<dd>여행가고파</dd>
+				</dl>
+				<dl>
+					<dt>회원구분</dt>
+					<dd>아티스트 <!--  일반 / 아티스트 --></dd>
+				</dl>
+				<dl>
+					<dt>회원가입일</dt>
+					<dd class="msdatewrap">
+					<ul><li class="tit">KOONG, KOONG NFT</li><li class="txt">2022-12-31</li></ul>
+					<ul><li class="tit">KOONG TALK</li><li class="txt">2023-01-01</li></ul>
+					</dd>
+				</dl>
+				<dl>
+					<dt>최근접속일</dt>
+					<dd>2022.12.31</dd>
+				</dl>
+				<dl>
+					<dt>회원상태</dt>
+					<dd class="bvwrap">
+					<span>일반</span>
+					<span class="bvbtn">
+					<!-- 회원일반 시 -->
+					<a href="javascript:vold();" onclick="pop_up_layer('pop_suspension_member');return false;" class="bbtn">정지</a>
+					<a href="javascript:vold();"  onclick="pop_up_layer('pop_withdraw_member');return false;" class="bbtn">탈퇴</a>
+					<!-- // 회원일반 시 -->
+
+					<!-- 회원정지 시  	-->
+					<a href="javascript:vold();"  onclick="pop_up_layer('pop_view_suspensionReason');return false;" class="bbtn">정지사유보기</a>
+					<a href="javascript:vold();"  onclick="pop_up_layer('pop_suspension_cancel');return false;" class="bbtn">정지취소</a>
+					<!--  // 회원정지 시  -->
+					<!-- -탈퇴 시 -->
+					<a href="javascript:vold();"  onclick="pop_up_layer('pop_view_withdrawReason');return false;"class="bbtn">탈퇴사유보기</a>
+                   <!-- -// 탈퇴 시 --> 
+					</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>상태변경일</dt>
+					<dd>-</dd>
+				</dl>
+			</div>
+		</section>
+
+		<section class="boardview ">
+			<h3 class="ctit">NFT 및 구매정보</h3>
+			<div>
+				<dl>
+					<dt>발행 NFT 앨범</dt>
+					<dd>10</dd>
+				</dl>
+				<dl>
+					<dt>소유 NFT 앨범</dt>
+					<dd>5</dd>
+				</dl>
+				<dl>
+					<dt>판매 NFT 앨범</dt>
+					<dd>5</dd>
+				</dl>
+
+				<dl>
+					<dt>구매 NFT 앨범 </dt>
+					<dd>3</dd>
+				</dl>
+			</div>
+		</section>
+
+		<section class="boardview ">
+			<h3 class="ctit">지갑정보</h3>
+			<div>
+				<dl>
+					<dt>보유 CORN</dt>
+					<dd>100,000 CORN</dd>
+				</dl>
+
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="목록" onClick="window.location='../member/member.html'">
+		</div>
+		<!-- // btnwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+<div id="toast" class="toast"></div>
+
+<!--   pop_suspension_member   -->
+<div class="popwrap  pop_suspension_member">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_suspension_member">
+		<div class="pwrap">
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">
+					회원 상태를 정지로 변경하시겠습니까?
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="확인" class="cbtn bb2"  onclick="pop_up_layer('pop_suspension_reason');return false;" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- //  pop_suspension_member -->
+
+<!--  pop_suspension_reason -->
+<div class="popwrap mw500 pop_suspension_reason">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_suspension_reason">
+		<div class="pwrap">
+
+			<div class="pop_tit">
+				<h3>정지처리사유</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+			   <div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>회원정지	</dd>
+					</dl>
+				</div>
+				<h4 class="pstit1"> 정지처리사유 </h4>
+				<div class="psbox pt0">
+					<textarea id="suspension" name="suspension"> </textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="회원정지" class="cbtn  bb2" onclick="toast('정지처리가 완료되었습니다')" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_suspension_reason -->
+
+<!--  pop_view_suspensionReason-->
+<div class="popwrap mw500 pop_view_suspensionReason">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_view_suspensionReason">
+		<div class="pwrap">
+
+			<div class="pop_tit">
+				<h3>정지처리사유</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+			   <div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>회원정지</dd>
+					</dl>
+				</div>
+				<h4 class="pstit1"> 정지처리사유 </h4>
+				<div class="psbox pt0">
+					<textarea id="suspension" name="suspension"> </textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn bb0"> 
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_view_suspensionReason -->
+
+
+<!--   pop_withdraw_member  -->
+<div class="popwrap  pop_withdraw_member">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_withdraw_member">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">
+					회원 상태를 탈퇴로 변경하시겠습니까?
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="확인" class="cbtn bb2"  onclick="pop_up_layer('pop_withdraw_reason');return false;" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- //  pop_withdraw_member -->
+
+<!--  pop_withdraw_reason  -->
+<div class="popwrap mw500 pop_withdraw_reason">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_withdraw_reason">
+		<div class="pwrap">
+
+			<div class="pop_tit">
+				<h3>탈퇴처리사유</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+			   		   <div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>회원탈퇴	</dd>
+					</dl>
+				</div>
+				<h4 class="pstit1">탈퇴처리사유 </h4>
+				<div class="psbox pt0">
+					<textarea id="withdraw" name="withdraw"> </textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="회원탈퇴" class="cbtn bb2" onclick="toast('탈퇴처리가 완료되었습니다')" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_withdraw_reason -->
+
+<!--  pop_view_withdrawReason  -->
+<div class="popwrap mw500 pop_view_withdrawReason">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_view_withdrawReason">
+		<div class="pwrap">
+
+			<div class="pop_tit">
+				<h3>탈퇴처리사유</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+			   		   <div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>회원탈퇴	</dd>
+					</dl>
+				</div>
+				<h4 class="pstit1">탈퇴처리사유 </h4>
+				<div class="psbox pt0">
+					<textarea id="withdraw" name="withdraw"> </textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn bb0"> 
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_view_withdrawReason -->
+
+
+<!--  pop_suspension_cancel  -->
+<div class="popwrap pop_suspension_cancel">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_suspension_cancel">
+		<div class="pwrap">
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">
+					회원정지 상태입니다. <br>회원상태를 일반으로 변경하시겠습니까?
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="확인" class="cbtn bb2" onclick="toast('상태가 일반으로 변경되었습니다')" >
+			</div>
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_suspension_cancel -->
+
+</body>
+</html>

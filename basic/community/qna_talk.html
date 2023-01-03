@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li class="on"><a href="../community/qna.html"><span>커뮤니티관리</span></a></li>
+			<li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>커뮤니티 관리</h2>
+		<ul>
+			<li><a href="../community/notice.html"><span>공지사항</span></a></li>
+			<li><a href="../community/event.html"><span>이벤트</span></a></li>
+			<li><a href="../community/faq.html"><span>FAQ</span></a></li>
+			<li class="on"><a href="../community/qna.html"><span>1:1 문의</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+		<div class="subtit">
+			<h2 class="ctit"><strong>COMMUNITY</strong><span>1:1 문의</span></h2>
+			<div class="ctbtn">
+				<a href="../community/qna.html">KOONG / KOONG NFT </a>
+				<a href="../community/qna_talk.html" class="on">KOONG TALK </a>
+			</div>
+		</div>
+
+		<!-- searchwrap -->
+		<section class="searchwrap">
+
+			<div class="sbox">
+				<span class="stit">검색조건</span>
+
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="0" selected disabled hidden>상태</option>
+					<option value="1">전체</option>
+					<option value="2">접수</option>
+					<option value="3">답변완료</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="0" selected disabled hidden>분류</option>
+					<option value="1">전체</option>
+					<option value="2">아티스트</option>
+					<option value="3">주문 &middot; 결제</option>
+					<option value="4">판매</option>
+					<option value="5">기타</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="1" selected>제목</option>
+					<option value="2">관리자</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<input type="text" class="stxt" id="searchTxt" name="searchTxt" placeholder="검색어를 입력해보세요">
+			</div>
+
+			<div class="sbox">
+				<span class="stit">조회기간</span>
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="1" selected>전체</option>
+					<option value="2">오늘</option>
+					<option value="3">1주</option>
+					<option value="4">1개월</option>
+					<option value="5">6개월</option>
+					<option value="6">1년</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<div class="calendarbox">
+					<span><input type="text" id="datepicker1"></span>
+					<span class="dot">~</span>
+					<span><input type="text" id="datepicker2"></span>
+				</div>
+			</div>
+
+			<div class="sbtn"><input type="button" id="searchBtn" name="searchBtn" value ="검색"></div>
+
+		</section>
+		<!-- // searchwrap -->
+
+
+		<!-- boardwrap -->
+		<section class="boardwrap">
+
+			<div class="boardtit">
+				<h3 class="ctit">총 777,777 문의</h3>
+				<div class="btbtn">
+					<!-- selectbox -->
+					<div class="selectbox">
+						<select class="selectpicker">
+						<option value="1" selected>20개씩 보기</option>
+						<option value="2">50개씩 보기</option>
+						<option value="3">100개씩 보기</option>
+						<option value="4">200개씩 보기</option>
+						</select>
+					</div>
+					<!-- // selectbox -->
+				</div>
+			</div>
+
+			<div class="boardlist board_qna">
+				<ul class="tit">
+					<li class="no">NO</li>
+					<li class="sort">분류</li>
+					<li class="title">제목</li>
+					<li class="id">ID(이메일)</li>
+					<li class="nickname">닉네임</li>
+					<li class="date">등록일</li>
+					<li class="rdate">답변일</li>
+					<li class="writer">답변자</li>
+					<li class="state">상태</li>
+					<li class="manage">상태관리</li>
+				</ul>
+
+				<!-- 내역없을 시
+						<div class="nodata">
+							<span><i>!</i><span>
+							<span>내역이 없습니다</span>
+						</div>
+						<!-- // 내역없을 시 -->
+
+				<!-- 내역있을 시 : 기본 20개씩 노출  -->
+				<div class="listwrap">
+					<ul>
+						<li class="no">10</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">-</li>
+						<li class="writer">-</li>
+						<li class="state">접수</li>
+						<li class="manage"> <input type="button" class="bbtn" value="답변쓰기" onClick="window.location='../community/qna_reply.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">9</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">-</li>
+						<li class="writer">-</li>
+						<li class="state">접수</li>
+						<li class="manage"> <input type="button" class="bbtn" value="답변쓰기" onClick="window.location='../community/qna_reply.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">8</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">2022-12-03</li>
+						<li class="writer">admin1</li>
+						<li class="state">답변완료</li>
+						<li class="manage"><input type="button" class="bbtn btn_done" value="답변확인" onClick="window.location='../community/qna_talk_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">7</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">2022-12-03</li>
+						<li class="writer">admin1</li>
+						<li class="state">답변완료</li>
+						<li class="manage"> <input type="button" class="bbtn btn_done" value="답변확인" onClick="window.location='../community/qna_talk_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">6</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">2022-12-03</li>
+						<li class="writer">admin1</li>
+						<li class="state">답변완료</li>
+						<li class="manage"> <input type="button" class="bbtn btn_done" value="답변확인" onClick="window.location='../community/qna_talk_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">5</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">2022-12-03</li>
+						<li class="writer">admin1</li>
+						<li class="state">답변완료</li>
+						<li class="manage"> <input type="button" class="bbtn btn_done" value="답변확인" onClick="window.location='../community/qna_talk_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">4</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">2022-12-03</li>
+						<li class="writer">admin1</li>
+						<li class="state">답변완료</li>
+						<li class="manage"> <input type="button" class="bbtn btn_done" value="답변확인" onClick="window.location='../community/qna_talk_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">3</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">2022-12-03</li>
+						<li class="writer">admin1</li>
+						<li class="state">답변완료</li>
+						<li class="manage"> <input type="button" class="bbtn btn_done" value="답변확인" onClick="window.location='../community/qna_talk_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">2</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">2022-12-03</li>
+						<li class="writer">admin1</li>
+						<li class="state">답변완료</li>
+						<li class="manage"> <input type="button" class="bbtn btn_done" value="답변확인" onClick="window.location='../community/qna_talk_detail.html'"></li>
+					</ul>
+					<ul>
+						<li class="no">1</li>
+						<li class="sort">아티스트</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="id"><em>sfdsfjkl@naver.com)</em></li>
+						<li class="nickname"><em>djsdlsdf123</em></li>
+						<li class="date">2022-12-02</li>
+						<li class="rdate">2022-12-03</li>
+						<li class="writer">admin1</li>
+						<li class="state">답변완료</li>
+						<li class="manage"> <input type="button" class="bbtn btn_done" value="답변확인" onClick="window.location='../community/qna_talk_detail.html'"></li>
+					</ul>
+				</div>
+				<!-- // 내역있을 시 -->
+			</div>
+
+			<!-- page -->
+			<div class="page">
+				<ul>
+					<li class="first"><a href=""><span>처음</span> </a></li>
+					<li class="prev"><a href=""><span>이전</span> </a></li>
+					<li><a href="">1</a></li>
+					<li class="on"><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li class="next"><a href=""><span>다음 </span> </a></li>
+					<li class="end"><a href=""><span>마지막 </span> </a></li>
+				</ul>
+			</div>
+			<!-- // page -->
+
+		</section>
+		<!-- boardwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+</body>
+</html>

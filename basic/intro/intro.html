@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<title>KOONG 관리자</title>
+
+
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/swiper/css/jquery-ui.min.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body class="intro">
+
+<div class="introwrap">
+	<div class="lwrap">
+		<h1><img src="../assets/img/com/logo.svg" alt="KOONG"></h1>
+	</div>
+	<div class="rwrap">
+		<div class="loginwrap">
+			<h2><span>LOGIN </span><strong>관리자 로그인</strong></h2>
+			<div class="logintxt">
+				<span><input type="text" id="login_id" name="login_id" placeholder="아이디 입력" ></span>
+				<span><input type="text" id="login_pw" name="login_pw" placeholder="비밀번호 입력" ></span>
+			</div>
+			<div class="loginbtn">
+				<input type="button" id="login_btn" name="login_btn" value="로그인" class="lbtn" onclick="pop_up_layer('pop_idpw_error');return false;" >
+				<span><input type="button" id="pw_modify" name="pw_modify" value="비밀번호 재설정"  class="pbtn" onclick="pop_up_layer('pop_pw_modify');return false;"></span>
+			</div>
+
+		</div>
+		<div class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</div>
+	</div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<!-- pop_idpw_error  -->
+<div class="popwrap pop_idpw_error">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_idpw_error">
+		<div class="pwrap">
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt" >
+					아이디 또는 비밀번호가 일치하지 않습니다.<br>다시 한번 더 확인해 주세요.
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<!-- btn_pop -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn">
+			</div>
+			<!-- // btn_pop -->
+
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_idpw_error  -->
+
+<!--  pop_pw_error  -->
+<div class="popwrap pop_pw_error">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_pw_error">
+		<div class="pwrap">
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt" >
+					비밀번호가 일치하지 않습니다.
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<!-- btn_pop -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn">
+			</div>
+			<!-- // btn_pop -->
+
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_pw_error  -->
+
+<!--  pop_pw_modify  -->
+<div class="popwrap pop_pw_modify">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_pw_modify">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>비밀번호 재설정</h3>
+			</div>
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="pwmbox" >
+					<dl class="email">
+						<dt>아이디</dt>
+						<dd>
+						<div class="ebox">
+							<p>
+								<input type="text" id="" name="" placeholder="이메일 입력">
+								<input type="button" id="" name="" class="ebtn" value="인증번호보내기" onclick="toast('인증번호를 메일로 보냈습니다')" >
+							</p>
+
+							<p>
+								<!-- 인증 완료시 바로 옆 <p> 에 클래스 class="done" 이 붙음 : 프로그램 후 주석 삭제 -->
+								<input type="text" id="" name=""  placeholder="인증번호 입력">
+
+								<input type="button" id="" name="" class="ebtn ebtn1" value="인증" onclick="pop_up_layer('pop_num_error');return false;" >
+								<!--  인증완료시 [인증 -> 인증완료] 로 글자 변경됨 <input type="button" id="" name="" class="ebtn ebtn2" value="인증완료"> -->
+							</p>
+						</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt>비밀번호 </dt>
+						<dd><input type="text" id="" name="" class="w100p" placeholder="비밀번호 입력"  ></dd>
+					</dl>
+					<dl>
+						<dt>비밀번호 확인</dt>
+						<dd><input type="text" id="" name="" class="w100p" placeholder="비밀번호 다시 입력" onclick="pop_up_layer('pop_pw_error');return false;" ></dd>
+					</dl>
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<!-- btn_pop -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="확인" class="cbtn bb2" onclick="pop_up_layer('pop_pw_mdone');return false;">
+			</div>
+			<!-- // btn_pop -->
+
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_pw_modify  -->
+
+<!--  pop_pw_mdone  -->
+<div class="popwrap pop_pw_mdone">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_pw_mdone">
+		<div class="pwrap">
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt" >
+					비밀번호가 재설정되었습니다
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<!-- btn_pop -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn">
+			</div>
+			<!-- // btn_pop -->
+
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_pw_mdone -->
+
+<!--  pop_num_error  -->
+<div class="popwrap pop_num_error">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_num_error">
+		<div class="pwrap">
+
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt" >
+					인증번호가 일치하지 않습니다
+				</div>
+			</div>
+			<!-- // pbox  -->
+
+			<!-- btn_pop -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn">
+			</div>
+			<!-- // btn_pop -->
+
+		</div>
+
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_num_error -->
+
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script> 
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li class="on"><a href="../community/qna.html"><span>커뮤니티관리</span></a></li>
+			<li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>커뮤니티 관리</h2>
+		<ul>
+			<li class="on"><a href="../community/notice.html"><span>공지사항</span></a></li>
+			<li><a href="../community/event.html"><span>이벤트</span></a></li>
+			<li><a href="../community/faq.html"><span>FAQ</span></a></li>
+			<li><a href="../community/qna.html"><span>1:1 문의</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+		<div class="subtit">
+			<h2 class="ctit"><strong>COMMUNITY</strong><span>공지사항</span></h2>
+			<div class="ctbtn">
+				<a href="../community/notice_create.html" class="on">KOONG / KOONG NFT </a>
+				<a href="../community/notice_talk_create.html">KOONG TALK </a>
+			</div>
+		</div>
+
+		<section class="boardview boardwrite cchkbox">
+			<h3 class="ctit">공지사항 등록</h3>
+			<div>
+				<form>
+				<dl>
+					<dt>제목</dt>
+					<dd><input type="text" id="event_subject" name="event_subject" class="w100p" placeholder="제목을 입력해 주세요" ></dd>
+				</dl>
+				<dl>
+					<dt>기간 </dt>
+					<dd class="period">
+					<div class="checks ">
+						<span>
+						<input type="radio" id="chk_cal1" name="chk_cal">
+						<label for="chk_cal1">지정</label>
+						</span>
+						<span>
+						<input type="radio" id="chk_cal2" name="chk_cal">
+						<label for="chk_cal2">비지정
+						</label>
+						</span>
+					</div>
+					<div class="calendarbox">
+						<span><input type="text" id="datepicker1"></span>
+						<!-- selectbox -->
+						<div class="selectbox">
+							<select class="selectpicker">
+							<option value="0" selected>00</option>
+							<option value="1">01</option>
+							<option value="2">02</option>
+							<option value="3">03</option>
+							<option value="4">04</option>
+							<option value="5">05</option>
+							<option value="6">06</option>
+							<option value="7">07</option>
+							<option value="8">08</option>
+							<option value="9">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							</select>
+						</div>
+						<!-- // selectbox -->
+						<span class="dot">~</span>
+						<span><input type="text" id="datepicker2"></span>
+						<!-- selectbox -->
+						<div class="selectbox">
+							<select class="selectpicker">
+							<option value="0" selected>00</option>
+							<option value="1">01</option>
+							<option value="2">02</option>
+							<option value="3">03</option>
+							<option value="4">04</option>
+							<option value="5">05</option>
+							<option value="6">06</option>
+							<option value="7">07</option>
+							<option value="8">08</option>
+							<option value="9">09</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							</select>
+						</div>
+						<!-- // selectbox -->
+					</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>노출여부</dt>
+					<dd>
+					<div class="checks ">
+						<span>
+						<input type="radio" id="chk_exposure1" name="chk_exposure">
+						<label for="chk_exposure1">노출 </label>
+						</span>
+						<span>
+						<input type="radio" id="chk_exposure2" name="chk_exposure">
+						<label for="chk_exposure2">비노출
+						</label>
+						</span>
+					</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>상단노출</dt>
+					<dd>
+					<div class="checks">
+						<span>
+						<input type="checkbox" id="chk_extop" name="chk_extop">
+						<label for="chk_extop">상단노출 </label>
+						</span>
+					</div>
+					</dd>
+				</dl>
+				 <dl>
+					<dt>정렬순서</dt>
+					<dd>
+					<input type="text" id="sequence" name="sequence" class="stxt w100p"  placeholder="정렬순서를 입력해주세요">
+					</dd>
+				</dl>				 
+				<dl>
+					<dt>대표이미지 </dt>
+					<dd class="img">				 
+					<div class="link "><input type="text"id="" name="" class="stxt w100p"  placeholder="팝업 상세 링크를 입력해주세요"></div>
+					<div class="vimgwrap mt10">
+						<div class="createFilebox">
+							<label for="ex_file1">
+							<span class="vtxt">이미지사이즈<br>1000px * 1216px </span>
+							<span class="vbtn"><i>파일선택</i></span>
+							</label>
+							<input type="file" name="ex_file1" id="ex_file1" class="createFile_upload" accept="image/*" multiple>
+						</div>
+						<div class="createFile_preview"></div>
+						<button type="button" class="createFile_preview-de">삭제</button>
+					</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>내용</dt>
+					<dd><textarea type="text" id="" name="" class="textarea"  placeholder="내용을 입력해 주세요" ></textarea></dd>
+				</dl>
+				<dl>
+					<dt>첨부파일</dt>
+					<dd>
+						<div class="filebox">						   
+						    <input type="text" class="upload-name" value="파일을 선택해주세요.">
+							<label>파일선택 <input type="file" name="file" style="display:none"></label>
+						</div>
+					</dd>
+				</dl>
+				</form>
+
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="취소" onClick="window.location='../community/notice.html'">
+			<input type="button" value="등록" class="btn_ok" onClick="window.location='../community/notice_detail.html'">
+		</div>
+		<!-- // btnwrap -->
+	</div>
+	<!-- // content -->
+</div>
+<!-- // wrap -->
+
+<div id="toast" class="toast"></div>
+
+ 
+
+</body>
+</html>

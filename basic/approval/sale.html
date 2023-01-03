@@ -1,0 +1,692 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li class="on"><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li><a href="../community/notice.html"><span>커뮤니티관리</span></a></li>
+			<li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>승인관리</h2>
+		<ul>
+			<li><a href="../approval/publish.html"><span>발행관리</span></a></li>
+			<li class="on"><a href="../approval/sale.html"><span>판매관리</span></a></li>
+			<li><a href="../approval/report.html"><span>신고관리</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><strong>APPROVAL</strong><span>판매관리</span></h2>
+
+		<!-- searchwrap -->
+		<section class="searchwrap">
+			<form>
+			<div class="sbox">
+				<span class="stit">검색조건</span>
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="0" selected >판매 상태 전체</option>
+					<option value="1">판매대기</option>
+					<option value="2">판매승인</option>
+					<option value="3">판매거절</option>
+					<option value="4">판매중지</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="0" selected >Market 전체</option>
+					<option value="1">Market</option>
+					<option value="2">Resale</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="1" selected>이메일</option>
+					<option value="2">앨범번호</option>
+					<option value="3">앨범제목</option>
+					<option value="4">아티스트</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<input type="text" class="stxt" id="searchTxt" name="searchTxt" placeholder="검색어를 입력해 보세요">
+			</div>
+
+			<div class="sbox">
+				<span class="stit">조회기간</span>
+
+				<div class="datebox">
+					<a href="javascript:vold();" >전체</a>
+					<a href="javascript:vold();">오늘</a>
+					<a href="javascript:vold();">1주일</a>
+					<a href="javascript:vold();">1개월</a>
+					<a href="javascript:vold();">3개월</a>
+				</div>
+
+				<div class="calendarbox">
+					<span><input type="text" id="datepicker1"></span>
+					<span class="dot">~</span>
+					<span><input type="text" id="datepicker2"></span>
+				</div>
+			</div>
+
+			<div class="sbtn"><input type="button" id="searchBtn" name="searchBtn" value ="검색"></div>
+			</form>
+		</section>
+		<!-- // searchwrap -->
+
+
+		<!-- boardwrap -->
+		<section class="boardwrap">
+
+			<div class="boardtit">
+				<h3 class="ctit">총 777,777 판매요청</h3>
+				<div class="btbtn">
+					<input type="button" id="" name="" value="엑셀다운로드">
+					<!-- selectbox -->
+					<div class="selectbox">
+						<select class="selectpicker">
+						<option value="1" selected>20개씩 보기</option>
+						<option value="2">50개씩 보기</option>
+						<option value="3">100개씩 보기</option>
+						<option value="4">200개씩 보기</option>
+						</select>
+					</div>
+					<!-- // selectbox -->
+				</div>
+			</div>
+
+			<div class="boardlist board_sale">
+				<ul class="tit">
+					<li class="chkbox">
+						<span class="checks">
+						<input type="checkbox" id="checkall" name="chk">
+						<label for="checkall"><i>checkbox</i></label>
+						</span>
+					</li>
+					<li class="no">앨범번호</li>
+					<li class="title">앨범제목</li>
+					<li class="atist">아티스트</li>
+					<li class="category">카테고리</li>
+					<li class="market">마켓</li>
+					<li class="id"> ID(이메일) </li>
+					<li class="nickname">닉네임</li>
+					<li class="saledate">판매일시</li>
+					<li class="detail">상세 </li>
+					<li class="adate">요청일</li>
+					<li class="state">상태</li>
+					<li class="date">상태변경일</li>
+					<li class="manage">상태관리 </li>
+				</ul>
+
+				<!-- 내역없을 시
+					<div class="nodata">
+						<span><i>!</i><span>
+						<span>내역이 없습니다</span>
+					</div>
+					<!-- // 내역없을 시 -->
+
+				<!-- 내역있을 시 -->
+				<div class="listwrap">
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">바로판매</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매대기</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_sale_ok');return false;" class="bbtn">판매승인</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_sale_reject');return false;" class="bbtn">판매거절</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">지정</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매거절</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_veiw_sale_rejectReason');return false;" class="bbtn w100p btn_g8">판매거절사유</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">바로판매</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매승인</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_saleapproval_cancel');return false;" class="bbtn w100p">판매승인취소</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">지정</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매중지</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_view_sale_stopReason');return false;" class="bbtn">판매중지사유</a>
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_sale_restart');return false;" class="bbtn">판매재개</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">지정</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매대기</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_sale_ok');return false;" class="bbtn">판매승인</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_approval_reject');return false;" class="bbtn">판매거절</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">지정</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매거절</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_veiw_sale_rejectReason');return false;" class="bbtn w100p btn_g8">판매거절사유</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">지정</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매대기</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_sale_ok');return false;" class="bbtn">판매승인</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_approval_reject');return false;" class="bbtn">판매거절</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">지정</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매거절</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_veiw_sale_rejectReason');return false;" class="bbtn w100p btn_g8">판매거절사유</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">지정</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매거절</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_veiw_sale_rejectReason');return false;" class="bbtn w100p btn_g8">판매거절사유</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="chkbox">
+							<span class="checks">
+							<input type="checkbox" id="chk_01" name="chk">
+							<label for="chk_01"><i>checkbox</i></label>
+							</span>
+						</li>
+						<li class="no"><em>123</em></li>
+						<li class="title"><em>앨범제목입니다</em></li>
+						<li class="atist"><em>BTS</em></li>
+						<li class="category"><em>DANCE / POP /  ELECTRONIC</em> </li>
+						<li class="market"><em>Market</em></li>
+						<li class="id"><em> email.@naver.com</em></li>
+						<li class="nickname"><em>쿵마스터</em></li>
+						<li class="saledate"><span class="sd1">지정</span><span class="sd2">2022-12-03</span></li>
+						<li class="detail"><a href="javascript:vold();"  onClick="window.location='../approval/sale_detail.html'" target="_blank" class="bbtn">상세</a></li>
+						<li class="adate">2022-12-01</li>
+						<li class="state">판매거절</li>
+						<li class="date">2022-12-02</li>
+						<li class="manage">
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_veiw_sale_rejectReason');return false;" class="bbtn w100p btn_g8">판매거절사유</a>
+						</li>
+					</ul>
+
+
+				</div>
+				<!-- // 내역있을 시 -->
+
+			</div>
+
+			<!-- page -->
+			<div class="page">
+				<ul>
+					<li class="first"><a href="javascript:vold();"><span>처음</span> </a></li>
+					<li class="prev"><a href="javascript:vold();"><span>이전</span> </a></li>
+					<li><a href="javascript:vold();">1</a></li>
+					<li class="on"><a href="javascript:vold();">2</a></li>
+					<li><a href="javascript:vold();">3</a></li>
+					<li><a href="javascript:vold();">4</a></li>
+					<li><a href="javascript:vold();">5</a></li>
+					<li class="next"><a href="javascript:vold();"><span>다음 </span> </a></li>
+					<li class="end"><a href="javascript:vold();"><span>마지막 </span> </a></li>
+				</ul>
+			</div>
+			<!-- // page -->
+
+		</section>
+		<!-- boardwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+
+<div id="toast" class="toast"></div>
+
+
+<!--  pop_sale_ok -->
+<div class="popwrap pop_sale_ok">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_sale_ok">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">해당 NFT을 판매승인하시겠습니까?</div>
+
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="승인" class="cbtn bb2" onclick="toast('승인처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_sale_ok -->
+
+
+<!--  pop_sale_reject-->
+<div class="popwrap pop_sale_reject">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_sale_reject">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">해당 NFT을 판매거절하시겠습니까?</div>
+
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="거절" class="cbtn bb2" onclick="pop_up_layer('pop_sale_rejectReason');return false;">
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_sale_reject -->
+
+
+<!-- pop_saleapproval_cancel-->
+<div class="popwrap pop_saleapproval_cancel">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_saleapproval_cancel">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">판매승인을 취소하시겠습니까? </span></div>
+
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="확인" class="cbtn bb2" onclick="toast('취소처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_saleapproval_cancel -->
+
+
+<!--  pop_sale_rejectReason -->
+<div class="popwrap mw500 pop_sale_rejectReason">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_sale_rejectReason">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>판매거절 사유 </h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox ptbox">
+				<div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>판매거절	</dd>
+					</dl>
+				</div>
+				<h4 class="pstit1">거절사유 </h4>
+				<div class="psbox pt0">
+					<textarea id="sale_reject" name="sale_reject"></textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="거절" class="cbtn bb2" onclick="toast('거절처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_sale_rejectReason -->
+
+
+<!--  pop_veiw_sale_rejectReason -->
+<div class="popwrap mw500 pop_veiw_sale_rejectReason" >
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_veiw_sale_rejectReason">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>판매거절사유</h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox ptbox">
+
+				<div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>판매거절	</dd>
+					</dl>
+				</div>
+
+				<h4 class="pstit1">거절사유</h4>
+				<div class="psbox_done">
+					거절된 사유는 사업자등록증이  제대로 인식이 되지 않았기 때문입니다 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다.
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn bb0">
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_veiw_sale_rejectReason -->
+
+<!--  pop_view_sale_stopReason -->
+<div class="popwrap mw500 pop_view_sale_stopReason" >
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_view_sale_stopReason">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>판매중지사유</h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox ptbox">
+
+				<div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>판매중지	</dd>
+					</dl>
+				</div>
+
+				<h4 class="pstit1">판매중지사유</h4>
+				<div class="psbox_done">
+					판매중지사유 입니다.  	판매중지사유 입니다.  	판매중지사유 입니다.  	판매중지사유 입니다.  	판매중지사유 입니다.
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn bb0">
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_view_sale_stopReason-->
+
+<!--  pop_sale_restart  -->
+<div class="popwrap pop_sale_restart">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_sale_restart">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">해당 NFT를 판매재개 하시겠습니까?</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="네" class="cbtn bb2"  onclick="toast('판매재개처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_sale_restart -->
+
+</body>
+</html>

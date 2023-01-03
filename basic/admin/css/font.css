@@ -1,0 +1,215 @@
+ 
+
+
+
+@font-face {
+ font-family: 'Noto Sans KR';
+ font-style: normal;
+ font-weight: 300;
+ src: url('fonts/NotoSansKR-Light.woff2') format('woff2'),
+ url('fonts/NotoSansKR-Light.woff') format('woff'),
+ url('fonts/NotoSansKR-Light.otf') format('opentype');
+}
+@font-face {
+ font-family: 'Noto Sans KR';
+ font-style: normal;
+ font-weight: 400;
+ src: url('fonts/NotoSansKR-Regular.woff2') format('woff2'),
+ url('fonts/NotoSansKR-Regular.woff') format('woff'),
+ url('fonts/NotoSansKR-Regular.otf') format('opentype');
+}
+@font-face {
+ font-family: 'Noto Sans KR';
+ font-style: normal;
+ font-weight: 500;
+ src: url('fonts/NotoSansKR-Medium.woff2') format('woff2'),
+ url('fonts/NotoSansKR-Medium.woff') format('woff'),
+ url('fonts/NotoSansKR-Medium.otf') format('opentype');
+}
+@font-face {
+ font-family: 'Noto Sans KR';
+ font-style: normal;
+ font-weight: 600;
+ src: url('fonts/NotoSansKR-Bold.woff2') format('woff2'),
+ url('fonts/NotoSansKR-Bold.woff') format('woff'),
+ url('fonts/NotoSansKR-Bold.otf') format('opentype');
+}
+
+
+
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 700;
+	src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+	url('fonts/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('fonts/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
+	src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+	url('fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 300;
+	src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+	url('fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+	url('fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+ 
+
+/*에스코어드림*/
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 100;
+  src: url('fonts/SCDream1.woff2') format('woff2'),
+       url('fonts/SCDream1.woff') format('woff'),
+       url('fonts/SCDream1.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 100;
+  src: url('fonts/SCDream1.woff2') format('woff2'),
+       url('fonts/SCDream1.woff') format('woff'),
+       url('fonts/SCDream1.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 200;
+  src: url('fonts/SCDream2.woff2') format('woff2'),
+       url('fonts/SCDream2.woff') format('woff'),
+       url('fonts/SCDream2.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/SCDream3.woff2') format('woff2'),
+       url('fonts/SCDream3.woff') format('woff'),
+       url('fonts/SCDream3.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/SCDream4.woff2') format('woff2'),
+       url('fonts/SCDream4.woff') format('woff'),
+       url('fonts/SCDream4.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 500;
+  src: url('fonts/SCDream5.woff2') format('woff2'),
+       url('fonts/SCDream5.woff') format('woff'),
+       url('fonts/SCDream5.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/SCDream6.woff2') format('woff2'),
+       url('fonts/SCDream6.woff') format('woff'),
+       url('fonts/SCDream6.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 700;
+  src: url('fonts/SCDream7.woff2') format('woff2'),
+       url('fonts/SCDream7.woff') format('woff'),
+       url('fonts/SCDream7.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 800;
+  src: url('fonts/SCDream8.woff2') format('woff2'),
+       url('fonts/SCDream8.woff') format('woff'),
+       url('fonts/SCDream8.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SCDream';
+  font-style: normal;
+  font-weight: 900;
+  src: url('fonts/SCDream9.woff2') format('woff2'),
+       url('fonts/SCDream9.woff') format('woff'),
+       url('fonts/SCDream9.otf') format('opentype');
+}
+
+/* s-core-dream */
+ 
+ @font-face {
+    font-family: 's-core-dream-thin';
+    src: url('fonts/scdream1-webfont.woff2') format('woff2'),
+         url('fonts/scdream1-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-extralight';
+    src: url('fonts/scdream2-webfont.woff2') format('woff2'),
+         url('fonts/scdream2-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-light';
+    src: url('fonts/scdream3-webfont.woff2') format('woff2'),
+         url('fonts/scdream3-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-regular';
+    src: url('fonts/scdream4-webfont.woff2') format('woff2'),
+         url('fonts/scdream4-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-medium';
+    src: url('fonts/scdream5-webfont.woff2') format('woff2'),
+         url('fonts/scdream5-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-bold';
+    src: url('fonts/scdream6-webfont.woff2') format('woff2'),
+         url('fonts/scdream6-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-extrabold';
+    src: url('fonts/scdream7-webfont.woff2') format('woff2'),
+         url('fonts/scdream7-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-heavy';
+    src: url('fonts/scdream8-webfont.woff2') format('woff2'),
+         url('fonts/scdream8-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 's-core-dream-black';
+    src: url('fonts/scdream9-webfont.woff2') format('woff2'),
+         url('scdream9-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

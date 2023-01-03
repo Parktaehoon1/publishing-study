@@ -1,0 +1,406 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li class="on"><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li><a href="../community/notice.html"><span>커뮤니티관리</span></a></li>
+			<li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>승인관리</h2>
+		<ul>
+			<li><a href="../approval/publish.html"><span>발행관리</span></a></li>
+			<li><a href="../approval/sale.html"><span>판매관리</span></a></li>
+			<li class="on"><a href="../approval/report.html"><span>신고관리</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><strong>APPROVAL</strong><span>신고관리</span></h2>
+
+		<section class="boardview">
+			<h3 class="ctit">신고 상세정보</h3>
+			<div>
+				<dl>
+					<dt>앨범번호</dt>
+					<dd class="bvwrap">
+					<span>123459</span>
+					<span class="bvbtn">
+					<input type="button" id="" value="신고된 NFT 보기" onClick="javascript:window.open('http://koongnft.sigmachain.co.kr/music/detail/392/49')"><!-- 해당 상품 상세페이지 로 이동 하면 됩니다-->
+					</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>앨범제목</dt>
+					<dd>영웅</dd>
+				</dl>
+				<dl>
+					<dt>아티스트</dt>
+					<dd>NCT</dd>
+				</dl>
+				<dl>
+					<dt>신고접수일</dt>
+					<dd>2022-12-02</dd>
+				</dl>		 
+				<dl>
+					<dt>신고자</dt>
+					<dd>email.@naver.com</dd>
+				</dl>
+				<dl>
+					<dt>신고사유</dt>
+					<dd>저작권 침해 및 기타 사유 </dd>
+				</dl> 
+				<dl>
+					<dt>상태</dt>
+					<dd class="bvwrap">
+					<span>신고접수 <!-- 신고접수 / 신고반려 / 판매중지 --></span>
+				
+					<span class="bvbtn">
+
+					<!--   신고접수 시 -->
+						<a href="javascript:vold();" onclick="pop_up_layer('pop_report_reject');return false;" class="bbtn">신고반려</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_sale_stop');return false;" class="bbtn btn_r">판매중지</a>
+					<!-- //  신고접수 시 -->
+
+					<!--  신고반려 시   -->
+						<a href="javascript:vold();"  onclick="pop_up_layer('pop_view_report_rejectReason');return false;" class="bbtn">신고반려사유</a>
+					<!--  //  신고반려 시 -->
+
+					<!-- 판매중지 시  -->
+					<a href="javascript:vold();"  onclick="pop_up_layer('pop_view_sale_stopReason');return false;" class="bbtn">판매중지사유</a>
+							<a href="javascript:vold();"  onclick="pop_up_layer('pop_sale_restart');return false;" class="bbtn">판매재개</a>
+					<!--  //  판매승인 시  -->
+
+					</span>
+					</dd>
+				</dl>			 
+				<dl>
+					<dt>처리날짜 </dt>
+					<dd>2022-12-02</dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="목록" onClick="window.location='../approval/sale.html'">
+		</div>
+		<!-- // btnwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+
+
+<div id="toast" class="toast"></div>
+
+
+<!--  pop_report_reject  -->
+<div class="popwrap pop_report_reject ">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_report_reject">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">해당 신고를 반려하시겠습니까?</div>
+
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="거절" class="cbtn bb2" onclick="pop_up_layer('pop_report_rejectReason');return false;">
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_report_reject -->
+
+
+<!--  pop_sale_restart  -->
+<div class="popwrap pop_sale_restart">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_sale_restart">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">해당 NFT를 판매재개 하시겠습니까?</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="네" class="cbtn bb2"  onclick="toast('판매재개처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_sale_restart -->
+
+<!--  pop_report_rejectReason -->
+<div class="popwrap mw500 pop_report_rejectReason">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_report_rejectReason">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>신고 반려 사유 </h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox ptbox">
+				<div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>신고반려	</dd>
+					</dl>
+				</div>
+				<h4 class="pstit1">반려사유 </h4>
+				<div class="psbox pt0">
+					<textarea id="approval_reject" name="approval_reject"></textarea>
+				</div>
+				<div  class="pstxt">※ 입력된 사유는 신고접수한 회원의 이메일로 발송됩니다. </div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="반려" class="cbtn bb2" onclick="toast('반려처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_report_rejectReason -->
+
+
+<!--  pop_view_report_rejectReason -->
+<div class="popwrap mw500 pop_view_report_rejectReason" >
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_view_report_rejectReason">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>신고반려사유</h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox ptbox">
+
+				<div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>신고반려	</dd>
+					</dl>
+				</div>
+
+				<h4 class="pstit1">반려사유</h4>
+				<div class="psbox_done">
+					거절된 사유는 사업자등록증이  제대로 인식이 되지 않았기 때문입니다 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다. 입정신청 거절된 사유입니다.
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn bb0">
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_view_report_rejectReason -->
+
+
+<!--  pop_sale_stop  -->
+<div class="popwrap pop_sale_stop">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_sale_stop">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">해당 NFT를 판매중지 하시겠습니까?</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="중지" class="cbtn bb2"  onclick="pop_up_layer('pop_sale_stopReason');return false;">
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_sale_stop -->
+
+<!--  pop_sale_stopReason -->
+<div class="popwrap mw500 pop_sale_stopReason">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_sale_stopReason">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>판매중지 사유 </h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox ptbox">
+				<div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>판매중지2022-11-14	</dd>
+					</dl>
+				</div>
+				<h4 class="pstit1">판매중지사유 </h4>
+				<div class="psbox pt0">
+					<textarea id="approval_reject" name="approval_reject"></textarea>
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="중지" class="cbtn bb2" onclick="toast('판매중지처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_sale_stopReason -->
+
+
+<!--  pop_view_sale_stopReason -->
+<div class="popwrap mw500 pop_view_sale_stopReason" >
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_view_sale_stopReason">
+		<div class="pwrap">
+			<div class="pop_tit">
+				<h3>판매중지사유</h3>
+			</div>
+			<!-- pbox  -->
+			<div class="pbox ptbox">
+
+				<div class="rejectbox">
+					<dl>
+						<dt>관리자</dt>
+						<dd>ADMIN1</dd>
+					</dl>
+					<dl>
+						<dt>상태변경일</dt>
+						<dd>2022-03-05</dd>
+					</dl>
+					<dl>
+						<dt>상태</dt>
+						<dd>판매중지	</dd>
+					</dl>
+				</div>
+
+				<h4 class="pstit1">판매중지사유</h4>
+				<div class="psbox_done">
+					판매중지사유 입니다.  	판매중지사유 입니다.  	판매중지사유 입니다.  	판매중지사유 입니다.  	판매중지사유 입니다.  
+				</div>
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="확인" class="cbtn bb0">
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn" href="#"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_view_sale_stopReason-->
+
+</body>
+</html>
