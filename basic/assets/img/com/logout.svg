@@ -1,0 +1,13 @@
+<svg id="icon_logout" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+  <g id="사각형_1740" data-name="사각형 1740" fill="#fff" stroke="#999" stroke-width="1" opacity="0">
+    <rect width="17" height="17" stroke="none"/>
+    <rect x="0.5" y="0.5" width="16" height="16" fill="none"/>
+  </g>
+  <g id="그룹_4589" data-name="그룹 4589" transform="translate(-756.789 -1951.704)">
+    <g id="그룹_4589-2" data-name="그룹 4589" transform="translate(764.718 1956.269)">
+      <path id="패스_5280" data-name="패스 5280" d="M809.76,1968.451l3.806,3.807a.333.333,0,0,1,0,.469l-3.806,3.807" transform="translate(-806.151 -1968.451)" fill="none" stroke="#767676" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="패스_9307" data-name="패스 9307" d="M3,0h7.12" transform="translate(-3 4.041)" fill="none" stroke="#767676" stroke-linecap="round" stroke-width="1"/>
+    </g>
+    <path id="패스_5281" data-name="패스 5281" d="M762.353,1966.532h-3.281a1.522,1.522,0,0,1-1.534-1.5v-11.069a1.522,1.522,0,0,1,1.534-1.5h3.281" transform="translate(0.802 0.813)" fill="none" stroke="#767676" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

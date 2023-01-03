@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li class="on"><a href="../community/qna.html"><span>커뮤니티관리</span></a></li>
+			<li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>커뮤니티 관리</h2>
+		<ul>
+			<li><a href="../community/notice.html"><span>공지사항</span></a></li>
+			<li><a href="../community/event.html"><span>이벤트</span></a></li>
+			<li class="on"><a href="../community/faq.html"><span>FAQ</span></a></li>
+			<li><a href="../community/qna.html"><span>1:1 문의</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+		<div class="subtit">
+			<h2 class="ctit"><strong>COMMUNITY</strong><span>FAQ</span></h2>
+			<div class="ctbtn">
+				<a href="../community/faq_detail.html">KOONG / KOONG NFT </a>
+				<a href="../community/faq_talk_detail.html" class="on">KOONG TALK </a>
+			</div>
+		</div>
+
+		<section class="boardview boardwrite cchkbox">
+			<h3 class="ctit">상세정보</h3>
+			<div>
+				<form>
+				<dl>
+					<dt>분류</dt>
+					<dd>전체 </dd>
+				</dl>
+				<dl>
+					<dt>제목</dt>
+					<dd>질문제목입니다 </dd>
+				</dl>
+				<dl>
+					<dt>노출여부</dt>
+					<dd>노출	</dd>
+				</dl>
+				<dl>
+					<dt>정렬순서</dt>
+					<dd>6</dd>
+				</dl>
+				<dl>
+					<dt>내용</dt>
+					<dd>내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 내용입니다 </dd>
+				</dl>
+				</form>
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="삭제" onclick="pop_up_layer('pop_faq_delete');return false;">
+			<input type="button" value="목록" onClick="window.location='../community/faq.html'">
+			<input type="button" value="수정" class="btn_ok" onClick="window.location='../community/faq_modify.html'">
+		</div>
+		<!-- // btnwrap -->
+
+	</div>
+	<!-- // content -->
+</div>
+<!-- // wrap -->
+ 
+ <div id="toast" class="toast"></div>
+
+<!--  pop_faq_delete -->
+<div class="popwrap pop_faq_delete">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_faq_delete">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">해당 FAQ 를 삭제하시겠습니까?</div>
+
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="네" class="cbtn bb2" onclick="toast('삭제처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_faq_delete -->
+
+
+</body>
+</html>

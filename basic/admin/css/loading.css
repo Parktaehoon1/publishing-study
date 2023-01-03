@@ -1,0 +1,105 @@
+.loading {position:fixed; z-index:100; width:100%; height:100%; display:flex; justify-content:center; align-items:center; background:rgba(0,0,0,0.4);}
+.loader,
+.loadingbox {height: 100px;position: relative;width: 100px;border-radius:100%;}
+.loader { display:flex; justify-content:center; align-items:center;z-index:101;   }
+.loadingbox {
+	border: 1px solid transparent;
+	border-color: transparent  #ed1c24  transparent #ed1c24 ;
+	-moz-animation: rotate-loading 1.5s linear 0s infinite normal;
+	-moz-transform-origin: 50% 50%;
+	-o-animation: rotate-loading 1.5s linear 0s infinite normal;
+	-o-transform-origin: 50% 50%;
+	-webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
+	-webkit-transform-origin: 50% 50%;
+	animation: rotate-loading 1.5s linear 0s infinite normal;
+	transform-origin: 50% 50%;
+}
+.loader:hover .loadingbox {border-color: transparent #ed1c24 transparent #ed1c24;}
+.loader:hover .loadingbox,
+.loader .loadingbox {
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#loading_text { width:100%; height:100%; 
+	-moz-animation: loading_text_opacity 4s linear 0s infinite normal;
+	-o-animation: loading_text_opacity 4s linear 0s infinite normal;
+	-webkit-animation: loading_text_opacity 4s linear 0s infinite normal;
+	animation: loading_text_opacity 4s linear 0s infinite normal;
+	color: #ed1c24;
+	font-size: 15px; line-height:100px;
+	font-weight:600;
+	opacity: 0;
+	position: absolute;
+	text-align: center;
+	text-transform: uppercase;
+	top: 0;
+	width: 100px;
+}
+
+.playerWrap .ploading_left,
+.playerWrap .ploading_left .loading {width:50% !important;  z-index:17 !important; }
+.playerWrap .ploading_right,
+.playerWrap .ploading_right .loading {width:50% !important;  z-index:17 !important; left:auto;  right:0 !important; }
+.playerWrap .ploading_left .loader,
+.playerWrap .ploading_right .loader {  z-index:18 !important;   }
+@media all and (max-width:700px){
+    .playerWrap .ploading_left,
+	.playerWrap .ploading_left .loading,
+	.playerWrap .ploading_right,
+	.playerWrap .ploading_right .loading{ width:100% !important; }
+}
+@media all and (min-width:1200px){ 
+	.playerWrap .ploading_left,
+	.playerWrap .ploading_left .loading,
+	.playerWrap .ploading_right,
+	.playerWrap .ploading_right .loading{max-width:600px !important; }
+}
+
+
+@keyframes rotate-loading {
+	0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+	100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+@-moz-keyframes rotate-loading {
+	0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+	100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+@-webkit-keyframes rotate-loading {
+	0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+	100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+@-o-keyframes rotate-loading {
+	0%  {transform: rotate(0deg);-ms-transform: rotate(0deg); -webkit-transform: rotate(0deg); -o-transform: rotate(0deg); -moz-transform: rotate(0deg);}
+	100% {transform: rotate(360deg);-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); -o-transform: rotate(360deg); -moz-transform: rotate(360deg);}
+}
+@keyframes loading_text_opacity {
+	0%  {opacity: 0}
+	20% {opacity: 1}
+	60% {opacity: 0}
+	80% {opacity: 1}
+	100%{opacity: 0}
+}
+@-moz-keyframes loading_text_opacity {
+	0%  {opacity: 0}
+	20% {opacity: 1}
+	60% {opacity: 0}
+	80% {opacity: 1}
+	100%{opacity: 0}
+}
+@-webkit-keyframes loading_text_opacity {
+	0%  {opacity: 0}
+	20% {opacity: 1}
+	60% {opacity: 0}
+	80% {opacity: 1}
+	100%{opacity: 0}
+}
+@-o-keyframes loading_text_opacity {
+	0%  {opacity: 0}
+	20% {opacity: 1}
+	60% {opacity: 0}
+	80% {opacity: 1}
+	100%{opacity: 0}
+}

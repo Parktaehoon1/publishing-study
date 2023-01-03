@@ -1,0 +1,13 @@
+<svg id="icon_m_closse" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49.243" height="49.243" viewBox="0 0 49.243 49.243">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="49.243" height="49.243" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="스크롤_그룹_1295" data-name="스크롤 그룹 1295" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="그룹_5153" data-name="그룹 5153" transform="translate(-979.379 -291.379)">
+      <line id="선_173" data-name="선 173" y1="45" x2="45" transform="translate(981.5 293.5)" fill="#fff" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <line id="선_174" data-name="선 174" x1="45" y1="45" transform="translate(981.5 293.5)" fill="#fff" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

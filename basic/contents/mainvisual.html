@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li><a href="../community/notice.html"><span>커뮤니티관리</span></a></li>
+		    <li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>컨텐츠관리</h2>
+		<ul>
+			<li class="on"><a href="../contents/mainvisual.html"><span>메인비주얼관리</span></a></li>
+			<li><a href="../contents/editorsPick.html"><span>Editor's Pick</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit"><strong>CONTENS</strong><span>메인비주얼 동영상 관리</span></h2>
+
+		<section class="boardview boardwrite cchkbox">
+			<h3 class="ctit">메인비주얼 관리</h3>
+			<div>
+				<form id="write_form">
+				<dl>
+					<dt>제목</dt>
+					<dd><input type="text" id="mainvisual_subject" name="title" class="w100p"
+					placeholder="제목을 입력해 주세요" value=""></dd>
+				</dl>
+				<dl>
+					<dt>배경 동영상</dt>
+					<dd class="img">
+					<div class="vimgwrap mt10">
+						<?php if(isset($main_info)){ ?>
+						<div class="createFilebox2" style="display: none;">
+							<label for="notice_file2">
+							<span class="vtxt">동영상사이즈<br> 720 x 480 이상  </span>
+							<span class="vbtn"><i>파일선택</i></span>
+							</label>
+							<input type="file" name="notice_file2" id="notice_file2" class="createFile_upload2"
+							accept="image/*">
+						</div>
+						<div class="createFile_preview2"><img class="thumb" src="<?=$this->config->item('img_url')?><?=$main_info->file_path_resize?>" title="닫기"></div>
+						<button type="button" class="createFile_preview-de2 on">삭제</button>
+						<?php } else{ ?>
+						<div class="createFilebox2">
+							<label for="notice_file2">
+							<span class="vtxt">동영상사이즈<br> 720 x 480 이상 </span>
+							<span class="vbtn"><i>파일선택</i></span>
+							</label>
+							<input type="file" name="notice_file2" id="notice_file2" class="createFile_upload2"
+							accept="image/*">
+						</div>
+						<div class="createFile_preview2"></div>
+						<button type="button" class="createFile_preview-de2">삭제</button>
+						<?php } ?>
+					</div>
+					</dd>
+				</dl>
+				<dl>
+					<dt>작은 타이틀</dt>
+					<dd><input type="text" id="mainvisual_txt" name="title" class="w100p"
+					placeholder="작은 타이틀을 입력해 주세요" value=""></dd>
+				</dl>
+				<dl>
+					<dt>메인타이틀</dt>
+					<dd><input type="text" id="mainvisual_txt" name="title" class="w100p"
+					placeholder="메인타이틀을 입력해 주세요" value=""></dd><!-- INPUT  텍스트입력시 	<br>  입력 가능하게 -->
+				</dl>
+				<dl>
+					<dt>URL</dt>
+					<dd><input type="text" id="mainvisual_link" name="title" class="w100p"
+					placeholder="연결할 URL을 입력해 주세요" value=""></dd>
+				</dl>
+
+				</form>
+
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="취소" onClick="window.location='/admin/community/notice'">
+			<input type="button" value="저장" class="btn_ok" id="write_submit">
+		</div>
+		<!-- // btnwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+</body>
+</html>

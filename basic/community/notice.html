@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li class="on"><a href="../community/qna.html"><span>커뮤니티관리</span></a></li>
+			<li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>커뮤니티 관리</h2>
+		<ul>
+			<li class="on"><a href="../community/notice.html"><span>공지사항</span></a></li>
+			<li><a href="../community/event.html"><span>이벤트</span></a></li>
+			<li><a href="../community/faq.html"><span>FAQ</span></a></li>
+			<li><a href="../community/qna.html"><span>1:1 문의</span></a></li> 
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+		<div class="subtit">
+			<h2 class="ctit"><strong>COMMUNITY</strong><span>공지사항</span></h2>
+			<div class="ctbtn">
+				<a href="../community/notice.html" class="on">KOONG / KOONG NFT </a>
+				<a href="../community/notice_talk.html">KOONG TALK </a>
+			</div>
+		</div>
+
+		<!-- searchwrap -->
+		<section class="searchwrap">
+
+			<div class="sbox">
+				<span class="stit">검색조건</span>
+
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="0" selected>노출여부 </option>
+					<option value="1"> 전체</option>
+					<option value="2">노출</option>
+					<option value="3">비노출</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<!-- selectbox -->
+				<div class="selectbox">
+					<select class="selectpicker">
+					<option value="1" selected>제목</option>
+					<option value="2">관리자</option>
+					</select>
+				</div>
+				<!-- // selectbox -->
+				<input type="text" class="stxt" id="searchTxt" name="searchTxt" placeholder="검색어를 입력해보세요">
+			</div>
+
+			<div class="sbox">
+				<span class="stit">조회기간</span>
+				<div class="datebox">
+					<a href="javascript:vold();" >전체</a>
+					<a href="javascript:vold();">오늘</a>
+					<a href="javascript:vold();">1주일</a>
+					<a href="javascript:vold();">1개월</a>
+					<a href="javascript:vold();">3개월</a>
+				</div>
+				<div class="calendarbox">
+					<span><input type="text" id="datepicker1"></span>
+					<span class="dot">~</span>
+					<span><input type="text" id="datepicker2"></span>
+				</div>
+			</div>
+
+			<div class="sbtn"><input type="button" id="searchBtn" name="searchBtn" value ="검색"></div>
+
+		</section>
+		<!-- // searchwrap -->
+
+
+		<!-- boardwrap -->
+		<section class="boardwrap">
+
+			<div class="boardtit">
+				<h3 class="ctit">총 777,777 공지사항 </h3>
+				<div class="btbtn">
+					<input type="button" id="" name=""  class="btn_apply" value="정렬변경 적용">
+					<!-- selectbox -->
+					<div class="selectbox">
+						<select class="selectpicker">
+						<option value="1" selected>20개씩 보기</option>
+						<option value="2">50개씩 보기</option>
+						<option value="3">100개씩 보기</option>
+						<option value="4">200개씩 보기</option>
+						</select>
+					</div>
+					<!-- // selectbox -->
+					<input type="button" id="" name=""  class="btn_add" value="공지사항 등록" onClick="window.location='../community/notice_create.html'">
+				</div>
+			</div>
+
+			<div class="boardlist board_notice">
+				<ul class="tit">
+					<li class="no">NO</li>
+					<li class="title">제목</li>
+					<li class="period">기간</li>
+					<li class="exposure">노출여부</li>
+					<li class="top">상단노출</li>
+					<li class="popup">팝업표출</li>
+					<li class="sequence">정렬순서</li>
+					<li class="writer">관리자</li>
+					<li class="date">등록일</li>
+					<li class="detail">상세</li>
+					<li class="manage">상태관리</li>
+				</ul>
+
+				<!-- 내역없을 시
+						<div class="nodata">
+							<span><i>!</i><span>
+							<span>내역이 없습니다</span>
+						</div>
+						<!-- // 내역없을 시 -->
+
+				<!-- 내역있을 시 : 기본 20개씩 노출  -->
+				<div class="listwrap displaywrap">
+					<ul>
+						<li class="no"> 10 </li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">1</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no"> 9 </li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">비지정</span><span class="pd2">-</span></li>
+						<li class="exposure">비노출</li>
+						<li class="top">X</li>
+						<li class="popup">X</li>
+						<li class="sequence">2</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no">8 </li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">3</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no">7</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">4</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no"> 6 </li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">5</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no">5 </li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">6</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no">4 </li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">7</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no">3 </li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">8</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no">2 </li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">9</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+					<ul>
+						<li class="no">1</li>
+						<li class="title"><em>제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 제목입니다 </em></li>
+						<li class="period"><span class="pd1">지정</span><span class="pd2">2022.11.02 ~ 2022.11.25</span></li>
+						<li class="exposure">노출</li>
+						<li class="top">O</li>
+						<li class="popup">X</li>
+						<li class="sequence">10</li>
+						<li class="writer"> Admin1 </li>
+						<li class="date"> 2022-12-02 </li>
+						<li class="detail"><input type="button" class="bbtn" value="상세" onClick="window.location='../community/notice_detail.html'"></li>
+						<li class="manage">
+							<a href="javascript:vold();" onClick="window.location='../community/notice_modify.html'" class="bbtn">수정</a>
+							<a href="javascript:vold();" onclick="pop_up_layer('pop_notice_delete');return false;" class="bbtn">삭제</a>
+						</li>
+					</ul>
+				</div>
+				<!-- // 내역있을 시 -->
+
+			</div>
+
+			<!-- page -->
+			<div class="page">
+				<ul>
+					<li class="first"><a href=""><span>처음</span> </a></li>
+					<li class="prev"><a href=""><span>이전</span> </a></li>
+					<li><a href="">1</a></li>
+					<li class="on"><a href="">2</a></li>
+					<li><a href="">3</a></li>
+					<li><a href="">4</a></li>
+					<li><a href="">5</a></li>
+					<li class="next"><a href=""><span>다음 </span> </a></li>
+					<li class="end"><a href=""><span>마지막 </span> </a></li>
+				</ul>
+			</div>
+			<!-- // page -->
+
+		</section>
+		<!-- boardwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+<div id="toast" class="toast"></div>
+
+<!--  pop_notice_delete -->
+<div class="popwrap pop_notice_delete">
+	<div class="bg"></div>
+	<div class="popwrap_layer" id="pop_notice_delete">
+		<div class="pwrap">
+			<!-- pbox  -->
+			<div class="pbox">
+				<div class="ptxt">해당 공지사항을 삭제하시겠습니까?</div>
+
+			</div>
+			<!-- // pbox  -->
+			<div class="btn_pop">
+				<input type="button" id="" name="" value="취소" class="cbtn bb1">
+				<input type="button" id="" name="" value="네" class="cbtn bb2" onclick="toast('삭제처리가 완료되었습니다')" >
+			</div>
+		</div>
+		<div class="btn_close">
+			<a class="cbtn"><span>Close</span></a>
+		</div>
+	</div>
+</div>
+<!-- // pop_notice_delete -->
+
+</body>
+</html>

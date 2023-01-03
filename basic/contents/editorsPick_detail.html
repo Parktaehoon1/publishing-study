@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="KOONG">
+<meta property="og:url" content="http://koongnft.sigmachain.co.kr/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KOONG">
+<meta property="og:image" content="/assets/img/com/thumbnail.jpg">
+<meta property="og:description" content="KOONG">
+
+<link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+
+<title>KOONG 관리자</title>
+<link rel="stylesheet" href="../assets/css/font.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap-select.css">
+<link rel="stylesheet" href="../assets/plugins/bootstrap/css/jquery-ui.css">
+<link rel="stylesheet" href="../assets/css/default.css">
+<link rel="stylesheet" href="../assets/css/popup.css">
+<link rel="stylesheet" href="../assets/css/common.css">
+<link rel="stylesheet" href="../assets/css/content.css">
+
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../assets/plugins/bootstrap/js/bootstrap-select.js"></script>
+<script src="../assets/plugins/bootstrap/js/jquery-ui.js"></script>
+<script src="../assets/js/menu.js"></script>
+<script src="../assets/js/common.js"></script>
+
+<link rel="shortcut icon" href="../assets/img/favicon/favicon.ico">
+
+<!-- [if lt IE 9]>
+ <script src="../assets/js/html5.js"></script>
+ <script src="../assets/js/respond.min.js"></script>
+<![endif] -->
+
+</head>
+<body>
+
+<!-- header -->
+<header>
+	<h1><a href="../nft/nft.html"><img src="../assets/img/com/logo.svg" alt="KOONG 관리자"></a></h1>
+	<nav>
+		<ul>
+			<li><a href="../nft/nft.html"><span><i>NFT</i>관리</span></a></li>
+			<li><a href="../approval/publish.html"><span>승인관리</span></a></li>
+			<li><a href="../transaction/transaction_nft.html"><span>거래관리</span></a></li>
+			<li><a href="../member/member.html"><span>회원관리</span></a></li>
+			<li><a href="../community/notice.html"><span>커뮤니티관리</span></a></li>
+			<li><a href="../contents/mainvisual.html"><span>컨텐츠관리</span></a></li>
+		</ul>
+		<div class="tmenu">
+			<a href="../setting/manager.html">관리자관리</a>
+			<a href="../intro/intro.html">로그아웃</a>
+		</div>
+	</nav>
+</header>
+<!-- // header -->
+
+<!-- wrap -->
+<div id="wrap">
+
+	<!-- aside -->
+	<aside>
+		<h2>컨텐츠관리</h2>
+		<ul>
+			<li><a href="../contents/mainvisual.html"><span>메인비주얼관리</span></a></li>
+			<li class="on"><a href="../contents/editorsPick.html"><span>Editor's Pick</span></a></li>
+		</ul>
+		<p class="copyright">COPYRIGHT © KOONG. ALL RIGHTS RESERVES.</p>
+	</aside>
+	<!--// aside-->
+
+	<!-- content -->
+	<div class="content">
+
+		<h2 class="ctit pb10"><strong>CONTENS</strong><span>Editor's Pick 관리 상세정보</span></h2>
+
+		<section class="boardview">
+			<h3 class="ctit">앨범정보</h3>
+			<div>
+				<dl>
+					<dt>앨범번호</dt>
+					<dd class="bvwrap">
+					<span><?=$album_idx?></span>
+					<span class="bvbtn">
+					<input type="button" id="" value="NFT 상세보기" onClick="javascript:window.open('http://<?=$_SERVER['HTTP_HOST']?>/music/detail/<?=$album_idx?>/<?=$unique_id_suffix?>')"><!-- 해당 상품 상세페이지 로 이동 하면 됩니다-->
+					</span>
+					</dd>
+				</dl>
+				<dl>
+					<dt>앨범제목</dt>
+					<dd><?=$title?></dd>
+				</dl>
+				<dl>
+					<dt>아티스트</dt>
+					<dd><?=$rep_artist?></dd>
+				</dl>
+				<dl>
+					<dt>Unique ID</dt>
+					<dd><?=$nft_unique_id?></dd>
+				</dl>
+				<dl>
+					<dt>Tracks</dt>
+					<dd><?=$music_cnt?></dd>
+				</dl>
+				<dl>
+					<dt>발행수량</dt>
+					<dd><?=$amount?></dd>
+				</dl>
+				<dl>
+					<dt>금액</dt>
+					<dd><?=format_price($price)?> KOONG</dd>
+				</dl>
+			</div>
+		</section>
+
+		<section class="boardview ">
+			<h3 class="ctit">회원정보</h3>
+			<div>
+
+				<dl>
+					<dt>ID(이메일)</dt>
+					<dd><?=$email?></dd>
+				</dl>
+				<dl>
+					<dt>닉네임</dt>
+					<dd><?=$nickname?></dd>
+				</dl>
+				<dl>
+					<dt>상태</dt>
+					<dd><?=($approval == '10' ? '판매' : '발행')?></dd>
+				</dl>
+
+				<dl>
+					<dt>상태변경일 </dt>
+					<dd><?=(isset($sell_timestamp) ? date('Y-m-d H:i:s',$sell_timestamp) : "-")?></dd>
+				</dl>
+			</div>
+		</section>
+
+		<!-- btnwrap -->
+		<div class="btnwrap">
+			<input type="button" value="목록" onClick="window.location='/admin/nft/main'">
+		</div>
+		<!-- // btnwrap -->
+
+	</div>
+	<!-- // content -->
+
+</div>
+<!-- // wrap -->
+
+
+</body>
+</html>
