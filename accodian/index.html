@@ -8,13 +8,11 @@
     <style>
         /* board */
         .boardwrap  {width:100%; background:#fff; margin:50px 0 0 0; border-radius:10px; }
-
         .boardList {width:100%; margin:0;border-top:1px solid #212121;}
         .boardList:after {content:''; display:block; clear:both; }
         .boardList ul {width:100%; border-bottom:1px solid #999; display:flex; justify-content:space-between; align-items:stretch; }
         .boardList ul:hover {background:#F6F6F8;} 
         .boardList ul li {display:flex; justify-content:center; flex-direction:column; align-items:center; padding:12px 5px;  text-align:center; min-height:56px;  font-weight:400;   }
-
         .boardList ul li.no em {font-weight:500;  } 
         .boardList ul li a:hover {cursor:pointer;} 
         .boardList ul li a {width:100%; text-align:left; display:inline-block; width:90%; white-space:nowrap; overflow:hidden; word-wrap:break-word; text-overflow:ellipsis; transition:all 0.3s }
@@ -25,68 +23,69 @@
         .boardList ul.titbox li {font-weight:500; height:60px; text-transform:uppercase; text-align:center !important; font-size:16px;}
         .boardList ul.titbox:hover {background:#f0f0f0;}
         .boardList ul li .stit {display:none; color:#999; font-weight:400; }
-
         .point {width:35px; line-height:34px; height:35px; text-align:center; padding:0; display:inline-block; color:#fff; background:#fb5b0d; border-radius:50%;}
     </style>
 </head>
 <body>
 <div class="boardwrap">
-			<h3 class="sr-only">FAQ</h3>
-
-			<div class="faq">
-
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">회원가입은 어떻게 하나요?</a></p>
-					<p class="a" ><span>A</span><em> 오너마켓 회원가입은 홈페이지 상단의 “사람 아이콘”을 클릭하시면 LOGIN/SIGN UP 팝업이 노출됩니다. 여기서 SIGN UP을 클릭하여 안내에 따라 약관동의 > 정보입력 후 회원가입이 완료됩니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">비밀번호를 분실했습니다.</a></p>
-					<p class="a" ><span>A</span><em> 홈페이지 상단 LOGIN이 버튼을 클릭하시면 [비밀번호 재설정]을 통해 “비밀번호 재설정”이 가능합니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">회원탈퇴는 어떻게 하나요?</a></p>
-					<p class="a" ><span>A</span><em> 회원탈퇴는 오너마켓 관리자에서 회원확인 후 회원탈퇴 진행합니다. Community > Contact Us > 문의하기를 통해 관리자에게 회원탈퇴 문의를 남겨 주세요. 회원탈퇴 시 오너마켓에서 생성한 지갑의 보유 코인은 사용할 수 없다는 점 꼭 확인하고 회원탈퇴를 해주시기 바랍니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">지갑 생성은 어떻게 하나요?</a></p>
-					<p class="a" ><span>A</span><em> 홈페이지 상단 [지갑] 아이콘 클릭 시 My Wallet 페이지에서 지갑 생성이 가능합니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">마켓에 사용 가능한 통화가 더 추가되나요?</a></p>
-					<p class="a" ><span>A</span><em> 네, 현재는 BUS의 통화가 첫 번째 통화로 정해져 있으나, 추후 Owner Market의 상장 문의를 통해 계속해서 마켓에서 사용 가능한 통화를 추가할 예정입니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">NFT 발행은 어디서 하나요?</a></p>
-					<p class="a" ><span>A</span><em> NFT 발행은 홈페이지 상단의 “Mint”버튼을 클릭하여 Mint 페이지에서 NFT 정보를 모두 입력한 후 발행이 완료됩니다. NFT 발행에는 업로드 파일, 제목, 내용, 발행 개수, 카테고리, 로열티입력, 유의사항 동의 후 NFT가 발행됩니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">NFT 발행 취소는 어떻게 하나요?</a></p>
-					<p class="a" ><span>A</span><em> 블록체인 특성상 한 번 발행된 NFT는 발행 취소가 불가능합니다. 다만 NFT 발행 시 정책상 부적절한 이미지나 영상 등이 포함되어 있는 경우 고지없이 해당 NFT가 사이트에서 삭제될 수 있습니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">발행한 NFT를 나만 보고 싶은데 어떻게 하나요?</a></p>
-					<p class="a" ><span>A</span><em> NFT 발행 시 NFT Public/Private 버튼을 활성화하여 공개 처리가 가능하며, 비활성화로 나만공개가 가능합니다. 공개로 발행 후에도 나만공개로 전환하고 싶은 경우에는 My Profile > Owned > Edit에서 수정이 가능합니다. 다만, 구매한 NFT이거나 판매하고 있는 NFT인 경우에는 나만공개 처리가 불가능합니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">발행한 NFT를 어떻게 판매하나요?</a></p>
-					<p class="a" ><span>A</span><em> 발행한 NFT는 My Profile > Owned에서 판매할 NFT 클릭 후 [Sell] 버튼을 통해 판매하실 수 있습니다. 다만, 최초 발행하여 최초로 판매하는 작품은 관리제 승인을 통해 판매가 가능하며, 관리자 승인 완료 후 [Sell] 버튼을 이용하여, 판매 타입과 판매 가격 설정 후 쉽게 판매가 가능합니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">판매 승인 거절된 경우에는 어떻게 하나요?</a></p>
-					<p class="a" ><span>A</span><em> 오너마켓 관리 정책상 판매 승인이 거절된 경우 [승인 거절] 버튼을 통해 거절 사유를 알 수 있습니다. 거절 사유 충족 시 판매 승인 재신청이 가능하오니, 승인 사유 충족 시 재신청해 주시기 바랍니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">비회원으로도 NFT 결제를 할 수 있나요?</a></p>
-					<p class="a" ><span>A</span><em> 오너마켓은 비회원으로 결제가 불가능합니다. 오너마켓은 회원제로 NFT 생성, 결제가 이루어 지는 시스템입니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">단일 상품이 무엇인가요?</a></p>
-					<p class="a" ><span>A</span><em> 한 작품에 NFT를 한 개 이상 발행한 상품입니다. 조각으로 발행한 작품을 제외하고 나머지가 단일 상품입니다. 단일 상품은 발행한 개수만큼 Edition 번호가 부여됩니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">조각 상품이 무엇인가요?</a></p>
-					<p class="a" ><span>A</span><em> 한 작품에 NFT를 단 한 개만 발행하여 한 개의 NFT를 조각으로 쪼개어 발행한 상품입니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">상품 구매는 어디서 하나요?</a></p>
-					<p class="a" ><span>A</span><em> 상품 구매는 Market > Digital, Auction 메뉴에서 원하는 상품을 골라 구매가 가능합니다. 단일 상품은 Edition별로 구매가 가능하며, 조각 상품은 원하는 가격, 구매 수량을 선택하여 구매가 가능합니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">구매한 상품 취소가 가능한가요?</a></p>
-					<p class="a" ><span>A</span><em> 블록체인 특성상 결제가 완료된 경우 소유권이 이전되기 때문에 상품 취소가 불가능합니다. 구매 시 신중히 결제해 주시기 바랍니다.				</div>
-				<div class="fbox hide">
-					<p class="q"><span>Q</span><a class="trigger">구매한 NFT는(상품)는 어디서 확인할 수 있나요?</a></p>
-					<p class="a" ><span>A</span><em> 구매한 NFT는 My Profile > Owned에서 확인가능하며, History에서도 결제 완료된 상품 리스트를 보실 수 있습니다.				</div>
-
-				<!-- <div class="nodata"><span>FAQ가 없습니다.</span></div> -->
-
-			</div>
+	<h3 class="sr-only">FAQ</h3>
+	<div class="faq">
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">회원가입은 어떻게 하나요?</a></p>
+			<p class="a" ><span>A</span><em> 오너마켓 회원가입은 홈페이지 상단의 “사람 아이콘”을 클릭하시면 LOGIN/SIGN UP 팝업이 노출됩니다. 여기서 SIGN UP을 클릭하여 안내에 따라 약관동의 > 정보입력 후 회원가입이 완료됩니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">비밀번호를 분실했습니다.</a></p>
+			<p class="a" ><span>A</span><em> 홈페이지 상단 LOGIN이 버튼을 클릭하시면 [비밀번호 재설정]을 통해 “비밀번호 재설정”이 가능합니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">회원탈퇴는 어떻게 하나요?</a></p>
+			<p class="a" ><span>A</span><em> 회원탈퇴는 오너마켓 관리자에서 회원확인 후 회원탈퇴 진행합니다. Community > Contact Us > 문의하기를 통해 관리자에게 회원탈퇴 문의를 남겨 주세요. 회원탈퇴 시 오너마켓에서 생성한 지갑의 보유 코인은 사용할 수 없다는 점 꼭 확인하고 회원탈퇴를 해주시기 바랍니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">지갑 생성은 어떻게 하나요?</a></p>
+			<p class="a" ><span>A</span><em> 홈페이지 상단 [지갑] 아이콘 클릭 시 My Wallet 페이지에서 지갑 생성이 가능합니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">마켓에 사용 가능한 통화가 더 추가되나요?</a></p>
+			<p class="a" ><span>A</span><em> 네, 현재는 BUS의 통화가 첫 번째 통화로 정해져 있으나, 추후 Owner Market의 상장 문의를 통해 계속해서 마켓에서 사용 가능한 통화를 추가할 예정입니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">NFT 발행은 어디서 하나요?</a></p>
+			<p class="a" ><span>A</span><em> NFT 발행은 홈페이지 상단의 “Mint”버튼을 클릭하여 Mint 페이지에서 NFT 정보를 모두 입력한 후 발행이 완료됩니다. NFT 발행에는 업로드 파일, 제목, 내용, 발행 개수, 카테고리, 로열티입력, 유의사항 동의 후 NFT가 발행됩니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">NFT 발행 취소는 어떻게 하나요?</a></p>
+			<p class="a" ><span>A</span><em> 블록체인 특성상 한 번 발행된 NFT는 발행 취소가 불가능합니다. 다만 NFT 발행 시 정책상 부적절한 이미지나 영상 등이 포함되어 있는 경우 고지없이 해당 NFT가 사이트에서 삭제될 수 있습니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">발행한 NFT를 나만 보고 싶은데 어떻게 하나요?</a></p>
+			<p class="a" ><span>A</span><em> NFT 발행 시 NFT Public/Private 버튼을 활성화하여 공개 처리가 가능하며, 비활성화로 나만공개가 가능합니다. 공개로 발행 후에도 나만공개로 전환하고 싶은 경우에는 My Profile > Owned > Edit에서 수정이 가능합니다. 다만, 구매한 NFT이거나 판매하고 있는 NFT인 경우에는 나만공개 처리가 불가능합니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">발행한 NFT를 어떻게 판매하나요?</a></p>
+			<p class="a" ><span>A</span><em> 발행한 NFT는 My Profile > Owned에서 판매할 NFT 클릭 후 [Sell] 버튼을 통해 판매하실 수 있습니다. 다만, 최초 발행하여 최초로 판매하는 작품은 관리제 승인을 통해 판매가 가능하며, 관리자 승인 완료 후 [Sell] 버튼을 이용하여, 판매 타입과 판매 가격 설정 후 쉽게 판매가 가능합니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">판매 승인 거절된 경우에는 어떻게 하나요?</a></p>
+			<p class="a" ><span>A</span><em> 오너마켓 관리 정책상 판매 승인이 거절된 경우 [승인 거절] 버튼을 통해 거절 사유를 알 수 있습니다. 거절 사유 충족 시 판매 승인 재신청이 가능하오니, 승인 사유 충족 시 재신청해 주시기 바랍니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">비회원으로도 NFT 결제를 할 수 있나요?</a></p>
+			<p class="a" ><span>A</span><em> 오너마켓은 비회원으로 결제가 불가능합니다. 오너마켓은 회원제로 NFT 생성, 결제가 이루어 지는 시스템입니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">단일 상품이 무엇인가요?</a></p>
+			<p class="a" ><span>A</span><em> 한 작품에 NFT를 한 개 이상 발행한 상품입니다. 조각으로 발행한 작품을 제외하고 나머지가 단일 상품입니다. 단일 상품은 발행한 개수만큼 Edition 번호가 부여됩니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">조각 상품이 무엇인가요?</a></p>
+			<p class="a" ><span>A</span><em> 한 작품에 NFT를 단 한 개만 발행하여 한 개의 NFT를 조각으로 쪼개어 발행한 상품입니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">상품 구매는 어디서 하나요?</a></p>
+			<p class="a" ><span>A</span><em> 상품 구매는 Market > Digital, Auction 메뉴에서 원하는 상품을 골라 구매가 가능합니다. 단일 상품은 Edition별로 구매가 가능하며, 조각 상품은 원하는 가격, 구매 수량을 선택하여 구매가 가능합니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">구매한 상품 취소가 가능한가요?</a></p>
+			<p class="a" ><span>A</span><em> 블록체인 특성상 결제가 완료된 경우 소유권이 이전되기 때문에 상품 취소가 불가능합니다. 구매 시 신중히 결제해 주시기 바랍니다.				</div>
+		<div class="fbox hide">
+			<p class="q"><span>Q</span><a class="trigger">구매한 NFT는(상품)는 어디서 확인할 수 있나요?</a></p>
+			<p class="a" ><span>A</span><em> 구매한 NFT는 My Profile > Owned에서 확인가능하며, History에서도 결제 완료된 상품 리스트를 보실 수 있습니다.				</div>
+		<!-- <div class="nodata"><span>FAQ가 없습니다.</span></div> -->
+	</div>
+     <figure>
+         <img src="/media/cc0-images/elephant-660-480.jpg"
+             alt="Elephant at sunset">
+         <figcaption>An elephant at sunset</figcaption>
+     </figure>
+     <!-- figuer 태그는 아래 figcaption 이랑 같이 사용하는게 가장 좋다 -->
 </body>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script>

@@ -5,28 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="reset.css"> -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+
+
+          /* 
+          header p:hover,
+          main p:hover,
+          footer p:hover{}
+          */
+                  header > p:hover {color: aqua;}
+
+        :is(header, main, footer) p:hover {
+          color: blue;
+          cursor: pointer;
+          }  
+          /* :is 의 경우 선택자가 다른 요소랑 동일하게 가짐 */
+        :where(header, main, footer) p:hover {
+          color: red;
+          cursor: pointer;
+          }
+          /* :is 랑 header > p:hover의 점수는 같아서 밑에 쓰이는게 색상 먹게 됨 */
+          .box{
+            /* background-color: red; */
+            background-color: color-mix(red, blue);
+            color: color-contrast(red);
+            /* color-contrast 는 브라우저가 알아서 색 반전으로 찾아줌 */
+          }
+
+          /* :has 기본 */
+          form:has(button){background-color: beige;}
+          /* has는 has안에 가지고 있는 자식의 부모에 속성을 주는 것 */
+          header:has(p){background-color: aqua;}
+
+          /* :not 문구 */
+          p:not(.classy) { color: red; }
+          body :not(p) { color: green; }
+
+          /* X + Y */
+          ul + p{
+            color: yellow; 
+            /* 여기에는 important를 붙여야됨 */
+          }
+
+          .abc ~ p{
+            color: gray;
+          }
+    </style>
 </head>
 <body>
- <section class="visual">
+  <header>
+    <p>aaa</p>
+  </header>
+  <main>
+    <span>aaaa</span>
+  </main>
+  <footer>
+    <p>aaaaa</p>
+  </footer>
 
-      
-          <!-- <div class="source"></div>
-          <div class="source2"></div> -->
-          <!-- swpier 로 갈 예정 -->
-   
-                  <div class="visual-box">
-                    <div class="circle"></div>
-                    <div class="circle2"></div>
-                    <div class="visual-title">
-                      시그마체인 독자적 기술로 미래의 새로운 가능성을 연결해 갑니다.
-                      <p>BLOCKCHAIN</p>
-                      <p>TECHNOLOGY</p>
-                    </div>
-                  </div>  
-            
-      </div>
+  <div class="box">
+    ㅁㅁㅁㅁㅁㅁㅁㅁㅁ
+  </div>
+  <form>
+    <button>aaa</button>
+    <input type="text" placeholder="aaa">
+  </form>
 
+  <p>Some text.</p>  
+  <!-- red -->
+  <p class="classy">Some other text.</p>
+  <!-- 감정 -->
+  <span>One more text<span>
+  <!-- green -->
+
+  <ul>
+    <li>aa</li>
+  </ul>
+  <p>bb</p>
+  <p>cc</p>
+
+  <ul class="abc">
+
+  </ul>
+  <p>tqwer</p>
 </body>
 </html>
