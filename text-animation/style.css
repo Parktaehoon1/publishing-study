@@ -1,0 +1,30 @@
+body,
+html {
+  overflow: hidden;
+}
+
+body {
+  background: #000;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.scrolling-text .scrolling-text-content {
+  color: #fff;
+  font-size: 120px;
+  white-space: nowrap;
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+  line-height: 1em;
+  margin: 50px 0;
+}
