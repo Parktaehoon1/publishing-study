@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -40,4 +40,42 @@
       }
     });
   </script>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!DOCTYPE html>
+<html>
+<body>
+
+<h1>WheelEvent deltaY Property</h1>
+
+<p>Resize the DIV element by scrolling inside it:</p>
+
+<div onwheel="myFunction(event)" style="width:100px;height:100px;background-color:Tomato"></div>
+
+<script>
+function myFunction(event) {
+  var y = event.deltaY;
+  var currentSize = event.target.style.width;
+  if (y > 0) {
+    newSize = parseInt(currentSize) + 10;
+  } else {
+    newSize = parseInt(currentSize) - 10;
+  }
+  event.target.style.width = newSize + "px";
+  event.target.style.height = newSize + "px";
+}
+</script>
+
+</body>
+</html>
+</body>
 </html>
