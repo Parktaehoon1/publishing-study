@@ -1,0 +1,63 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+}
+
+.skill-progress {
+  width: 500px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #333;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.skill-progress h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+  font-weight: normal;
+}
+.item {}
+.item p {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.item p span:first-child {
+  float: left;
+}
+.item p span:last-child {
+  float: right;
+}
+.progress {
+  border: 1px solid #6cd4c4;
+  padding: 5px;
+  border-radius: 3px;
+}
+.progress-level {
+  height: 10px;
+  background: linear-gradient(to right, #fa709a, #fee140);
+  animation-name: ani;
+  animation-duration: 1s;
+}
+
+@keyframes ani {
+  0% {
+    width: 0;
+  }
+}
+
+
+

@@ -1,0 +1,65 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+
+.item {
+  /*border: 1px solid red;*/
+  width: 300px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.item input {
+  border: 1px solid lightgray;
+  height: 40px;
+  width: inherit;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+  padding-left: 50px;
+  outline: none;
+  transition: 0.3s;
+}
+.item .fa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: gray;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  /*border: 1px solid blue;*/
+  text-align: center;
+  line-height: 40px;
+  transition: 0.3s;
+  border-radius: 5px 0 0 5px;
+}
+.item input:focus {
+  border: 1px solid dodgerblue;
+  box-shadow: 0 0 5px dodgerblue;
+}
+.item input:focus + .fa {
+  background-color: dodgerblue;
+}
+.item input:focus::placeholder {
+  visibility: hidden;
+}
+
+
+

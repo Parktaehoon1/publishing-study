@@ -1,0 +1,7 @@
+Email
+Email Address
+Password
+Password
+Keep me logged in
+Forgot Your Password?
+Log in

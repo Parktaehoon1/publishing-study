@@ -1,0 +1,105 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  color: #222;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+.tab-inner {}
+input[name=tabmenu] {
+  display: none;
+}
+.tabs {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+}
+.items {
+  height: 100vh;
+  width: 300%;
+  transition: 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.items div {
+  height: 100vh;
+  float: left;
+  width: 33.33333%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.items div:nth-child(1) {
+  background-color: teal;
+}
+.items div:nth-child(2) {
+  background-color: dodgerblue;
+}
+.items div:nth-child(3) {
+  background-color: yellowgreen;
+}
+.items div h1 {
+  font-size: 80px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.btn {
+  position: absolute;
+  bottom: 20px;
+  /*left: 50%;
+  transform: translateX(-50%);*/
+  width: 100%;
+  text-align: center;
+}
+.btn label {
+  display: inline-block;
+  height: 5px;
+  width: 50px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+input[id=tab1]:checked ~ .tabs .items {
+  left: 0;
+}
+input[id=tab2]:checked ~ .tabs .items {
+  left: -100%;
+}
+input[id=tab3]:checked ~ .tabs .items {
+  left: -200%;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+  background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,103 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+}
+.square {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  margin: 30px;
+}
+.square span {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  border: 1px solid #fff;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  transition: 0.5s;
+}
+.square:nth-child(1):hover span {
+  background-color: crimson;
+  border: none;
+}
+.square:nth-child(2):hover span {
+  background-color: dodgerblue;
+  border: none;
+}
+.square:nth-child(3):hover span {
+  background-color: yellowgreen;
+  border: none;
+}
+.square span:nth-child(1) {
+  animation: circle 6s linear infinite;
+}
+.square span:nth-child(2) {
+  animation: circle 4s linear infinite;
+  animation-direction: reverse;
+}
+.square span:nth-child(3) {
+  animation: circle 10s linear infinite;
+}
+.square:hover span:nth-child(1) {
+  opacity: 0.3;
+}
+.square:hover span:nth-child(2) {
+  opacity: 0.6;
+}
+.square:hover span:nth-child(3) {
+  opacity: 0.8;
+}
+
+.square div {
+  /*border: 1px solid red;*/
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  text-align: center;
+  color: #fff;
+}
+.square div a {
+  color: #fff;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  border: 1px solid #fff;
+  padding: 8px;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,133 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+.tab-inner {
+  /* border: 1px solid red; */
+  width: 300px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+}
+input[name=tabmenu] {
+  display: none;
+}
+.content {
+  /*display: none;*/
+  position: absolute;
+  top: 0;
+  left: -50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+}
+.btn {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 10px;
+}
+.btn label {
+  background-color: lightgray;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+input[id=tab1]:checked ~ .slide1,
+input[id=tab2]:checked ~ .slide2,
+input[id=tab3]:checked ~ .slide3 {
+/*  display: block;*/
+  opacity: 1;
+  visibility: visible;
+  left: 0;
+} 
+
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+  background-color: crimson;
+}
+
+input[id=tab1]:checked ~ .heading .text1,
+input[id=tab2]:checked ~ .heading .text2,
+input[id=tab3]:checked ~ .heading .text3 {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.text1,
+.text2,
+.text3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: crimson;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 25px;
+  box-sizing: border-box;
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.text1 span,
+.text2 span,
+.text3 span {
+  font-size: 20px;
+  display: block;
+  margin-top: 5px;
+}
+.text2 {
+  background-color: dodgerblue;
+}
+.text3 {
+  background-color: yellowgreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

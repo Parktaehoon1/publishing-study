@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Content Slider</title>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="preload">
+
+  <div class="tab-inner">
+    <input type="radio" id="tab1" name="tabmenu" checked>
+    <input type="radio" id="tab2" name="tabmenu">
+    <input type="radio" id="tab3" name="tabmenu">
+    <div class="tabs">
+      <div class="items">
+        <div>
+          <h1>Portfolio Slide #01</h1>
+        </div>
+        <div>
+          <h1>Portfolio Slide #02</h1>
+        </div>
+        <div>
+          <h1>Portfolio Slide #03</h1>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <label for="tab1">Graphic</label>
+      <label for="tab2">Web Publishing</label>
+      <label for="tab3">Logo & CI</label>
+    </div>
+  </div>
+
+  <script>
+    $('body').removeClass('preload')
+  </script>
+
+</body>
+</html>

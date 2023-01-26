@@ -1,0 +1,64 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin: 0;
+}
+a {
+  color: #222;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.icon {
+  width: 125px;
+  height: 125px;
+  margin: 10px;
+  position: relative;
+}
+.icon span {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  /*display: none;*/
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+.icon span:after {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg) translateX(-50%);
+  bottom: -5px;
+  left: 50%;
+}
+.icon:hover span {
+  /*display: block;*/
+  opacity: 1;
+  visibility: visible;
+}
+
+/*
+  visibility: hidden; 과 visibility: visible;을 사용하는 대신에 .icon span에 pointer-events: none;를 넣어줘도 됩니다.
+*/
