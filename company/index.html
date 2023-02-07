@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="room-menu">
+    <div class="menu">
+		<a href="javascript:;" class="main_menu"></a>
+        
+		<div class="menu-gnb">
+			<ul>
+				<li class="me">
+
+				</li>
+				<li class="guest">
+
+				</li>
+				<li class="deco">
+
+				</li>
+				<li class="set">
+
+				</li>
+				<li class="logout">
+
+				</li>
+			</ul>
+		</div>
+    </div>
+</div>
+</body>
+<script>
+        $(".menu").on("mousedown", function () {
+            $(this).toggleClass("on")
+            $('.menu-bar').toggleClass("on")
+
+        });
+</script>
+</html>
