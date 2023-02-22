@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18">
+    <g transform="translate(-79 -77)">
+        <rect data-name="사각형 1" width="24" height="2" rx="1" transform="translate(79 77)" style="fill:#fff"/>
+        <rect data-name="사각형 2" width="24" height="2" rx="1" transform="translate(79 85)" style="fill:#fff"/>
+        <rect data-name="사각형 3" width="24" height="2" rx="1" transform="translate(79 93)" style="fill:#fff"/>
+    </g>
+</svg>

@@ -1,0 +1,77 @@
+
+*{margin:0;padding:0;}
+html:root {border:none;}
+html {overflow-y:hidden;}
+/*body{min-width:1400px; background:#191919; color:#1e1e1e;word-break:keep-all;word-wrap:break-word;}*/
+/*body.intro { background:#191919;}*/
+/*html,body{position:relative;width:100%; height:100%; margin:0;padding:0;font-size:13px; font-family:'Noto Sans KR','Malgun Gothic','맑은 고딕',Dotum,'돋움',sans-serif; vertical-align:top; font-weight:400;line-height:1.6;}*/
+
+div, dl,dt,dd,ul,ol,li,pre,form,fieldset,input,button,select,textarea,p,blockquote,address,th,td {margin:0;padding:0;vertical-align:top; color:inherit;
+    font-family:inherit; font-size: inherit; font-weight: inherit;}
+
+html,body, header,nav,section,article,footer, aside, address, div, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, button, select, textarea, p, blockquote, address, table, tbody, thead, th, td,
+details, figcaption, figure, hgroup, h1,h2,h3,h4,h5,h6,a, span, strong,b, i,em {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display:block; padding:0;margin:0; vertical-align:top;}
+header,nav,section,article,footer{width:100%;}
+img, b,strong,a, span,i {vertical-align:top;padding:0;margin:0;border:0;}
+b, strong {font-weight:500;}
+
+h1,h2,h3,h4,h5,h6 {font-weight:600; line-height:1.2;}
+a{text-decoration:none; display:inline-block; cursor:pointer; color:inherit; vertical-align:top;background:transparent; outline:none;}
+a:hover{text-decoration:none; }
+
+*,*:focus,*:hover{outline:none;}
+a:focus, img:focus, input:focus, select:focus, option:focus, textarea:focus, button:focus{outline: none;}
+
+table {border-collapse:collapse;border-spacing:0;padding:0;margin:0;border:0;}
+address,caption,cite,code,dfn,em,i,strong,th,var {font-style:normal; padding:0;margin:0;}
+ol,ul,li,dl, dd,menu {list-style:none; margin:0; padding:0;}
+legend,button,input,select,textarea{vertical-align:middle;display:inline-block;padding:0;margin:0;}
+legend {text-indent: -9999px;}
+caption {text-indent: -9999px; display: none; text-align:left;}
+caption:after{display:block;clear:both;content:'';}
+caption legend {width:0; height:0; line-height:0; overflow:hidden; visibility:hidden; font-size:0;}
+abbr,acronym {border:0;}
+img.flxImg{max-width:100%;}
+
+hr {display:none;height:0; border:0; margin:0; padding:0;}
+th,td {vertical-align:middle; text-align:center;}
+
+blockquote,q{quotes:none;}
+blockquote::before,blockquote::after,q::before,q::after{content:'';content:none;}
+
+
+
+
+/* .room-menu .menu{border-radius: 30px; background: rgba(0, 0, 0, 0.7) ; width:60px; height: 60px; overflow: hidden;}
+.room-menu .menu.on{ height:100% }
+
+.room-menu .menu .main_menu{z-index: 999; display: inline-block; width: 60px; height: 60px; background: url(icon_menu.svg) no-repeat center center;}
+.room-menu .menu.on .main_menu{background: url(icon_close.svg) no-repeat center center; height: 50px;}
+
+.menu-gnb ul li{width: 60px; height: 60px;}
+.room-menu .menu.on .menu-gnb ul li{height: 50px;}
+
+.me {display: inline-block; background: url(icon_me.svg) no-repeat center;}
+.guest{display: inline-block; background: url(icon_guest.svg) no-repeat center;}
+.deco{display: inline-block; background: url(icon_deco.svg) no-repeat center;}
+.set{display: inline-block; background: url(icon_set.svg) no-repeat center;}
+.logout{display: inline-block; background: url(icon_out.svg) no-repeat center;} */
+
+
+.room-menu .menu{border-radius: 30px; background: rgba(0, 0, 0, 0.7) ; width:60px; height: 60px; overflow: hidden;}
+.room-menu .menu.on{ height:100% }
+
+.room-menu .menu .main_menu{z-index: 999; display: inline-block; width: 60px; height: 60px; background: url(icon_menu.svg) no-repeat center center;}
+.room-menu .menu.on .main_menu{background: url(icon_close.svg) no-repeat center center;padding: 21px 18px;}
+
+.menu-gnb ul li{width: 60px; height: 60px;}
+.room-menu .menu.on .menu-gnb ul li{padding: 21px 18px;}
+
+.me {display: inline-block; background: url(icon_me.svg) no-repeat center;}
+.guest{display: inline-block; background: url(icon_guest.svg) no-repeat center;}
+.deco{display: inline-block; background: url(icon_deco.svg) no-repeat center;}
+.set{display: inline-block; background: url(icon_set.svg) no-repeat center;}
+.logout{display: inline-block; background: url(icon_out.svg) no-repeat center;}

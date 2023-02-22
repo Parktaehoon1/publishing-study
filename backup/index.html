@@ -1,0 +1,186 @@
+<!-- view page info -->
+
+<!-- Nft Detail info -->
+<div id="nft_detail_data">
+    <article class="video_info">
+        <div class="etc_btns">
+            <div class="item"><a href="javascript:;" class="like <?=($favor == 'Y' ? 'on' : '')?>"> <strong class="text"></strong> <span class="num">
+                <?=$favor_count?>
+                </span> </a> </div>
+            <div class="sns_shares" style="display: ">
+                <div class="item dropdown">
+                    <button onclick="myShare(this)" class="dropbtn btn_shares"></button>
+                    <div id="myShare" class="dropdown-content">
+						<a class="sns_sicon copylink">Copy Link</a>
+						<a onclick="shareSns('facebook')" class="sns_sicon facebook">Share on Facebook</a>
+						<a onclick="shareSns('twitter')" class="sns_sicon twitter">Share on Twitter</a>
+						<a onclick="shareSns('telegram')" class="sns_sicon telegram">Share on Telegram</a>
+					</div>
+                </div>
+            </div>
+            <div class="item dropdown">
+                <button onclick="myDropdown2(this)" class="dropbtn more"></button>
+                <div id="myDropdown" class="dropdown-content"> <a onClick="pop_up_layer('pop_report');return false;">Report</a> </div>
+            </div>
+        </div>
+        <div class="text_area">
+            <?php if($is_public == 'N') { ?>
+            <div class="release_check"><span class="unrelease">Private</span></div>
+            <?php } ?>
+            <p class=""><!--Created by --><span class="ownername">
+					<div onclick="location.href='/collection/nft/<?=$col_idx?>'">
+                <?=$col_name?>
+                <?=($is_mark_col === 'O' ? '<em class="c_mark_col">
+			<!--
+			<div class="mark_modal">This collection belongs to a verified<br> account and has significant interest or<br> sales. <a href="javascript:void(0)" class="mark_more">Learn more</a></div>
+			-->
+</em>' : '')?>
+			</div>
+				</span></p>
+            <strong class="subject">
+            <?=$title?>
+            <?php if($is_referral == 'O') { ?>
+            <span class="white_mark">Whitelist</span>
+            <?php } ?>
+            </strong>
+            <div class="con">
+                <div class="etc_info mat5">
+                    <p><span class="view">
+                        <?=$views?>
+                        Views </span> <span class="time">
+                        <?=getUsDateStr(date('Y-m-d',$reg_timestamp))?>
+                        </span></p>
+                    <p class="mat5">Edition<span class="edi"> #<?=$nft_idx?></span>
+						<?php if($burn_chk != 1){?>
+						Owned by<strong class="ownername"> <a class="gray09" href="/channel/channel/<?=$owner_name?>">
+                        <?=$owner_name?>
+						<?=($owner_is_mark === 'O' ? '<em class="c_mark_col">
+							<!--
+									<div class="mark_modal">This collection belongs to a verified<br> account and has significant interest or<br> sales. <a href="javascript:void(0)" class="mark_more">Learn more</a></div>
+									-->
+						</em>' : '')?>
+                        </a> </strong>
+						<?php }else{?>
+								Burend NFT
+						<?php }?>
+					</p>
+                    <?php if($burn_chk == 0 && $sell_type == 'F'){ ?>
+                    <div class="mat10">
+                        <p class="gray05">Current Price</p>
+                        <span class="strm">
+                        <?=$display_price?>
+                        <?//=$coin_type?>
+                        </span> </div>
+                    <?php } ?>
+                    <!--<p class="mat10">
+                        <button class="other_view" data-toggle="modal" data-target="#other_edi"> <span>Edition More</span> <i class="xi-angle-right-thin xi-x"><span></span></i></button>
+                    </p>-->
+                </div>
+            </div>
+
+            <!-- auction -->
+			<?php if($burn_chk == 0){?>
+				<?php if($bid_state == '10' || $bid_state == '20' || $bid_state == '60') { ?>
+				<div class="auction_info mat20">
+					<div class="remain_time">
+						<h4>Auction</h4>
+						<div class="count info remain_time_count">
+							<?php if((int) $bid_end_timestamp < time()){ ?>
+							<!--					<strong>2</strong><em>Day </em><strong>01:11:12</strong>-->
+							<strong>End</strong>
+							<?php } ?>
+						</div>
+					</div>
+					<div>
+						<?php if($bid_state == '10'){ ?>
+						<h4>Minimum Bid</h4>
+						<?php } else if($bid_state == '20' || $bid_state == '60'){ ?>
+						<h4>Current High Bid</h4>
+						<?php } ?>
+						<div class="info"><strong class="price"><span class="price">
+							<?=$current_high_bid?>
+							<?=$coin_type?>
+							</span></strong>
+							<?php if($bid_state != '10') { ?>
+							by
+							<?=$current_high_bidder_name?>
+							<?php } ?>
+						</div>
+					</div>
+					<div>
+						<h4>Fixed Price</h4>
+						<div class="info"><strong>
+							<?=$display_price?>
+							<?//=$coin_type?>
+							</strong></div>
+					</div>
+				</div>
+				<?php } else if($auction_end_dt > date('Y-m-d H:i:s') && $bid_state != '') { ?>
+				<div class="auction_info">
+					<div class="remain_time">
+						<h4>Auction</h4>
+						<div class="count info" id="remain_time"> <strong>End</strong> </div>
+					</div>
+				</div>
+				<?php } ?>
+			<?php }?>
+            <!-- //auction --> 
+            
+        </div>
+        <div class="peo_btn">
+            <div class="btns">
+				<?php if($burn_chk == 0){?>
+					<?php if(!($trade_status === '60' || $trade_status === '20')){ ?>
+					<?php if($bid_state == '10' || $bid_state == '20') { ?>
+					<!--auction-->
+					<?php if ((int) $bid_end_timestamp > time()  && time() > (int) $bid_start_timestamp){ ?>
+					<?php if(!isset($user_idx)){ ?>
+					<button type="button" class="btn btn_gg btn_sl" onclick="pop_up_layer('pop_buy_signin')">Instant Buy</button>
+					<button type="button" id="" class="btn btn_rr btn_sl fix" onclick="pop_up_layer('pop_buy_signin')">Place Bid</button>
+					<?php }	else if(isset($user_idx) && $user_idx != $owner_idx && $approval == '10' && $price != '') { ?>
+					<button type="button" class="btn btn_gg btn_sl" onclick="go_buy()">Instant Buy</button>
+					<button type="button" id="place_bid_btn" class="btn btn_rr btn_sl fix place_bid_btn">Place Bid</button>
+					<?php } ?>
+					<?php } ?>
+					<?php if($user_idx == $owner_idx && $user_idx == $seller_idx && $trade_status == '10') { ?>
+					<button type="button" class="btn btn_rr btn_sl fix" onclick="pop_up_layer('pop_nosale_confirm')">Cancel the sale</button>
+					<?php } ?>
+					<!--//auction-->
+					<?php }else if($bid_state == '60'){ ?>
+					<?php if($user_idx == $seller_idx){ ?>
+					<button type="button" class="btn btn_rr btn_sl fix" onclick="pop_up_layer('pop_nosale_confirm')">Cancel the sale</button>
+					<?php } ?>
+					<?php }else { ?>
+					<?php if(!isset($user_idx) && $trade_status == '10'){ ?>
+					<button type="button" class="btn btn_rr btn_sl fix" onclick="pop_up_layer('pop_buy_signin')">BUY</button>
+					<?php }	else if(isset($user_idx) && $user_idx != $owner_idx && $approval == '10' && $price != '' && $trade_status == '10') { ?>
+					<button type="button" class="btn btn_rr btn_sl fix" onclick="go_buy()">BUY</button>
+					<?php } ?>
+					<?php if($user_idx == $maker_idx && $is_sales == 'N' && $approval == '30') { ?>
+					<a href="/create/<?=($contents_type == 'image' ? 'create_i' : 'create')?>/<?=$video_idx?>" class="btn btn_gg btn_sl">Edit</a>
+					<?php } ?>
+					<?php if($user_idx == $owner_idx && $trade_idx == '' && $approval == '10' && $register_state == '10' && $bid_state != '60' && $pos_sell === 'O') { ?>
+					<a class="btn btn_gg btn_sl" onclick="pop_up_layer('pop_resales_edit')">Sale</a>
+					<?php } else if($user_idx == $owner_idx && $register_state == '10' && $bid_state == '40' && $pos_sell === 'O') { ?>
+					<a class="btn btn_gg btn_sl" onclick="pop_up_layer('pop_resales_edit')">Sale</a>
+					<?php } ?>
+					<?php if($user_idx == $maker_idx && $is_sales == 'N' && $approval == '30') { ?>
+					<button type="button" class="btn btn_rr btn_sl fix" onclick="pop_up_layer('pop_sale_permision')"><!--Application for approval-->Request Listing</button>
+					<?php } ?>
+					<?php if ($user_idx == $maker_idx && $is_sales == 'N' && $approval == '20') { ?>
+					<button type="button" class="btn btn_rr btn_sl fix" onclick="pop_up_layer('pop_sale_permision_cancle')">Cancel application for approval</button>
+					<?php } ?>
+					<?php if($user_idx == $owner_idx && $user_idx == $seller_idx && $trade_status == '10') { ?>
+					<button type="button" class="btn btn_rr btn_sl fix" onclick="pop_up_layer('pop_nosale_confirm')">Cancel the sale</button>
+					<?php } ?>
+					<?php } ?>
+					<?php } ?>
+					<?php if((((isset($user_idx) && $user_idx != $owner_idx) || !isset($user_idx)) && $bid_state == '' && $approval == '10') && $pos_sell == 'O'){?>
+					<button type="button" class="btn btn_wr btn_sl" onclick="make_offer()">Make Offer</button>
+					<?php }?>
+				<?php }?>
+            </div>
+        </div>
+    </article>
+</div>
+<!-- // Nft Detail info -->

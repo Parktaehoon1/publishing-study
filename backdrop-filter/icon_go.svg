@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26.811" height="10.121" viewBox="0 0 26.811 10.121">
+    <defs>
+        <clipPath id="ew342kh0ma">
+            <path style="fill:none" d="M1 0h26.811v10.121H1z"/>
+        </clipPath>
+    </defs>
+    <g transform="translate(-1)" style="isolation:isolate;clip-path:url(#ew342kh0ma)">
+        <path data-name="선 12" transform="translate(.75 9.061)" style="stroke:#fff;stroke-linecap:round;stroke-width:1.5px;fill:none" d="M0 0h26"/>
+        <path data-name="선 13" transform="translate(18.75 1.061)" style="stroke:#fff;stroke-linecap:round;stroke-width:1.5px;fill:none" d="m0 0 8 8"/>
+    </g>
+</svg>
