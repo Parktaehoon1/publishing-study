@@ -45,12 +45,31 @@ blockquote::before,blockquote::after,q::before,q::after{content:'';content:none;
 
 
 
+/* .room-menu .menu{border-radius: 30px; background: rgba(0, 0, 0, 0.7) ; width:60px; height: 60px; overflow: hidden;}
+.room-menu .menu.on{ height:100% }
+
+.room-menu .menu .main_menu{z-index: 999; display: inline-block; width: 60px; height: 60px; background: url(icon_menu.svg) no-repeat center center;}
+.room-menu .menu.on .main_menu{background: url(icon_close.svg) no-repeat center center; height: 50px;}
+
+.menu-gnb ul li{width: 60px; height: 60px;}
+.room-menu .menu.on .menu-gnb ul li{height: 50px;}
+
+.me {display: inline-block; background: url(icon_me.svg) no-repeat center;}
+.guest{display: inline-block; background: url(icon_guest.svg) no-repeat center;}
+.deco{display: inline-block; background: url(icon_deco.svg) no-repeat center;}
+.set{display: inline-block; background: url(icon_set.svg) no-repeat center;}
+.logout{display: inline-block; background: url(icon_out.svg) no-repeat center;} */
+
+
 .room-menu .menu{border-radius: 30px; background: rgba(0, 0, 0, 0.7) ; width:60px; height: 60px; overflow: hidden;}
 .room-menu .menu.on{ height:100% }
 
-.room-menu .menu .main_menu{display: inline-block; width: 60px; height: 60px; background: url(icon_menu.svg) no-repeat center center;}
-.room-menu .menu.on .main_menu{background: url(icon_close.svg) no-repeat center center;}
+.room-menu .menu .main_menu{z-index: 999; display: inline-block; width: 60px; height: 60px; background: url(icon_menu.svg) no-repeat center center;}
+.room-menu .menu.on .main_menu{background: url(icon_close.svg) no-repeat center center;padding: 21px 18px;}
+
 .menu-gnb ul li{width: 60px; height: 60px;}
+.room-menu .menu.on .menu-gnb ul li{padding: 21px 18px;}
+
 .me {display: inline-block; background: url(icon_me.svg) no-repeat center;}
 .guest{display: inline-block; background: url(icon_guest.svg) no-repeat center;}
 .deco{display: inline-block; background: url(icon_deco.svg) no-repeat center;}

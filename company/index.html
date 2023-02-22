@@ -36,10 +36,14 @@
 </div>
 </body>
 <script>
-        $(".menu").on("mousedown", function () {
-            $(this).toggleClass("on")
-            $('.menu-bar').toggleClass("on")
 
-        });
+        let menuList = $('.menu-gnb li')
+        $.each(menuList, function(i){
+            $(this).on("click",function(){
+                menuList.removeClass('on');
+                console.log("toggle")
+                menuList.eq(i).addClass('on');
+            })
+        })
 </script>
 </html>
